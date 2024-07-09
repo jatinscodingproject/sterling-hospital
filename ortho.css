@@ -1,0 +1,83 @@
+/* Custom styles for the website */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.jumbotron {
+    background: linear-gradient(to right, #1a355d, #4a90e2);
+    color: white;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption h5 {
+    animation: fadeInUp 1s;
+}
+
+.carousel-caption p {
+    animation: fadeInUp 1.5s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    background-color: #1a355d;
+    color: white;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    color: #4a90e2;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}

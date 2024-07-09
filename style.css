@@ -1,0 +1,418 @@
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&amp;family=Poppins:wght@400;600;700&amp;display=swap');
+
+/* Background colors */
+body {
+  background-color: #ffffff;
+  /* Soft cream background */
+  font-family: 'Poppins', sans-serif;
+  /* Set the default font */
+}
+
+section {
+  background-color: #ffffff;
+  /* White section backgrounds */
+}
+
+footer {
+  background-color: #ffeadf;
+  /* Light peach footer background */
+}
+
+/* Text colors */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2c4b6b;
+  /* Navy blue headings */
+  font-family: 'Lora', serif;
+  /* Set the heading font */
+}
+
+h2{
+  font-size: 45px;
+}
+
+p,
+a {
+  color: #7a5a4b;
+  /* Warm brown text */
+}
+
+a:hover {
+  color: #1a355d;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #ffb6c1;
+  /* Light pink primary button */
+  border-color: #ffb6c1;
+  color: #ffffff;
+  /* White text */
+  font-family: 'Poppins', sans-serif;
+  /* Set the button font */
+}
+
+.btn-primary:hover {
+  background-color: #ff96a9;
+  /* Darker pink on hover */
+  border-color: #ff96a9;
+}
+
+.btn-secondary {
+  background-color: #2c4b6b;
+  /* Navy blue secondary button */
+  border-color: #2c4b6b;
+  color: #ffffff;
+  /* White text */
+  font-family: 'Poppins', sans-serif;
+  /* Set the button font */
+}
+
+.btn-secondary:hover {
+  background-color: #3eb2c4;
+  /* Teal on hover */
+  border-color: #3eb2c4;
+}
+
+/* Navigation bar styles */
+.navbar {
+  background-color: #ffffff;
+  /* White navigation bar */
+  font-family: 'Poppins', sans-serif;
+  /* Set the navigation font */
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #7a5a4b;
+  /* Warm brown nav links */
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #ffb6c1;
+  /* Light pink nav link hover */
+}
+
+/* Custom styles */
+.bg-maternity {
+  background-color: #ffb6c1 !important;
+  /* Light pink top bar */
+  border-color: #ffb6c1 !important;
+  color: #ffffff;
+  /* White text */
+}
+
+.card {
+  border-color: #ffb6c1;
+  /* Light pink card borders */
+  font-family: 'Poppins', sans-serif;
+  /* Set the card font */
+}
+
+.card-header {
+  background-color: #ffb6c1;
+  /* Light pink card headers */
+  color: #ffffff;
+  /* White card header text */
+  font-family: 'Lora', serif;
+  /* Set the card header font */
+}
+
+.btn-appointment {
+  background-color: #2c4b6b;
+  color: #ffffff;
+  border-color: #2c4b6b;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  /* Set the button font */
+}
+
+.btn-appointment:hover {
+  background-color: #ffb6c1;
+  border-color: #ffb6c1;
+}
+
+.translucent-bg {
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Set the background color to translucent white */
+}
+
+.card-img-top {
+  width: 100%;
+  /* Ensure gallery images span the entire width of their parent container */
+  height: auto;
+  /* Automatically adjust height based on aspect ratio */
+}
+
+/* Gallery styles */
+.gallery-item {
+  margin-bottom: 20px;
+  /* Add some space between each gallery item */
+}
+
+.gallery-item img {
+  width: 100%;
+  /* Ensure gallery images span the entire width of their parent container */
+  height: auto;
+  /* Automatically adjust height based on aspect ratio */
+  cursor: pointer;
+  /* Change cursor to pointer on hover to indicate clickability */
+}
+
+.modal-body img {
+  max-width: 100%;
+  /* Ensure modal image doesn't exceed the width of its container */
+  height: auto;
+  /* Automatically adjust height based on aspect ratio */
+}
+
+/* Carousel styles */
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 500px;
+  /* Add a max-height for desktop */
+}
+
+.carousel-inner::before {
+  display: block;
+  content: "";
+  padding-top: 56.25%;
+  /* 16:9 aspect ratio */
+}
+
+.carousel-inner .carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-family: 'Lora', serif;
+}
+
+.card-text {
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color:#7a5a4b
+}
+
+@media (max-width: 768px) {
+  .carousel-inner {
+    max-height: none;
+  }
+
+  .carousel-caption {
+    display: none;
+  }
+}
+
+.mapouter {
+  text-align: center;
+  margin: auto;
+}
+
+.gmap_canvas {
+  display: inline-block;
+
+}
+
+
+#Book:hover {
+  color: #1a355d;
+}
+
+#footer p,
+li,
+a {
+  color: #7a5a4b;
+  font-size: 17px;
+}
+
+#footer h5 {
+  font-weight: bold;
+}
+
+.nav-item.active .nav-link {
+  font-weight: bold;
+  color: #2c4b6b;
+}
+
+#edit_navbar_ul a:hover {
+  font-weight: 600;
+  color: #2c4b6b;
+}
+
+/* dropdown css */
+
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+.dropend .dropdown-toggle {
+  margin-left: 1em;
+}
+
+.dropdown-item:hover {
+  color: #fff;
+}
+
+.dropdown .dropdown-menu {
+  display: none;
+}
+
+.dropdown:hover>.dropdown-menu,
+.dropend:hover>.dropdown-menu {
+  display: block;
+  margin-top: 0.125em;
+  margin-left: 0;
+}
+
+@media screen and (min-width: 769px) {
+  .dropend:hover>.dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+
+  .dropend .dropdown-toggle {
+    margin-left: 0;
+  }
+}
+
+/* patient page */
+
+.patient-testimonials {
+  background-color: #f8f9fa;
+}
+
+.testimonial {
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: scale(1.05);
+}
+
+.testimonial p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* doctor page css */
+
+.card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 1rem;
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  color: #2c4b6b;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #333;
+}
+
+.img-fluid {
+  border-radius: 10px;
+}
+
+.lead {
+  font-weight: 500;
+}
+
+.doctor-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.doctor-image {
+  flex: 1;
+}
+
+.doctor-info {
+  flex: 2;
+  padding-left: 1.5rem;
+}
+
+.custom-carousel .carousel-inner .custom-card {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+.custom-carousel .custom-card .custom-card-body {
+  padding: 20px;
+}
+.custom-carousel .custom-card .custom-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+.custom-carousel .custom-card .custom-card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
