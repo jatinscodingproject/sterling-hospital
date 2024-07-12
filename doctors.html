@@ -59,7 +59,7 @@
       }
 
       .card-large img {
-         max-height: auto;
+         height: 500px;
          max-width: 100%;
          object-fit: cover;
       }
@@ -81,7 +81,7 @@
       }
 
       .card-small img {
-         max-height: 380px;
+         height: 380px;
          max-width: 100%;
          object-fit: cover;
       }
@@ -104,6 +104,21 @@
          display: flex;
          justify-content: center;
          width: 100%;
+      }
+
+      @media (max-width: 768px) {
+         .card-large img {
+            height: 400px;
+            max-width: 100%;
+            object-fit: cover;
+         }
+      }
+      @media (max-width: 452px) {
+         .card-large img {
+            height: 300px;
+            max-width: 100%;
+            object-fit: cover;
+         }
       }
    </style>
 </head>
