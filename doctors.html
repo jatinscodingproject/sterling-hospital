@@ -44,27 +44,66 @@
    <title>Sterling Hospital | Best IVF & Fertility Hospital in Virar</title>
    <link rel="stylesheet" href="style.css">
    <style>
-      .doctor-image-large {
-         width: 100%;
-         height: 100px;
+      .card .card-large {
+         flex: 0 0 auto;
+         margin: 10px;
+         border: 1px solid #ddd;
+         border-radius: 5px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-between;
+         padding: 10px;
+         box-sizing: border-box;
+      }
+
+      .card-large img {
+         max-height: auto;
+         max-width: 100%;
          object-fit: cover;
       }
 
-      .doctor-image-small {
+      .card .card-small {
+         flex: 0 0 auto;
          width: 100%;
-         height: 100px;
-         object-fit: cover;
+         height: 550px;
+         margin: 10px;
+         border: 1px solid #ddd;
+         border-radius: 5px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-between;
+         padding: 10px;
+         box-sizing: border-box;
       }
 
-
-      .card-body {
-         text-align: center;
+      .card-small img {
+         max-height: 380px;
+         max-width: 100%;
+         object-fit: cover;
       }
 
       .jumbotron {
          background: linear-gradient(to right, );
          padding: 3rem 2rem;
          margin-bottom: 2rem;
+      }
+
+      h5 {
+         text-align: center;
+      }
+
+      .card-text {
+         text-align: center;
+      }
+
+      .center-button {
+         display: flex;
+         justify-content: center;
+         width: 100%;
       }
    </style>
 </head>
@@ -296,20 +335,22 @@
       <div class="jumbotron jumbotron-fluid">
          <div class="container">
             <h2 class="display-4" style="color: #2c4b6b;">Our Doctors</h2>
-            <p class="lead" style="color: #7a5a4b;">Meet our team of dedicated healthcare professionals.</p>
+            <p class="lead" style="color: #7a5a4b;">Meet our team of dedicated professional dotors.</p>
          </div>
       </div>
       <div class="container-fluid">
          <div class="row">
             <div class="col-md-6 mb-4">
-               
+
                <div class="card card-large">
                   <img src="d1.jpg" class="img-fluid doctor-image-large" alt="Dr. Sachin Zambare">
                   <div class="card-body">
                      <h5 class="card-title"><b>Dr. Sachin Zambare</b></h5>
                      <p class="card-text"><b>Consultant Orthopaedic & Spine Surgeon</b></p>
-                     <a href="sterlingDoctor/doct1.html" class="btn btn-appointment ml-auto" id="Book"><i
-                           class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     <div class="center-button">
+                        <a href="sterlingDoctor/doct1.html" class="btn btn-appointment" id="Book"><i
+                              class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -319,8 +360,10 @@
                   <div class="card-body">
                      <h5 class="card-title">Dr. Renu Singh</h5>
                      <p class="card-text"><b>Consultant Fertility Specialist & Laparoscopic Surgeon</b></p>
-                     <a href="sterlingDoctor/doct2.html" class="btn btn-appointment ml-auto" id="Book"><i
-                           class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     <div class="center-button">
+                        <a href="sterlingDoctor/doct1.html" class="btn btn-appointment" id="Book"><i
+                              class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -332,8 +375,10 @@
                   <div class="card-body">
                      <h5 class="card-title"><b>Dr. Abhishek Kini</b></h5>
                      <p class="card-text"><b>Consultant Ankle and Foot Surgeon</b></p>
-                     <a href="sterlingDoctor/doct3.html" class="btn btn-appointment ml-auto" id="Book"><i
-                           class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     <div class="center-button">
+                        <a href="sterlingDoctor/doct1.html" class="btn btn-appointment" id="Book"><i
+                              class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -343,8 +388,10 @@
                   <div class="card-body">
                      <h5 class="card-title">Dr. Arpit Dave</h5>
                      <p class="card-text"><b>Consultant Arthroscopy Surgeon</b></p>
-                     <a href="sterlingDoctor/doct4.html" class="btn btn-appointment ml-auto" id="Book"><i
-                           class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     <div class="center-button">
+                        <a href="sterlingDoctor/doct1.html" class="btn btn-appointment" id="Book"><i
+                              class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -354,8 +401,10 @@
                   <div class="card-body">
                      <h5 class="card-title"><b>Dr. Vinod Pareshi</b></h5>
                      <p class="card-text"><b>Consultant Joint Replacement Surgeon</b></p>
-                     <a href="sterlingDoctor/doct5.html" class="btn btn-appointment ml-auto" id="Book"><i
-                           class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     <div class="center-button">
+                        <a href="sterlingDoctor/doct1.html" class="btn btn-appointment" id="Book"><i
+                              class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -365,8 +414,10 @@
                   <div class="card-body">
                      <h5 class="card-title"><b>Dr. Akshay Gupte</b></h5>
                      <p class="card-text"><b>Consultant Joint Replacement Surgeon</b></p>
-                     <a href="sterlingDoctor/doct6.html" class="btn btn-appointment ml-auto" id="Book"><i
-                           class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     <div class="center-button">
+                        <a href="sterlingDoctor/doct1.html" class="btn btn-appointment" id="Book"><i
+                              class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -378,8 +429,10 @@
                   <div class="card-body">
                      <h5 class="card-title">Dr. Anish Raut</h5>
                      <p class="card-text"><b>Consultant Plastic Surgeon</b></p>
-                     <a href="sterlingDoctor/doct7.html" class="btn btn-appointment ml-auto" id="Book"><i
-                           class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     <div class="center-button">
+                        <a href="sterlingDoctor/doct1.html" class="btn btn-appointment" id="Book"><i
+                              class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -389,8 +442,10 @@
                   <div class="card-body">
                      <h5 class="card-title"><b>Dr. Ekta Gupta</b></h5>
                      <p class="card-text"><b>Consultant Anaesthetist</b></p>
-                     <a href="sterlingDoctor/doct8.html" class="btn btn-appointment ml-auto" id="Book"><i
-                           class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     <div class="center-button">
+                        <a href="sterlingDoctor/doct1.html" class="btn btn-appointment" id="Book"><i
+                              class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -400,8 +455,10 @@
                   <div class="card-body">
                      <h5 class="card-title"><b>Dr. Nitin Kolhe</b></h5>
                      <p class="card-text"><b>Anaesthestist</b></p>
-                     <a href="sterlingDoctor/doct9.html" class="btn btn-appointment ml-auto" id="Book"><i
-                           class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     <div class="center-button">
+                        <a href="sterlingDoctor/doct1.html" class="btn btn-appointment" id="Book"><i
+                              class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -411,8 +468,10 @@
                   <div class="card-body">
                      <h5 class="card-title"><b>Dr. Siddharth Kini</b></h5>
                      <p class="card-text"><b>Consultant Urologist</b></p>
-                     <a href="sterlingDoctor/doct10.html" class="btn btn-appointment ml-auto" id="Book"><i
-                           class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     <div class="center-button">
+                        <a href="sterlingDoctor/doct1.html" class="btn btn-appointment" id="Book"><i
+                              class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -424,8 +483,10 @@
                   <div class="card-body">
                      <h5 class="card-title">Dr. Vinay Rao</h5>
                      <p class="card-text"><b>Consultant in Internal Medicine</b></p>
-                     <a href="sterlingDoctor/doct11.html" class="btn btn-appointment ml-auto" id="Book"><i
-                           class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     <div class="center-button">
+                        <a href="sterlingDoctor/doct1.html" class="btn btn-appointment" id="Book"><i
+                              class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -435,8 +496,10 @@
                   <div class="card-body">
                      <h5 class="card-title">Dr. Harsh Vaishnav</h5>
                      <p class="card-text"><b>Consultant Physiotherapist</b></p>
-                     <a href="sterlingDoctor/doct12.html" class="btn btn-appointment ml-auto" id="Book"><i
-                           class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     <div class="center-button">
+                        <a href="sterlingDoctor/doct1.html" class="btn btn-appointment" id="Book"><i
+                              class="fa fa-stethoscope" aria-hidden="true"></i> More About Doctor</a>
+                     </div>
                   </div>
                </div>
             </div>
