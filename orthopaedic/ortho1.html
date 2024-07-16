@@ -54,11 +54,15 @@
 
       .image-crd {
          width: 100%;
-         height: auto;
+         height: 0px;
          object-fit: cover;
       }
 
       .carousel-item {
+         height: auto;
+      }
+
+      #slider-xray {
          height: auto;
       }
 
@@ -307,7 +311,7 @@
       </div>
    </div>
 
-   <div class="container my-5">
+   <div class="container my-2">
       <div class="row">
          <div class="col-md-4">
             <div class="zoom-effect-container">
@@ -424,9 +428,9 @@
 
       </div>
 
-      <div class="container my-5">
+      <div class="container my-2">
          <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="1000">
-            <div class="carousel-inner">
+            <div class="carousel-inner" id="slider-xray">
                <div class="carousel-item active">
                   <img src="../orthoImages/t1 (1).jpeg" class="d-block w-100 image-card" alt="Orthopaedic Care">
                </div>
@@ -446,7 +450,7 @@
          </div>
       </div>
 
-      <div class="container my-5">
+      <div class="container my-2">
          <h3 class="text-center">Learn About Bones and Muscles</h3>
          <div class="video-container" id="videoBox">
             <video id="boneMuscleVideo" width="100%" controls>
