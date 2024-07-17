@@ -51,6 +51,12 @@
          .image-card {
             margin-bottom: 15px;
          }
+         .image-card {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+         }
       }
    </style>
 </head>
@@ -296,6 +302,26 @@
    </div>
 
    <div class="container">
+      <div class="container-fluid my-2">
+         <div class="row">
+            <div class="col-md-4">
+               <div class="zoom-effect-container">
+                  <img src="../orthoImages/o7.jpg" class="img-fluid image-card" alt="Orthopaedic Care">
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="zoom-effect-container">
+                  <img src="../orthoImages/vert.jpeg" class="img-fluid image-card" alt="Joint Replacement">
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="zoom-effect-container">
+                  <img src="../orthoImages/vertbro.jpeg" class="img-fluid image-card" alt="Trauma Care">
+               </div>
+            </div>
+         </div>
+      </div>
+      
       <div class="info-box">
          <h3>Vertebroplasty</h3>
          <p>Vertebroplasty is a minimally invasive surgical procedure designed to stabilize spinal fractures and relieve
@@ -369,25 +395,7 @@
 
       </div>
 
-      <div class="container-fluid my-2">
-         <div class="row">
-            <div class="col-md-4">
-               <div class="zoom-effect-container">
-                  <img src="../orthoImages/o7.jpg" class="img-fluid image-card" alt="Orthopaedic Care">
-               </div>
-            </div>
-            <div class="col-md-4">
-               <div class="zoom-effect-container">
-                  <img src="../orthoImages/vert.jpeg" class="img-fluid image-card" alt="Joint Replacement">
-               </div>
-            </div>
-            <div class="col-md-4">
-               <div class="zoom-effect-container">
-                  <img src="../orthoImages/vertbro.jpeg" class="img-fluid image-card" alt="Trauma Care">
-               </div>
-            </div>
-         </div>
-      </div>
+      
    </div>
 
    <!-- Footer -->
