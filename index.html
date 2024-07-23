@@ -51,6 +51,56 @@
          border-radius: 10px;
          margin-right: 1rem;
       }
+
+      .slider-container {
+         position: relative;
+         overflow: hidden;
+      }
+
+      .slider-wrapper {
+         display: flex;
+         transition: transform 0.5s ease;
+      }
+
+      .card {
+         flex: 0 0 33.33%;
+         /* 3 cards per row */
+         box-sizing: border-box;
+         padding: 15px;
+         transition: transform 0.5s ease;
+      }
+
+      .card img {
+         width: 100%;
+         height: auto;
+      }
+
+      .slider-button {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         background-color: #007bff;
+         color: white;
+         border: none;
+         padding: 10px;
+         cursor: pointer;
+         z-index: 1;
+      }
+
+      .prev {
+         left: 10px;
+      }
+
+      .next {
+         right: 10px;
+      }
+
+      @media (max-width: 768px) {
+         .card {
+            flex: 0 0 100%;
+            /* 1 card per row */
+         }
+      }
    </style>
 </head>
 
@@ -580,6 +630,55 @@
       </div>
    </section>
 
+   <section id="aboutus" class="my-5">
+      <div class="container-fluid">
+         <h4 class="text-center mb-5">Orthopaedic Services</h4>
+
+         <div class="slider-container">
+            <div class="slider-wrapper">
+               <!-- Card 1: Orthopaedic and Trauma Care -->
+               <div class="card">
+                  <img src="orthoImages/o1.jpg" alt="Orthopaedic and Trauma Care">
+                  <div class="card-body">
+                     <h6 class="card-title">Orthopaedic and Trauma Care</h6>
+                     <a href="orthopaedic/ortho1.html" class="btn btn-primary btn-appointment">Learn More</a>
+                  </div>
+               </div>
+
+               <!-- Card 2: Spine Surgery and Spinal Disorders -->
+               <div class="card">
+                  <img src="orthoImages/o5.jpg" alt="Spine Surgery and Spinal Disorders">
+                  <div class="card-body">
+                     <h6 class="card-title">Spine Surgery and Spinal Disorders</h6>
+                     <a href="orthopaedic/ortho2.html" class="btn btn-primary btn-appointment">Learn More</a>
+                  </div>
+               </div>
+
+               <!-- Card 3: Joint Replacement -->
+               <div class="card">
+                  <img src="orthoImages/o10.jpg" alt="Joint Replacement">
+                  <div class="card-body">
+                     <h6 class="card-title">Joint Replacement</h6>
+                     <a href="orthopaedic/ortho3.html" class="btn btn-primary btn-appointment">Learn More</a>
+                  </div>
+               </div>
+
+               <!-- Card 4: Arthroscopy Knee, Shoulder & Ankle -->
+               <div class="card">
+                  <img src="orthoImages/o17.jpg" alt="Arthroscopy Knee, Shoulder & Ankle">
+                  <div class="card-body">
+                     <h6 class="card-title">Arthroscopy Knee, Shoulder & Ankle</h6>
+                     <a href="orthopaedic/ortho4.html" class="btn btn-primary btn-appointment">Learn More</a>
+                  </div>
+               </div>
+            </div>
+
+            <button class="slider-button prev" onclick="prevSlide()">&#10094;</button>
+            <button class="slider-button next" onclick="nextSlide()">&#10095;</button>
+         </div>
+      </div>
+   </section>
+
    <!-- Maps -->
    <section class="py-5">
       <div class="container-fluid">
@@ -672,6 +771,40 @@
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+   <script>
+      const sliderWrapper = document.querySelector('.slider-wrapper');
+      const cards = document.querySelectorAll('.card');
+      let currentIndex = 0;
+      const visibleCards = 1; // Number of visible cards
+
+      function updateSlider() {
+         const cardWidth = cards[0].offsetWidth;
+         const offset = -cardWidth * (visibleCards * currentIndex);
+         sliderWrapper.style.transform = `translateX(${offset}px)`;
+      }
+
+      function nextSlide() {
+         if (currentIndex < cards.length - visibleCards) {
+            currentIndex++;
+            updateSlider();
+         }
+      }
+
+      function prevSlide() {
+         if (currentIndex > 0) {
+            currentIndex--;
+            updateSlider();
+         }
+      }
+
+      // Initialize slider position
+      updateSlider();
+
+      // Optional: Update card width on resize to ensure responsiveness
+      window.addEventListener('resize', () => {
+         updateSlider();
+      });
+   </script>
 
 </body>
 
