@@ -13,7 +13,7 @@
     <meta name="author" content="Sterling Hospital">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -44,16 +44,42 @@
     <title>Sterling Hospital | Best IVF & Fertility Hospital in Virar</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .about-img {
+        .intro-image {
             transition: transform 0.3s ease-in-out;
         }
 
-        .about-img:hover {
+        .intro-image:hover {
             transform: scale(1.05);
+        }
+
+        .intro-image {
+            max-height: 300px;
+            /* Adjust height as needed */
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .section-title {
+            border-bottom: 1px solid #c0c8ce;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 1.25rem;
+        }
+
+        .section-title .icon {
+            transition: transform 0.3s ease;
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        .section-title .icon.rotate {
+            transform: rotate(45deg);
         }
     </style>
 </head>
-
 
 <body>
     <!-- Top Bar -->
@@ -70,7 +96,8 @@
             </div>
         </div>
     </div>
-    <!-- nav bar -->
+
+    <!-- Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
@@ -83,7 +110,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto" id="edit_navbar_ul">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html#aboutus">About us</a>
+                        <a class="nav-link" href="aboutus.html">About us</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -115,8 +142,7 @@
                                         <hr class="dropdown-divider">
                                     </li>
                                     <li><a class="dropdown-item" href="fertilityServices/fertility4.html">Blastocyst
-                                            Culture</a>
-                                    </li>
+                                            Culture</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
@@ -141,9 +167,7 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="fertilityServices/fertility9.html">Recurrent
-                                            Implantation
-                                            Failure</a></li>
+                                    <li><a class="dropdown-item" href="fertilityServices/fertility9.html">Recurrent Pregnancy Loss</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
@@ -163,8 +187,7 @@
                                         <hr class="dropdown-divider">
                                     </li>
                                     <li><a class="dropdown-item" href="fertilityServices/fertility13.html">Male
-                                            Infertility</a>
-                                    </li>
+                                            Infertility</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
@@ -175,22 +198,19 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item"
-                                                    href="fertilityServices/donor/donor1.html">Donor Egg</a>
-                                            </li>
+                                                    href="fertilityServices/donor/donor1.html">Donor Egg</a></li>
                                             <li>
                                                 <hr class="dropdown-divider">
                                             </li>
                                             <li><a class="dropdown-item"
-                                                    href="fertilityServices/donor/donor1.html">Donor sperm</a>
-                                            </li>
+                                                    href="fertilityServices/donor/donor1.html">Donor sperm</a></li>
                                         </ul>
                                     </li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
                                     <li><a class="dropdown-item" href="fertilityServices/fertility15.html">Advanced
-                                            Technology
-                                            and
+                                            Technology and
                                             Diagnostics</a></li>
                                 </ul>
                             </li>
@@ -243,7 +263,8 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="orthopaedic/ortho9.html">Paediatric Orthopaedics</a>
+                                    <li><a class="dropdown-item" href="orthopaedic/ortho9.html">Paediatric
+                                            Orthopaedics</a>
                                     </li>
                                     <li>
                                         <hr class="dropdown-divider">
@@ -299,117 +320,260 @@
     </nav>
 
     <!-- middle section -->
+    <div class="container">
+        <section class="row align-items-center">
+            <div class="col-md-8">
+                <h3>About Us</h3>
+                <p>Welcome to Sterling Orthopaedic and IVF Centre, where excellence in healthcare meets compassionate
+                    patient care. Nestled in the heart of Virar, our state-of-the-art facility offers unparalleled
+                    services in orthopedics, spine surgery, and fertility treatments. Our commitment is to provide
+                    personalized care with the latest advancements in medical technology, ensuring a holistic healing
+                    experience.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="about.jpeg" alt="Sterling Orthopaedic and IVF Centre" class="intro-image">
+            </div>
+        </section>
 
-    <div class="container mt-5 mb-5">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h2>About Us</h2>
-                <p>
-                    Welcome to our company! We are dedicated to providing the best services in the industry.
-                    Our team of professionals is committed to ensuring your satisfaction with every project we
-                    undertake.
-                    With years of experience and a passion for excellence, we strive to exceed your expectations.
-                </p>
-                <p>
-                    Our mission is to deliver high-quality solutions that meet your needs and help you achieve your
-                    goals.
-                    We value integrity, innovation, and customer satisfaction. Thank you for choosing us as your trusted
-                    partner.
-                </p>
+        <!-- Sections for toggling content -->
+        <section>
+            <h5 class="section-title" data-target="#mission">
+                <span class="icon">+</span> Our Mission
+            </h5>
+            <div id="mission" class="collapse">
+                <p>To deliver high quality, accessible, affordable, and reliable healthcare to our community.</p>
             </div>
-            <div class="col-md-6">
-                <img src="about.jpeg" alt="About Us" class="img-fluid about-img">
+        </section>
+
+        <section>
+            <h5 class="section-title" data-target="#vision">
+                <span class="icon">+</span> Our Vision
+            </h5>
+            <div id="vision" class="collapse">
+                <p>To showcase to the world the best in patient care, surgical expertise, academics, medical ethics, and
+                    state-of-the-art technology. To be a center which will be the pride of our country.</p>
             </div>
-        </div>
+        </section>
+
+        <section>
+            <h5 class="section-title" data-target="#values">
+                <span class="icon">+</span> Our Values
+            </h5>
+            <div id="values" class="collapse">
+                <ul class="list-unstyled">
+                    <li><strong>Excellence:</strong> We strive for excellence. We want to be inspirational. We challenge
+                        ourselves to push boundaries and offer the very best care in world-class facilities.</li>
+                    <li><strong>Empathy:</strong> We empathize with every single patient and their every need, fear, and
+                        hope. We understand their pain and we will do our very best to alleviate it.</li>
+                    <li><strong>Ethics:</strong> Our excellence rests on the bedrock of our ethics. Our first and only
+                        duty is to the patient's well-being, overriding any other consideration.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h5 class="section-title" data-target="#facilities">
+                <span class="icon">+</span> World-Class Facilities
+            </h5>
+            <div id="facilities" class="collapse">
+                <p>Our center boasts modern facilities designed to provide a seamless and comfortable patient
+                    experience. Our infrastructure includes:</p>
+                <ul>
+                    <li>State-of-the-art operation theatres with HVAC system (air handling units) and laminar air flow
+                        systems for optimal sterilization</li>
+                    <li>Advanced modular IVF lab with latest equipments</li>
+                    <li>Orthoscannogram (first time in Virar)</li>
+                    <li>Advanced C-Arm system and Digital X-ray (full body)</li>
+                    <li>24/7 accidents and emergency services</li>
+                    <li>24/7 ambulance services</li>
+                    <li>Spacious waiting area with wheelchair assistance</li>
+                    <li>Out patient department (OPD)</li>
+                    <li>An in-house pharmacy</li>
+                    <li>An in-house pathology lab</li>
+                    <li>Deluxe and super deluxe spacious rooms with stunning views of Jeevdani Mandir, offering a serene
+                        and picturesque setting for our patients</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h5 class="section-title" data-target="#ambiance">
+                <span class="icon">+</span> Pleasant Ambiance and Healing Atmosphere
+            </h5>
+            <div id="ambiance" class="collapse">
+                <p>We understand that a healing environment extends beyond medical care. Our hospital is designed to
+                    offer a serene and pleasant ambiance that promotes healing and well-being. From the moment you step
+                    into our facility, you will be welcomed by a warm and inviting atmosphere, with comfortable waiting
+                    areas, soothing decor, and a friendly, attentive staff ready to assist you.</p>
+            </div>
+        </section>
+
+        <section>
+            <h5 class="section-title" data-target="#founders">
+                <span class="icon">+</span> Meet Our Founders
+            </h5>
+            <div id="founders" class="collapse">
+                <h6>Dr. Sachin Zambare - Orthopedic and Spine Surgeon</h6>
+                <p>Dr. Sachin Zambare, an esteemed orthopedic surgeon, co-founded Sterling Orthopaedic and IVF Centre
+                    with a vision to revolutionize orthopedic care. With specialized training from top experts in
+                    Europe, including Spain, Switzerland, and Hungary, Dr. Sachin excels in joint replacement and spine
+                    surgeries. His expertise is complemented by his warm aura and reassuring smile, which instantly put
+                    patients at ease. Many find that half their worries vanish upon seeing him, a testament to his
+                    compassionate nature and professional excellence.</p>
+                <p>Leading the spine surgery department, Dr. Sachin combines precision and advanced techniques to
+                    restore mobility and enhance the quality of life for his patients. His dedication to advancing
+                    orthopedic treatment makes him a beacon of hope for those suffering from musculoskeletal issues.</p>
+
+                <h6>Dr. Renu Singh - IVF Specialist</h6>
+                <p>Dr. Renu Singh, a revered IVF specialist, co-founded our center with a passion for helping couples
+                    achieve their dreams of parenthood. Her extensive knowledge in reproductive medicine and
+                    gynecological laparoscopy has transformed countless lives. Dr. Renu's empathetic approach, coupled
+                    with her commitment to excellence, has established her as a trusted and beloved figure in fertility
+                    care.</p>
+                <p>Dr. Renu’s holistic and patient-centric approach ensures that each journey to parenthood is supported
+                    with the utmost care, compassion, and expertise.</p>
+            </div>
+        </section>
+
+        <section>
+            <h5 class="section-title" data-target="#team">
+                <span class="icon">+</span> Our Dedicated Team
+            </h5>
+            <div id="team" class="collapse">
+                <p>Our team comprises highly skilled doctors, dedicated nurses, and supportive staff who work
+                    collaboratively to ensure the best outcomes for our patients. We believe in a multidisciplinary
+                    approach, integrating various specialties to create personalized treatment plans.</p>
+            </div>
+        </section>
+
+        <section>
+            <h5 class="section-title" data-target="#why-choose-us">
+                <span class="icon">+</span> Why Choose Us?
+            </h5>
+            <div id="why-choose-us" class="collapse">
+                <ul>
+                    <li><strong>Comprehensive Services:</strong> We offer a broad spectrum of services, from advanced
+                        orthopedic and spine surgeries to cutting-edge IVF treatments.</li>
+                    <li><strong>Innovative Technology:</strong> Our facilities are equipped with the latest medical
+                        technology to provide precise diagnoses and effective treatments.</li>
+                    <li><strong>Expert Team:</strong> Our experienced medical professionals are committed to providing
+                        compassionate and expert care.</li>
+                    <li><strong>Patient-Centered Care:</strong> We prioritize your needs, ensuring personalized and
+                        supportive care throughout your treatment journey.</li>
+                    <li><strong>Healing Environment:</strong> Our hospital's serene and pleasant ambiance is designed to
+                        enhance the healing process, offering comfort and tranquility to all our patients.</li>
+                    <li><strong>Scenic Views:</strong> Our deluxe and super deluxe rooms offer spacious accommodations
+                        with breathtaking views of Jeevdani Mandir, providing a peaceful and inspiring environment for
+                        recovery.</li>
+                </ul>
+                <p>At Sterling Orthopaedic and IVF Centre, we are more than a healthcare provider; we are your partners
+                    in health, dedicated to helping you live your best life. Whether you seek relief from orthopedic
+                    conditions or wish to embark on the path to parenthood, we are here to support and guide you every
+                    step of the way.</p>
+            </div>
+        </section>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
+    <!-- Footer -->
+    <footer id="contactus" class="py-3">
+        <div class="container-fluid">
+            <div class="row" id="footer">
+                <div class="col-md-4 mb-3">
+                    <h5>About Us</h5>
+                    <p>Sterling Hospital is dedicated to providing exceptional medical care with integrity and
+                        compassion.
+                        Our state-of-the-art facilities and highly skilled medical professionals ensure that each
+                        patient
+                        receives personalized and comprehensive treatment. We prioritize patient well-being and strive
+                        to
+                        create a supportive and healing environment. Whether it's routine check-ups, specialized
+                        treatments,
+                        or emergency care, our commitment to excellence remains unwavering.</p>
+                </div>
+                <div class="col-md-2 mb-3" id="contact_us">
+                    <h5>Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html#aboutus">About Us</a></li>
+                        <li><a href="orthopaedic/ortho1.html">Our Services</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="patient.html">Our Patients</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="cashless.html">Cashless</a></li>
+                        <li><a href="index.html#contactus">Contact Us</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.google.com/maps?q=Yashwant+Vihar+Complex,+Virar+Nalasopara+Link+Road,+Bolinj,+Virar+West,+Maharashtra,+India+401303"
+                                style="text-decoration: none;">
+                                <i class="fas fa-map-marker-alt fa-lg" style="color: #1a355d;"></i>
+                                Besides Yashwant Vihar Complex, Virar Nalasopara Link Road, Bolinj, Virar West,
+                                Maharashtra,
+                                India 401303
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+918530064800" id="phone-number" style="text-decoration: none;">
+                                <i class="fas fa-phone fa-lg" style="color: #1a355d;"></i> 8530046800 / 8530064800
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:sterlingorthohospital@gmail.com" style="text-decoration: none;">
+                                <i class="fas fa-envelope fa-lg" style="color: #1a355d;"></i>
+                                sterlingorthohospital@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5>Get Connected</h5>
+                    <ul class="list-inline social-icons">
+                        <li><a href="index.html"><i class="fa fa-globe fa-lg fa-inverse" style="color: #1a355d;"></i>
+                                https://sterlingorthoivf.in/</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="line"
+                style="background-color: rgb(212, 212, 212); height: 1px; width: 105%; margin-bottom: 15px; position: relative; left: -20px;">
+
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">Copyright @2024 Sterling Orthopaedic Hospital and IVF Centre. All
+                        rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="../ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap v4 JavaScript -->
+    <script src="../stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
-</html>
-
-
-<!-- Footer -->
-<footer id="contactus" class="py-3">
-    <div class="container-fluid">
-        <div class="row" id="footer">
-            <div class="col-md-4 mb-3">
-                <h5>About Us</h5>
-                <p>Sterling Hospital is dedicated to providing exceptional medical care with integrity and compassion.
-                    Our state-of-the-art facilities and highly skilled medical professionals ensure that each patient
-                    receives personalized and comprehensive treatment. We prioritize patient well-being and strive to
-                    create a supportive and healing environment. Whether it's routine check-ups, specialized treatments,
-                    or emergency care, our commitment to excellence remains unwavering.</p>
-            </div>
-            <div class="col-md-2 mb-3" id="contact_us">
-                <h5>Navigation</h5>
-                <ul class="list-unstyled">
-                    <li><a href="index.html#aboutus">About Us</a></li>
-                    <li><a href="orthopaedic/ortho1.html">Our Services</a></li>
-                    <li><a href="doctors.html">Doctors</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="patient.html">Our Patients</a></li>
-                    <li><a href="facilities.html">Facilities</a></li>
-                    <li><a href="cashless.html">Cashless</a></li>
-                    <li><a href="index.html#contactus">Contact Us</a></li>
-
-                </ul>
-            </div>
-            <div class="col-md-3 mb-3">
-                <h5>Contact Us</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="https://www.google.com/maps?q=Yashwant+Vihar+Complex,+Virar+Nalasopara+Link+Road,+Bolinj,+Virar+West,+Maharashtra,+India+401303"
-                            style="text-decoration: none;">
-                            <i class="fas fa-map-marker-alt fa-lg" style="color: #1a355d;"></i>
-                            Besides Yashwant Vihar Complex, Virar Nalasopara Link Road, Bolinj, Virar West, Maharashtra,
-                            India 401303
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:+918530064800" id="phone-number" style="text-decoration: none;">
-                            <i class="fas fa-phone fa-lg" style="color: #1a355d;"></i> 8530046800 / 8530064800
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:sterlingorthohospital@gmail.com" style="text-decoration: none;">
-                            <i class="fas fa-envelope fa-lg" style="color: #1a355d;"></i>
-                            sterlingorthohospital@gmail.com
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-            <div class="col-md-3 mb-3">
-                <h5>Get Connected</h5>
-                <ul class="list-inline social-icons">
-                    <li><a href="index.html"><i class="fa fa-globe fa-lg fa-inverse" style="color: #1a355d;"></i>
-                            https://sterlingorthoivf.in/</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="line"
-            style="background-color: rgb(212, 212, 212); height: 1px; width: 105%; margin-bottom: 15px; position: relative; left: -20px;">
-
-        </div>
-        <div class="row">
-            <div class="col-12 text-center">
-                <p class="mb-0">Copyright @2024 Sterling Orthopaedic Hospital and IVF Centre. All
-                    rights reserved.</p>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- jQuery -->
-<script src="ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- Bootstrap v4 JavaScript -->
-<script src="stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.section-title').on('click', function () {
+                var target = $(this).data('target');
+                var icon = $(this).find('.icon');
+                var content = $(target);
+    
+                if (content.hasClass('show')) {
+                    content.collapse('hide');
+                    icon.removeClass('rotate');
+                } else {
+                    content.collapse('show');
+                    icon.addClass('rotate');
+                }
+            });
+        });
+    </script>
 </body>
 
 <!-- Mirrored from sterlingorthoivf.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jun 2024 08:38:44 GMT -->

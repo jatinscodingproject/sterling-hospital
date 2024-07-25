@@ -44,17 +44,11 @@
    <title>Sterling Hospital | Best IVF & Fertility Hospital in Virar</title>
    <link rel="stylesheet" href="style.css">
    <style>
-      .card img {
-         width: 100%;
-         height: auto;
-         object-fit: cover;
-         border-radius: 10px;
-         margin-right: 1rem;
-      }
-
       .slider-container {
          position: relative;
+         width: 100%;
          overflow: hidden;
+         padding: 0 10px;
       }
 
       .slider-wrapper {
@@ -63,28 +57,58 @@
       }
 
       .card {
-         flex: 0 0 33.33%;
-         /* 3 cards per row */
+         flex: 1 0 100%;
          box-sizing: border-box;
-         padding: 15px;
-         transition: transform 0.5s ease;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         margin: 0 5px;
+      }
+
+      @media (min-width: 768px) {
+         .card {
+            flex: 1 0 calc(33.33% - 10px);
+         }
       }
 
       .card img {
-         width: 100%;
+         max-width: 100%;
          height: auto;
+      }
+
+      .card-body {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+      }
+
+      .card-title {
+         margin-bottom: 15px;
+      }
+
+      .btn-appointment {
+         margin-top: auto;
+         text-align: center;
       }
 
       .slider-button {
          position: absolute;
-         top: 50%;
+         top: 40%;
          transform: translateY(-50%);
-         background-color: #007bff;
-         color: white;
+         background-color: white;
+         color: black;
          border: none;
          padding: 10px;
          cursor: pointer;
-         z-index: 1;
+         border-radius: 50%;
+         width: 40px;
+         height: 40px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
       }
 
       .prev {
@@ -93,13 +117,6 @@
 
       .next {
          right: 10px;
-      }
-
-      @media (max-width: 768px) {
-         .card {
-            flex: 0 0 100%;
-            /* 1 card per row */
-         }
       }
    </style>
 </head>
@@ -187,8 +204,7 @@
                            <li>
                               <hr class="dropdown-divider">
                            </li>
-                           <li><a class="dropdown-item" href="fertilityServices/fertility9.html">Recurrent Implantation
-                                 Failure</a></li>
+                           <li><a class="dropdown-item" href="fertilityServices/fertility9.html">Recurrent Pregnancy Loss</a></li>
                            <li>
                               <hr class="dropdown-divider">
                            </li>
@@ -484,152 +500,59 @@
       </div>
    </section> -->
 
-   <!-- orthopaedic section -->
-   <section id="aboutus" class="my-5">
-      <div class="container-fluid">
-         <h4 class="text-center mb-5">Orthopaedic Services</h4>
-
-         <div class="row">
-
-            <!-- Card 1: Orthopaedic and Trauma Care -->
-            <div class="col-lg-3 col-md-6 mb-4">
-               <div class="card">
-                  <img src="orthoImages/o1.jpg" class="card-img-top" alt="Orthopaedic and Trauma Care">
-                  <div class="card-body">
-                     <h6 class="card-title" style="font-size: 17px; text-align: center;">Orthopaedic and Trauma Care
-                     </h6>
-                     <!-- <p class="card-text">
-                        Specializing in advanced orthopaedic and trauma care services. Expert team treats fractures, injuries, and musculoskeletal conditions.
-                     </p> -->
-                     <a href="orthopaedic/ortho1.html" class="btn btn-primary btn-appointment btn-block">Learn More</a>
-                  </div>
-               </div>
-            </div>
-
-            <!-- Card 2: Spine Surgery and Spinal Disorders -->
-            <div class="col-lg-3 col-md-6 mb-4">
-               <div class="card">
-                  <img src="orthoImages/o5.jpg" class="card-img-top" alt="Spine Surgery and Spinal Disorders">
-                  <div class="card-body">
-                     <h6 class="card-title" style="font-size: 17px; text-align: center;">Spine Surgery and Spinal
-                        Disorders</h6>
-                     <!-- <p class="card-text">
-                        Specialize in comprehensive care for spinal disorders. Advanced techniques for effective treatment and optimal outcomes.
-                     </p> -->
-                     <a href="orthopaedic/ortho2.html" class="btn btn-primary btn-appointment btn-block">Learn More</a>
-                  </div>
-               </div>
-            </div>
-
-            <!-- Card 3: Joint Replacement -->
-            <div class="col-lg-3 col-md-6 mb-4">
-               <div class="card">
-                  <img src="orthoImages/o10.jpg" class="card-img-top" alt="Joint Replacement">
-                  <div class="card-body">
-                     <h6 class="card-title" style="font-size: 17px; text-align: center;">Joint Replacement</h6>
-                     <!-- <p class="card-text">
-                        Expert joint replacement surgeries for knees, hips, and shoulders. Focus on pain relief and mobility improvement.
-                     </p> -->
-                     <a href="orthopaedic/ortho3.html" class="btn btn-primary btn-appointment btn-block">Learn More</a>
-                  </div>
-               </div>
-            </div>
-
-            <!-- Card 4: Arthroscopy Knee, Shoulder & Ankle -->
-            <div class="col-lg-3 col-md-6 mb-4">
-               <div class="card">
-                  <img src="orthoImages/o17.jpg" class="card-img-top" alt="Arthroscopy Knee, Shoulder & Ankle">
-                  <div class="card-body">
-                     <h6 class="card-title" style="font-size: 17px; text-align: center;">Arthroscopy Knee, Shoulder &
-                        Ankle</h6>
-                     <!-- <p class="card-text">
-                        Minimally invasive arthroscopic procedures for knee, shoulder, and ankle joints. Improve joint function and recovery.
-                     </p> -->
-                     <a href="orthopaedic/ortho4.html" class="btn btn-primary btn-appointment btn-block">Learn More</a>
-                  </div>
-               </div>
-            </div>
-
-         </div>
-
-      </div>
-   </section>
-
    <!-- ivf section -->
+
    <section id="aboutus" class="my-5">
       <div class="container-fluid">
          <h4 class="text-center mb-5">IVF Services</h4>
 
-         <div class="row">
-
-            <!-- Card 1: Orthopaedic and Trauma Care -->
-            <div class="col-lg-3 col-md-6 mb-4">
+         <div class="slider-container">
+            <div class="slider-wrapper">
+               <!-- Card 1: Orthopaedic and Trauma Care -->
                <div class="card">
-                  <img src="fertImages/12.jpg" class="card-img-top" alt="Orthopaedic and Trauma Care">
+                  <img src="fertImages/12.jpg" alt="Intrauterine Insemination (IUI)">
                   <div class="card-body">
-                     <h6 class="card-title" style="font-size: 17px; text-align: center;">Intrauterine Insemination (IUI)
-                     </h6>
-                     <!-- <p class="card-text">
-                        Specializing in advanced orthopaedic and trauma care services. Expert team treats fractures, injuries, and musculoskeletal conditions.
-                     </p> -->
-                     <a href="fertilityServices/fertility3.html" class="btn btn-primary btn-appointment btn-block">Learn
-                        More</a>
+                     <h6 class="card-title">Intrauterine Insemination (IUI)</h6>
+                     <a href="fertilityServices/fertility3.html" class="btn btn-primary btn-appointment">Learn More</a>
+                  </div>
+               </div>
+
+               <!-- Card 2: Spine Surgery and Spinal Disorders -->
+               <div class="card">
+                  <img src="fertImages/16.jpg" alt="Intracytoplasmic Sperm Injection">
+                  <div class="card-body">
+                     <h6 class="card-title">Intracytoplasmic Sperm Injection</h6>
+                     <a href="fertilityServices/fertility2.html" class="btn btn-primary btn-appointment">Learn More</a>
+                  </div>
+               </div>
+
+               <!-- Card 3: Joint Replacement -->
+               <div class="card">
+                  <img src="fertImages/nurse-holding-model-of-male-reproductive-system.jpg" alt="Male Infertility">
+                  <div class="card-body">
+                     <h6 class="card-title">Male Infertility</h6>
+                     <a href="fertilityServices/fertility13.html" class="btn btn-primary btn-appointment">Learn More</a>
+                  </div>
+               </div>
+
+               <!-- Card 4: Arthroscopy Knee, Shoulder & Ankle -->
+               <div class="card">
+                  <img src="fertImages/20.jpg" alt="Blastocyst Culture">
+                  <div class="card-body">
+                     <h6 class="card-title">Blastocyst Culture</h6>
+                     <a href="fertilityServices/fertility4.html" class="btn btn-primary btn-appointment">Learn More</a>
                   </div>
                </div>
             </div>
 
-            <!-- Card 2: Spine Surgery and Spinal Disorders -->
-            <div class="col-lg-3 col-md-6 mb-4">
-               <div class="card">
-                  <img src="fertImages/16.jpg" class="card-img-top" alt="Spine Surgery and Spinal Disorders">
-                  <div class="card-body">
-                     <h6 class="card-title" style="font-size: 17px; text-align: center;">Intracytoplasmic Sperm
-                        Injection</h6>
-                     <!-- <p class="card-text">
-                        Specialize in comprehensive care for spinal disorders. Advanced techniques for effective treatment and optimal outcomes.
-                     </p> -->
-                     <a href="fertilityServices/fertility2.html" class="btn btn-primary btn-appointment btn-block">Learn
-                        More</a>
-                  </div>
-               </div>
-            </div>
-
-            <!-- Card 3: Joint Replacement -->
-            <div class="col-lg-3 col-md-6 mb-4">
-               <div class="card">
-                  <img src="fertImages/nurse-holding-model-of-male-reproductive-system.jpg" class="card-img-top"
-                     alt="Joint Replacement">
-                  <div class="card-body">
-                     <h6 class="card-title" style="font-size: 17px; text-align: center;">Male Infertility</h6>
-                     <!-- <p class="card-text">
-                        Expert joint replacement surgeries for knees, hips, and shoulders. Focus on pain relief and mobility improvement.
-                     </p> -->
-                     <a href="fertilityServices/fertility13.html"
-                        class="btn btn-primary btn-appointment btn-block">Learn More</a>
-                  </div>
-               </div>
-            </div>
-
-            <!-- Card 4: Arthroscopy Knee, Shoulder & Ankle -->
-            <div class="col-lg-3 col-md-6 mb-4">
-               <div class="card">
-                  <img src="fertImages/20.jpg" class="card-img-top" alt="Arthroscopy Knee, Shoulder & Ankle">
-                  <div class="card-body">
-                     <h6 class="card-title" style="font-size: 17px; text-align: center;">Blastocyst Culture</h6>
-                     <!-- <p class="card-text">
-                        Minimally invasive arthroscopic procedures for knee, shoulder, and ankle joints. Improve joint function and recovery.
-                     </p> -->
-                     <a href="fertilityServices/fertility4.html" class="btn btn-primary btn-appointment btn-block">Learn
-                        More</a>
-                  </div>
-               </div>
-            </div>
-
+            <button class="slider-button prev" onclick="prevSlide()">&#10094;</button>
+            <button class="slider-button next" onclick="nextSlide()">&#10095;</button>
          </div>
-
       </div>
    </section>
 
+   
+   <!-- ortho section  -->
    <section id="aboutus" class="my-5">
       <div class="container-fluid">
          <h4 class="text-center mb-5">Orthopaedic Services</h4>
@@ -656,7 +579,7 @@
 
                <!-- Card 3: Joint Replacement -->
                <div class="card">
-                  <img src="orthoImages/o10.jpg" alt="Joint Replacement">
+                  <img src="orthoImages/o12.jpg" alt="Joint Replacement">
                   <div class="card-body">
                      <h6 class="card-title">Joint Replacement</h6>
                      <a href="orthopaedic/ortho3.html" class="btn btn-primary btn-appointment">Learn More</a>
@@ -678,6 +601,7 @@
          </div>
       </div>
    </section>
+
 
    <!-- Maps -->
    <section class="py-5">
@@ -772,38 +696,38 @@
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
    <script>
-      const sliderWrapper = document.querySelector('.slider-wrapper');
-      const cards = document.querySelectorAll('.card');
       let currentIndex = 0;
-      const visibleCards = 1; // Number of visible cards
+      const cards = document.querySelectorAll('.slider-wrapper .card');
+      const totalCards = cards.length;
 
       function updateSlider() {
-         const cardWidth = cards[0].offsetWidth;
-         const offset = -cardWidth * (visibleCards * currentIndex);
-         sliderWrapper.style.transform = `translateX(${offset}px)`;
-      }
+         const sliderWrapper = document.querySelector('.slider-wrapper');
+         const cardsVisible = window.innerWidth < 768 ? 1 : 3;
+         sliderWrapper.style.transform = `translateX(-${currentIndex * (100 / cardsVisible)}%)`;
 
-      function nextSlide() {
-         if (currentIndex < cards.length - visibleCards) {
-            currentIndex++;
-            updateSlider();
-         }
+         document.querySelector('.prev').disabled = currentIndex === 0;
+         document.querySelector('.next').disabled = currentIndex === Math.ceil(totalCards / cardsVisible) - 1;
       }
 
       function prevSlide() {
+         const cardsVisible = window.innerWidth < 768 ? 1 : 3;
          if (currentIndex > 0) {
             currentIndex--;
             updateSlider();
          }
       }
 
-      // Initialize slider position
-      updateSlider();
+      function nextSlide() {
+         const cardsVisible = window.innerWidth < 768 ? 1 : 3;
+         if (currentIndex < Math.ceil(totalCards / cardsVisible) - 1) {
+            currentIndex++;
+            updateSlider();
+         }
+      }
 
-      // Optional: Update card width on resize to ensure responsiveness
-      window.addEventListener('resize', () => {
-         updateSlider();
-      });
+      window.addEventListener('resize', updateSlider);
+
+      updateSlider();
    </script>
 
 </body>
