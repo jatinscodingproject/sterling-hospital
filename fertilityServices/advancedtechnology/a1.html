@@ -17,60 +17,20 @@
     <title>Our Doctors | Sterling Hospital</title>
     <link rel="stylesheet" href="../../style.css">
     <style>
+        .pgt-image {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
         .info-box {
             background: #f8f9fa;
             padding: 20px;
             border-radius: 5px;
             margin-top: 20px;
-        }
-
-        .section {
-            margin-bottom: 20px;
-        }
-
-        .section img {
-            max-width: 100%;
-            display: block;
-            margin: 20px auto;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        @media (min-width: 992px) {
-            #eggDonationImage {
-                max-width: 50%;
-                height: auto;
-            }
-        }
-
-        #eggDonationImage {
-            border: 1px solid #ccc;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            height: auto;
-        }
-
-        #eggDonationImage:hover {
-            transform: scale(0.98);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .image-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        @media (max-width: 768px) {
-            .image-card {
-                margin-bottom: 15px;
-            }
         }
     </style>
 </head>
@@ -314,115 +274,158 @@
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h2>Preimplantation Genetic Diagnosis (PGD)</h2>
-            <p class="lead">An overview of the process, benefits, and considerations for individuals and couples looking
-                to achieve pregnancy through assisted reproductive technology.</p>
+            <h2>Preimplantation Genetic Testing (PGT)</h2>
+            <p class="lead">An advanced technique used in conjunction with In Vitro Fertilization (IVF) to screen
+                embryos for genetic abnormalities before implantation, increasing the chances of a successful pregnancy
+                and a healthy baby.</p>
         </div>
     </div>
 
-    <!-- Donor Egg IVF Section -->
-    <div class="container" id="donor_egg_ivf">
-        <div class="info-box" id="infoBox2">
-            <div class="image-container">
-                <img id="eggDonationImage" src="../../fertImages/donoregg.jpg" class="img-fluid" alt="Egg Donation Image">
+
+    <!-- Preimplantation Genetic Testing (PGT) Section -->
+    <div class="container my-3" id="preimplantation_genetic_testing">
+        <div class="info-box">
+            <h3 class="text-center">Types of PGT</h3>
+
+            <!-- PGT-A Section -->
+            <div class="row align-items-center mb-4">
+                <div class="col-md-4">
+                    <img src="https://pacgenomics.com/wp-content/uploads/2019/08/pacgenomics-PGTA-Preimplantation-Genetic-Testing-for-Aneuploidies-process-biopsy.jpg"
+                        alt="PGT-A Image" class="img-fluid pgt-image">
+                </div>
+                <div class="col-md-8">
+                    <h5>PGT-A (Preimplantation Genetic Testing for Aneuploidy)</h5>
+                    <p><strong>Purpose:</strong> Detects an abnormal number of chromosomes (aneuploidy) in embryos.</p>
+                    <p><strong>Benefit:</strong> Reduces the risk of miscarriage and increases the likelihood of a
+                        successful pregnancy by selecting embryos with the correct number of chromosomes.</p>
+                    <h6>Who Should Consider PGT-A:</h6>
+                    <ul>
+                        <li><strong>Women of Advanced Maternal Age:</strong> Women over 35 have a higher risk of
+                            chromosomal abnormalities in their eggs.</li>
+                        <li><strong>Couples with Recurrent Pregnancy Loss:</strong> Can help identify embryos with the
+                            correct number of chromosomes to improve pregnancy outcomes.</li>
+                        <li><strong>Previous IVF Failures:</strong> Beneficial for couples who have undergone several
+                            unsuccessful IVF cycles.</li>
+                        <li><strong>Male Factor Infertility:</strong> Can reduce higher rates of chromosomal
+                            abnormalities in embryos.</li>
+                    </ul>
+                </div>
             </div>
-            <h3>Donor Egg IVF</h3>
 
-            <p>Donor Egg In Vitro Fertilization (IVF) is a specialized fertility treatment that involves using eggs from
-                a
-                donor to help individuals and couples achieve pregnancy. This procedure is particularly beneficial for
-                women
-                who are unable to conceive using their own eggs due to various medical conditions or age-related
-                factors.
-            </p>
+            <!-- PGT-M Section -->
+            <div class="row align-items-center mb-4">
+                <div class="col-md-4">
+                    <img src="https://www.bestivfclinic.co.in/wp-content/uploads/2021/12/Preimplantation-Genetic-Testing.jpg"
+                        alt="PGT-M Image" class="img-fluid pgt-image">
+                </div>
+                <div class="col-md-8">
+                    <h5>PGT-M (Preimplantation Genetic Testing for Monogenic Disorders)</h5>
+                    <p><strong>Purpose:</strong> Screens embryos for specific single-gene disorders, such as
+                        Thalassemia, sickle cell anemia, hemophilia, cystic fibrosis, or Huntington's disease.</p>
+                    <p><strong>Benefit:</strong> Prevents the transmission of known genetic disorders to offspring.</p>
+                    <h6>Who Should Consider PGT-M:</h6>
+                    <ul>
+                        <li><strong>Known Genetic Disorders:</strong> For couples where one or both partners are
+                            carriers of a single-gene disorder.</li>
+                        <li><strong>Family History of Genetic Disorders:</strong> Helps prevent known genetic conditions
+                            from being passed on to offspring.</li>
+                        <li><strong>Ethnic Backgrounds with Higher Risk:</strong> Certain ethnic groups have a higher
+                            prevalence of specific genetic disorders.</li>
+                    </ul>
+                </div>
+            </div>
 
-            <h5>What is Donor Egg IVF?</h5>
-            <p>Donor Egg IVF is a form of assisted reproductive technology where eggs from a healthy donor are
-                fertilized
-                with sperm in a laboratory setting. The resulting embryos are then transferred to the recipient's
-                uterus,
-                with the goal of achieving a successful pregnancy.</p>
+            <!-- PGT-SR Section -->
+            <div class="row align-items-center mb-4">
+                <div class="col-md-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScUl9l0kjbclZ6feD6nT4k2t1PKYgItLuaDdMjZ1_ctNRA9rHQzlLp1cMJH9PoR-0l3IQ&usqp=CAU"
+                        alt="PGT-SR Image" class="img-fluid pgt-image">
+                </div>
+                <div class="col-md-8">
+                    <h5>PGT-SR (Preimplantation Genetic Testing for Structural Rearrangements)</h5>
+                    <p><strong>Purpose:</strong> Identifies structural chromosomal abnormalities like translocations or
+                        inversions.</p>
+                    <p><strong>Benefit:</strong> Ensures that embryos with balanced chromosomal structures are selected,
+                        reducing the risk of genetic disorders and miscarriage.</p>
+                    <h6>Who Should Consider PGT-SR:</h6>
+                    <ul>
+                        <li><strong>Chromosomal Rearrangements:</strong> For couples where one partner carries a
+                            balanced chromosomal rearrangement.</li>
+                        <li><strong>Recurrent Pregnancy Loss:</strong> Beneficial for couples with multiple miscarriages
+                            due to structural chromosomal abnormalities.</li>
+                        <li><strong>Previous Children with Chromosomal Abnormalities:</strong> Helps in selecting
+                            embryos with balanced chromosomes.</li>
+                    </ul>
+                </div>
+            </div>
 
-            <h5>Who Can Benefit from Donor Egg IVF?</h5>
-            <p>Donor Egg IVF is an option for:</p>
+            <h5>Procedure</h5>
+            <p><strong>IVF Process:</strong></p>
             <ul>
-                <li>Women with diminished ovarian reserve or poor egg quality</li>
-                <li>Women experiencing premature ovarian failure or menopause</li>
-                <li>Women with genetic disorders they do not want to pass on to their offspring</li>
-                <li>Couples who have undergone multiple failed IVF cycles with their own eggs</li>
+                <li>Ovarian stimulation to produce multiple eggs.</li>
+                <li>Retrieval of eggs from the ovaries.</li>
+                <li>Fertilization of eggs with sperm in the laboratory to create embryos.</li>
             </ul>
 
-            <h5>The Donor Egg IVF Process</h5>
-            <p><strong>Selection of the Egg Donor:</strong></p>
+            <p><strong>Embryo Biopsy:</strong></p>
             <ul>
-                <li>Egg donors are typically young, healthy women between the ages of 23 and 35.</li>
-                <li>They undergo rigorous medical, genetic, and psychological screening to ensure suitability.</li>
+                <li>At the blastocyst stage (typically day 5 or 6), a few cells are carefully removed from each embryo.
+                </li>
+                <li>The biopsy is performed without damaging the embryo, which continues to develop.</li>
             </ul>
 
-            <p><strong>Egg Retrieval from the Donor:</strong></p>
+            <p><strong>Genetic Analysis:</strong></p>
             <ul>
-                <li>The donor undergoes a minor surgical procedure to retrieve her eggs after ovarian stimulation.</li>
+                <li>The biopsied cells are sent to a genetic laboratory for analysis.</li>
+                <li>Advanced techniques such as Next Generation Sequencing (NGS) or Comparative Genomic Hybridization
+                    (CGH) are used to examine the genetic material.</li>
             </ul>
 
-            <p><strong>Fertilization and Embryo Culture:</strong></p>
+            <p><strong>Selection of Embryos:</strong></p>
             <ul>
-                <li>The retrieved eggs are fertilized with the sperm from the recipient's partner or a sperm donor in
-                    the
-                    laboratory.</li>
-                <li>The embryos are cultured and monitored for several days.</li>
+                <li>Based on the genetic test results, embryos that are free from abnormalities are selected for
+                    transfer.</li>
+                <li>These embryos are then implanted into the uterus or frozen for future use.</li>
             </ul>
 
-            <p><strong>Embryo Transfer:</strong></p>
+            <h5>Benefits of PGT</h5>
             <ul>
-                <li>The highest quality embryos are selected and transferred to the recipient's uterus.</li>
+                <li><strong>Increased Success Rates:</strong> Higher chances of implantation and successful pregnancy.
+                </li>
+                <li><strong>Reduced Miscarriage Rates:</strong> Selecting embryos with the correct number of chromosomes
+                    significantly reduces the risk of miscarriage.</li>
+                <li><strong>Prevention of Genetic Disorders:</strong> Helps prevent the transmission of genetic diseases
+                    to offspring.</li>
+                <li><strong>Informed Decision Making:</strong> Provides valuable information for prospective parents to
+                    make informed choices about their reproductive options.</li>
             </ul>
 
-            <p><strong>Pregnancy Test:</strong></p>
+            <h5>Considerations</h5>
             <ul>
-                <li>About two weeks after the embryo transfer, a pregnancy test is conducted to determine if the
-                    procedure
-                    was successful.</li>
+                <li><strong>Technical Complexity:</strong> Requires specialized expertise and advanced laboratory
+                    facilities.</li>
+                <li><strong>Cost:</strong> Can be expensive and not affordable to everyone.</li>
             </ul>
 
-            <p><strong>Success Rates and Considerations</strong></p>
+            <h5>General Recommendations</h5>
             <ul>
-                <li>Donor Egg IVF generally has high success rates, particularly because the eggs are sourced from
-                    young, healthy donors.</li>
-                <li>Success rates can vary depending on various factors, including the recipient's health and the
-                    quality of the embryos.</li>
-                <li>It is important for recipients to be aware of the physical, emotional, and financial aspects
-                    involved in the process.</li>
+                <li><strong>Consultation with a Genetic Counselor:</strong> Couples considering PGT should consult with
+                    a genetic counselor to understand their risks and make informed decisions.</li>
+                <li><strong>Personal and Family Medical History:</strong> Detailed personal and family medical histories
+                    can help determine the need for specific types of PGT.</li>
             </ul>
 
-            <p>Donor Egg IVF offers a viable path to parenthood for many individuals and couples who face fertility
-                challenges. With advances in reproductive medicine and robust legal frameworks, this procedure provides
-                hope and new possibilities for building families.</p>
+            <p>PGT is a powerful tool in reproductive medicine, offering hope to couples at risk of genetic disorders
+                and those experiencing recurrent miscarriages or failed IVF attempts. It combines the latest
+                advancements in genetics with the precision of modern reproductive technology to help achieve healthy
+                pregnancies and the birth of healthy babies.</p>
+
+            <p><i><strong>"For more information or to schedule a consultation <a href="tel:+918530064800"
+                            style="font-weight: bold; color: #2c4b6b; text-decoration: underline;"
+                            class="contact">Contact Us</a>. We are here to help
+                        you achieve your dream of parenthood."</strong></i></p>
         </div>
     </div>
-
-    <!-- Conclusion Section -->
-    <div class="container" id="conclusion" style="margin-bottom: 20px;">
-        <div class="info-box" id="infoBox5">
-            <h3>Conclusion</h3>
-
-            <p>Donor Egg IVF offers a valuable option for individuals and couples facing infertility challenges,
-                providing
-                the opportunity to achieve pregnancy and build a family. It involves careful consideration of medical,
-                ethical, and legal aspects to ensure the well-being of all parties involved.</p>
-
-            <p>By understanding the process, ethical considerations, and legal framework surrounding Donor Egg IVF,
-                individuals and couples can make informed decisions and access appropriate support throughout their
-                journey towards parenthood.</p>
-
-            <p>Consulting with fertility specialists, counselors, and legal professionals can provide guidance and
-                clarity
-                on navigating the complexities of assisted reproduction, promoting positive outcomes and
-                patient-centered
-                care.</p>
-
-        </div>
-    </div>
-
 
 
 
@@ -445,7 +448,7 @@
                 <div class="col-md-2 mb-3" id="contact_us">
                     <h5>Navigation</h5>
                     <ul class="list-unstyled">
-                        <li><a href="../../index.html#aboutus">About Us</a></li>
+                        <li><a href="../../aboutus.html">About Us</a></li>
                         <li><a href="../../orthopaedic/ortho1.html">Our Services</a></li>
                         <li><a href="../../doctors.html">Doctors</a></li>
                         <li><a href="../../gallery.html">Gallery</a></li>
