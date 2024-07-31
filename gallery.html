@@ -43,6 +43,43 @@
     <script src="../cdn.jsdelivr.net/npm/popper.js%401.16.0/dist/umd/popper.min.js"></script>
     <title>Sterling Hospital | Best IVF & Fertility Hospital in Virar</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+         .container-fluid.bg-light {
+        padding: 15px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .gallery-item {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 600px; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensures the image covers the container */
+        max-height: 600px; /* Adjust the maximum height as needed */
+        border-radius: 5px; /* Optional: adds rounded corners */
+    }
+
+    @media (max-width: 768px) {
+        .gallery-item {
+            flex: 0 0 50%; /* Two items per row on small screens */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .gallery-item {
+            flex: 0 0 100%; /* One item per row on extra-small screens */
+        }
+    }
+    </style>
 </head>
 
 <body>
@@ -304,43 +341,41 @@
     <!-- section 2 -->
     <div class="container-fluid bg-light">
         <div class="row">
-            <div class="row">
-                <div class="col-md-4 gallery-item">
-                    <img src="g10.webp" alt="Image 10" data-toggle="modal" data-target="#imageModal10" style="height: auto;" loading="lazy">
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="g1.webp" alt="Image 1" data-toggle="modal" data-target="#imageModal1" style="height: 400px;" loading="lazy">
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="g2.webp" alt="Image 2" data-toggle="modal" data-target="#imageModal2" style="height: 400px;" loading="lazy">
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="g3.webp" alt="Image 3" data-toggle="modal" data-target="#imageModal3" style="height: 400px;" loading="lazy">
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="g4.webp" alt="Image 4" data-toggle="modal" data-target="#imageModal4" style="height: 400px;" loading="lazy">
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="g5.webp" alt="Image 5" data-toggle="modal" data-target="#imageModal5" style="height: 400px;" loading="lazy">
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="g6.webp" alt="Image 6" data-toggle="modal" data-target="#imageModal6" style="height: 400px;" loading="lazy">
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="g7.webp" alt="Image 7" data-toggle="modal" data-target="#imageModal7" style="height: 400px;" loading="lazy">
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="g8.webp" alt="Image 8" data-toggle="modal" data-target="#imageModal8" style="height: 400px;" loading="lazy">
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="g9.webp" alt="Image 9" data-toggle="modal" data-target="#imageModal9" style="height: 400px;" loading="lazy">
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="g11.webp" alt="Image 11" data-toggle="modal" data-target="#imageModal11" style="height: 400px;" loading="lazy">
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="g12.webp" alt="Image 12" data-toggle="modal" data-target="#imageModal12" style="height: 400px;" loading="lazy">
-                </div>
+            <div class="gallery-item col-md-4">
+                <img src="g10.webp" alt="Image 10" data-toggle="modal" data-target="#imageModal10" loading="lazy">
+            </div>
+            <div class="gallery-item col-md-4">
+                <img src="g1.webp" alt="Image 1" data-toggle="modal" data-target="#imageModal1" loading="lazy">
+            </div>
+            <div class="gallery-item col-md-4">
+                <img src="g2.webp" alt="Image 2" data-toggle="modal" data-target="#imageModal2" loading="lazy">
+            </div>
+            <div class="gallery-item col-md-4">
+                <img src="g3.webp" alt="Image 3" data-toggle="modal" data-target="#imageModal3" loading="lazy">
+            </div>
+            <div class="gallery-item col-md-4">
+                <img src="g4.webp" alt="Image 4" data-toggle="modal" data-target="#imageModal4" loading="lazy">
+            </div>
+            <div class="gallery-item col-md-4">
+                <img src="g5.webp" alt="Image 5" data-toggle="modal" data-target="#imageModal5" loading="lazy">
+            </div>
+            <div class="gallery-item col-md-4">
+                <img src="g6.webp" alt="Image 6" data-toggle="modal" data-target="#imageModal6" loading="lazy">
+            </div>
+            <div class="gallery-item col-md-4">
+                <img src="g7.webp" alt="Image 7" data-toggle="modal" data-target="#imageModal7" loading="lazy">
+            </div>
+            <div class="gallery-item col-md-4">
+                <img src="g8.webp" alt="Image 8" data-toggle="modal" data-target="#imageModal8" loading="lazy">
+            </div>
+            <div class="gallery-item col-md-4">
+                <img src="g9.webp" alt="Image 9" data-toggle="modal" data-target="#imageModal9" loading="lazy">
+            </div>
+            <div class="gallery-item col-md-4">
+                <img src="g11.webp" alt="Image 11" data-toggle="modal" data-target="#imageModal11" loading="lazy">
+            </div>
+            <div class="gallery-item col-md-4">
+                <img src="g12.webp" alt="Image 12" data-toggle="modal" data-target="#imageModal12" loading="lazy">
             </div>
         </div>
     </div>
