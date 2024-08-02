@@ -17,17 +17,44 @@
    <title>Our Doctors | Sterling Hospital</title>
    <link rel="stylesheet" href="../style.css">
    <style>
+      .jumbotron {
+         width: 100%;
+         background-image: url("https://birlafertility.com/wp-content/uploads/2021/03/ivf_banner-desktop.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         position: relative;
+         min-height: 400px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      #back_img {
+         background: #fff;
+         padding: 20px;
+         border-radius: 8px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         position: absolute;
+         top: 87%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 30%;
+         box-sizing: border-box;
+      }
+
+      #back_img {
+         background: rgba(255, 255, 255, 0.8);
+         padding: 20px;
+         border-radius: 8px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         margin-top: 50px;
+         width: auto;
+      }
+
       .zoom-effect-container {
          position: relative;
          overflow: hidden;
-      }
-
-      .image-card {
-         width: 100%;
-         height: 300px;
-         object-fit: cover;
-         transition: transform 0.5s ease;
-         margin-bottom: 10px;
       }
 
       .zoom-effect-container:hover .image-card {
@@ -35,6 +62,7 @@
       }
 
       #info-box {
+         margin-top: 100px;
          background: #f8f9fa;
          padding: 20px;
          border-radius: 5px;
@@ -42,78 +70,27 @@
          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
-      h3,
-      h5 {
-         color: #2c4b6b;
+      #info-box img {
+         width: 100%;
+         height: 100%;
       }
 
-      p,
-      ul {
-         line-height: 1.6;
-      }
-
-      ul {
-         padding-left: 20px;
-      }
-
-      .info-box-header {
-         display: flex;
-         flex-wrap: wrap;
-         align-items: flex-start;
-      }
-
-      .info-box-header .images-container {
-         flex: 1 1 30%;
-         max-width: 30%;
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
-         margin-right: 20px;
-      }
-
-      .info-box-header .images-container .col-md-4 {
-         flex: 1 1 100%;
-         margin-bottom: 20px;
-      }
-
-      .info-box-content {
-         flex: 1 1 70%;
-         max-width: 100%;
-      }
-
-      .toggle-content {
-         display: none;
-         margin-top: 10px;
-      }
-
-      .toggle-icon {
-         cursor: pointer;
-         display: inline-block;
-         transition: transform 0.3s ease;
-      }
-
-      .rotate {
-         transform: rotate(45deg);
-      }
-
-      @media (max-width: 768px) {
-         .info-box-header {
-            flex-direction: column;
-            align-items: flex-start;
+      @media (max-width: 680px) {
+         #back_img {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 79%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30%;
+            box-sizing: border-box;
          }
 
-         .info-box-header .images-container {
-            max-width: 100%;
-            margin-right: 0;
-         }
-
-         .info-box-header .images-container .col-md-4 {
-            flex: 1 1 100%;
-            margin-right: 0;
-         }
-
-         .info-box-content {
-            max-width: 100%;
+         #back_img {
+            width: 100%;
          }
       }
    </style>
@@ -348,156 +325,64 @@
 
    <!-- middle section -->
    <div class="jumbotron jumbotron-fluid">
-      <div class="container-fluid">
-         <h2 style="color: #2c4b6b;" class="text-center">In Vitro Fertilization (IVF) Care</h2>
-         <p class="lead text-center" style="color: #7a5a4b;">Comprehensive Fertility Treatment in Virar & Mumbai</p>
+      <div class="container-fluid" id="back_img">
+         <h4 style="color: #2c4b6b; font-size: 20pxx; font-weight: bold;" class="text-center">In Vitro Fertilization
+            (IVF)</h4>
       </div>
    </div>
 
-   <div class="container-fluid my-3">
-      <div class="info-box" id="info-box">
-         <div class="info-box-content">
-            <h3>In Vitro Fertilization (IVF)</h3>
-            <p>Welcome to Sterling Orthopaedic and IVF Centre, where we specialize in providing comprehensive and
-               compassionate fertility care. Our In Vitro Fertilization (IVF) program is dedicated to helping couples
-               achieve their dream of parenthood with the highest standards of medical excellence and personalized
-               attention.</p>
-            <div class="container my-3">
-               <div class="row">
-                  <div class="col-md-4">
-                     <div class="zoom-effect-container">
-                        <img src="../fertImages/13.jpg" class="img-fluid image-card" alt="ICSI Procedure">
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="zoom-effect-container">
-                        <img src="../fertImages/14.jpg" class="img-fluid image-card" alt="Fertility Clinic">
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="zoom-effect-container">
-                        <img src="../fertImages/15.jpg" class="img-fluid image-card" alt="Embryo Development">
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <hr>
-            <h5><span class="toggle-icon">+</span> What is IVF?</h5>
-            <div class="toggle-content">
-               <p>In Vitro Fertilization (IVF) is an advanced assisted reproductive technology (ART) used to help
-                  individuals and couples conceive a child. The process involves retrieving eggs from a woman's
-                  ovaries, fertilizing them with sperm in a laboratory, and then transferring the resulting embryos
-                  into the woman's uterus. IVF bypasses certain infertility issues and enhances the chances of a
-                  successful pregnancy.</p>
-            </div>
-            <hr>
-            <h5><span class="toggle-icon">+</span> Indications for IVF</h5>
-            <div class="toggle-content">
-               <p>IVF is recommended for various fertility challenges, including:</p>
-               <ul>
-                  <li><strong>Tubal Factor Infertility:</strong> Blocked or damaged fallopian tubes that prevent the
-                     egg and sperm from meeting.</li>
-                  <li><strong>Male Factor Infertility:</strong> Low sperm count, poor sperm motility, or abnormal
-                     sperm morphology.</li>
-                  <li><strong>Unexplained Infertility:</strong> No identifiable cause despite thorough evaluation.
-                  </li>
-                  <li><strong>Endometriosis:</strong> Severe cases that interfere with ovulation, fertilization, or
-                     implantation.</li>
-                  <li><strong>Ovulation Disorders:</strong> Conditions like Polycystic Ovary Syndrome (PCOS) and
-                     other hormonal disorders affecting ovulation.</li>
-                  <li><strong>Premature Ovarian Failure:</strong> Early menopause or significantly reduced ovarian
-                     function.</li>
-                  <li><strong>Genetic Disorders:</strong> Risk of passing on hereditary conditions, managed with
-                     Preimplantation Genetic Testing (PGT).</li>
-                  <li><strong>Previous Fertility Treatment Failures:</strong> Unsuccessful outcomes from fertility
-                     medications, intrauterine insemination (IUI), or surgery.</li>
-                  <li><strong>Age-Related Infertility:</strong> Advanced maternal age affecting egg quantity and
-                     quality.</li>
-                  <li><strong>Cancer Patients:</strong> Fertility preservation before undergoing treatments like
-                     chemotherapy or radiation.</li>
-                  <li><strong>Recurrent Pregnancy Loss:</strong> Multiple miscarriages that may benefit from genetic
-                     testing of embryos.</li>
-               </ul>
-            </div>
-            <hr>
-            <h5><span class="toggle-icon">+</span> Our Comprehensive IVF Services</h5>
-            <div class="toggle-content">
-               <h6>Initial Consultation and Assessment</h6>
-               <ul>
-                  <li><strong>Detailed Evaluation:</strong> Our fertility specialists conduct a thorough medical
-                     history review, physical examination, and diagnostic testing to identify the underlying causes
-                     of infertility.</li>
-                  <li><strong>Customized Treatment Plans:</strong> Based on your assessment, we create a personalized
-                     treatment plan designed to optimize your chances of success.</li>
-               </ul>
-            </div>
-            <hr>
-            <h5><span class="toggle-icon">+</span> Advanced Diagnostic Testing</h5>
-            <div class="toggle-content">
-               <ul>
-                  <li><strong>Hormonal Testing:</strong> Comprehensive hormone profiling to assess ovarian reserve
-                     and reproductive health.</li>
-                  <li><strong>Ultrasound Scans:</strong> High-resolution imaging to evaluate the health of
-                     reproductive organs.</li>
-                  <li><strong>Male Fertility Testing:</strong> Semen analysis and additional tests to assess male
-                     fertility factors.</li>
-               </ul>
-            </div>
-            <hr>
-            <h5><span class="toggle-icon">+</span> IVF Treatment Cycle</h5>
-            <div class="toggle-content">
-               <ul>
-                  <li><strong>Ovarian Stimulation:</strong> Medications are used to stimulate the ovaries to produce
-                     multiple eggs.</li>
-                  <li><strong>Egg Retrieval:</strong> A minor surgical procedure to collect mature eggs from the
-                     ovaries.</li>
-                  <li><strong>Sperm Collection:</strong> Collection of a sperm sample from the male partner or a
-                     donor.</li>
-                  <li><strong>Fertilization:</strong> Eggs and sperm are combined in the laboratory to facilitate
-                     fertilization.</li>
-                  <li><strong>Embryo Culture:</strong> Monitoring the development of fertilized eggs (embryos) in a
-                     controlled environment.</li>
-                  <li><strong>Embryo Transfer:</strong> The best-quality embryos are transferred into the uterus for
-                     implantation.</li>
-               </ul>
-            </div>
-            <hr>
-            <h5><span class="toggle-icon">+</span> State-of-the-Art Facilities</h5>
-            <div class="toggle-content">
-               <p>Our modern IVF laboratory is equipped with cutting-edge technology for embryo culture, genetic
-                  testing, and cryopreservation. We also offer private consultation rooms to ensure your privacy and
-                  comfort throughout your treatment journey.</p>
-            </div>
-            <hr>
-            <h5><span class="toggle-icon">+</span> Success Rates and Patient Stories</h5>
-            <div class="toggle-content">
-               <p>At Sterling IVF, we pride ourselves on our impressive success rates, reflecting our commitment to
-                  excellence and patient care. We invite you to read heartwarming testimonials from couples who have
-                  successfully achieved their dream of parenthood with our help.</p>
-            </div>
-            <hr>
-            <div>
-               <p>Your journey to parenthood starts here. Contact Us on <a href="tel:+918530064800"
-                     style="font-weight: bold; color: #2c4b6b; text-decoration: underline;"
-                     class="contact">+918530064800</a> today to schedule a consultation or visit our state-of-the-art
-                  facility. Together, we can
-                  help you achieve the dream of building your family.</p>
-               <p><i><strong>"Book an appointment today and let us help you achieve your dream of
-                        parenthood!"</strong></i></p>
-            </div>
+   <div class="container-fluid my-5" id="info-box">
+      <div class="row justify-content-center align-items-center">
+         <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <h4 style="font-weight: bold;">IVF at Sterling Orthopaedic and IVF Centre & IVF</h4>
+            <p>In Vitro Fertilisation (IVF) is the most eﬀective form of assisted reproductive technology. It is a
+               series of procedures used to assist with the conception of a baby. During IVF, mature eggs are collected
+               from a woman’s ovaries and fertilised with sperm under laboratory conditions.
+               <br><br>
+               The fertilised eggs are monitored in a lab for several days until embryos form. The embryos are then
+               transferred to the uterus to grow and develop.
+               <br><br>
+               At Birla Fertility & IVF, we offer world-class IVF treatment for people struggling with fertility issues.
+               It is one several techniques available to help people with fertility problems have a baby.
+            </p>
+         </div>
+         <div class="col-lg-6 d-flex justify-content-center align-items-center">
+            <img
+               src="https://media.istockphoto.com/id/1292821427/photo/microscopic-research-of-in-vitro-fertilization-ivf.jpg?s=612x612&w=0&k=20&c=K41BS7jmigICl75HbbFXvcyjKYAZDW3Z2XVWYqu7gVc="
+               class="img-fluid" alt="IVF">
          </div>
       </div>
    </div>
 
-   <div class="container-fluid my-3">
-      <h3 class="text-center">Learn More About IVF</h3>
-      <div class="video-container" id="videoBox">
-         <video id="boneMuscleVideo" width="100%" controls>
-            <source src="../fertImages/VID-20240624-WA0000.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-         </video>
+   <div class="container-fluid my-5">
+      <div class="text-center mb-4">
+         <h4 style="font-weight: bold;">Why IVF?</h4>
+      </div>
+      <div class="row justify-content-center align-items-center">
+         <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+            <img src="https://birlafertility.com/wp-content/uploads/2021/02/blocked-damage.png" alt="whyivf1"
+               class="img-fluid">
+            <h6 class="text-center" style="margin-top: 10px; font-weight: bold;">Blocked or damaged fallopian tubes</h6>
+         </div>
+         <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+            <img src="https://birlafertility.com/wp-content/uploads/2021/02/ovalution.png" alt="whyivf1"
+               class="img-fluid">
+            <h6 class="text-center" style="margin-top: 10px; font-weight: bold;">Ovulation disorders, premature ovarian failure</h6>
+         </div>
+         <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+            <img src="https://birlafertility.com/wp-content/uploads/2021/02/pelivic.png" alt="whyivf1"
+               class="img-fluid">
+               <h6 class="text-center" style="margin-top: 10px; font-weight: bold;">Pelvic adhesions</h6>
+         </div>
+         <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+            <img src="https://birlafertility.com/wp-content/uploads/2021/02/Endometriosis.png" alt="whyivf1"
+               class="img-fluid">
+               <h6 class="text-center" style="margin-top: 10px; font-weight: bold;">Endometriosis</h6>
+         </div>
       </div>
    </div>
+
+
 
    <!-- Footer -->
    <footer id="contactus" class="py-3">
@@ -508,7 +393,8 @@
                <p>Sterling Hospital is dedicated to providing exceptional medical care with integrity and compassion.
                   Our state-of-the-art facilities and highly skilled medical professionals ensure that each patient
                   receives personalized and comprehensive treatment. We prioritize patient well-being and strive to
-                  create a supportive and healing environment. Whether it's routine check-ups, specialized treatments,
+                  create a supportive and healing environment. Whether it's routine check-ups, specialized
+                  treatments,
                   or emergency care, our commitment to excellence remains unwavering.</p>
             </div>
             <div class="col-md-2 mb-3" id="contact_us">
