@@ -54,7 +54,15 @@
 
       .zoom-effect-container {
          position: relative;
+         width: 100%;
          overflow: hidden;
+      }
+
+      .image-card {
+         width: 100%;
+         height: 400px;
+         object-fit: cover;
+         transition: transform 0.5s ease;
       }
 
       .zoom-effect-container:hover .image-card {
@@ -62,12 +70,17 @@
       }
 
       #info-box {
-         margin-top: 100px;
          background: #f8f9fa;
          padding: 20px;
          border-radius: 5px;
          margin-top: 20px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 768px) {
+         .image-card {
+            margin-bottom: 15px;
+            height: 300px;
+         }
       }
 
       #info-box img {
@@ -96,31 +109,6 @@
          z-index: -1;
       }
 
-      .question-list {
-         cursor: pointer;
-         padding: 10px;
-         border-bottom: 1px solid #ddd;
-         color: #1a355d;
-         font-weight: bold;
-      }
-
-      .question-list:hover {
-         background-color: #aca2a2;
-      }
-
-      .question-list.active {
-         color: #ffb6c1;
-         font-weight: bold;
-      }
-
-      .answer {
-         display: none;
-      }
-
-      .answer {
-         margin-left: 20px;
-         margin-top: 20px;
-      }
 
       .custom-hr {
          height: 1px;
@@ -128,15 +116,7 @@
          background-color: #ffb6c1;
       }
 
-      .toggle-icon {
-         transition: transform 0.3s ease;
-         margin-right: 10px;
-         font-size: 18px
-      }
-
-      .question-list.active .toggle-icon {
-         transform: rotate(45deg)
-      }
+      
 
       .row-equal-height {
          display: flex;
@@ -313,17 +293,12 @@
       @media (min-width: 768px) {
          .card {
             flex: 0 0 calc(33.33% - 20px);
-            /* Show three cards at a time, adjusting for gaps */
             margin: 0 10px;
-            /* Add margin to create space between cards */
          }
       }
-
-      /* Ensure no gap on smaller screens */
       @media (max-width: 767px) {
          .card {
             margin: 0;
-            /* No margin for smaller screens */
          }
       }
 
@@ -349,7 +324,6 @@
          text-align: center;
       }
 
-      /* Slider buttons styling */
       .slider-button {
          position: absolute;
          top: 50%;
@@ -719,147 +693,117 @@
       </div>
    </div>
 
-   <div class="container-fluid my-5" id="info-box">
-      <div class="row justify-content-center align-items-center">
-         <div class="col-lg-6 d-flex flex-column justify-content-center">
-            <h4 style="font-weight: bold;">IVF at Sterling Orthopaedic and IVF Centre & IVF</h4>
-            <p>Welcome to Sterling Orthopaedic and IVF Centre, where we specialize in providing comprehensive and
-               compassionate fertility care. Our In Vitro Fertilization (IVF) program is dedicated to helping couples
-               achieve their dream of parenthood with the highest standards of medical excellence and personalized
-               attention.
-            </p>
-         </div>
-         <div class="col-lg-6 d-flex justify-content-center align-items-center">
-            <img
-               src="https://media.istockphoto.com/id/1292821427/photo/microscopic-research-of-in-vitro-fertilization-ivf.jpg?s=612x612&w=0&k=20&c=K41BS7jmigICl75HbbFXvcyjKYAZDW3Z2XVWYqu7gVc="
-               class="img-fluid" alt="IVF">
-         </div>
-      </div>
-   </div>
-
    <div class="container-fluid my-5">
-      <div class="text-center mb-4">
-         <h4 style="font-weight: bold;">Why IVF?</h4>
-      </div>
-      <div class="row justify-content-center align-items-center">
-         <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
-            <img src="../fertImages/blocked-damage.webp" alt="whyivf1" class="img-fluid" style="margin-top: 10px;">
-            <h6 class="text-center" style="margin-top: 10px; font-weight: bold;">Blocked or damaged fallopian tubes</h6>
-         </div>
-         <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
-            <img src="../fertImages/ovalution.webp" alt="whyivf1" class="img-fluid" style="margin-top: 10px;">
-            <h6 class="text-center" style="margin-top: 10px; font-weight: bold;">Ovulation disorders, premature ovarian
-               failure</h6>
-         </div>
-         <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
-            <img src="../fertImages/pelivic.webp" alt="whyivf1" class="img-fluid" style="margin-top: 10px;">
-            <h6 class="text-center" style="margin-top: 10px; font-weight: bold;">Pelvic adhesions</h6>
-         </div>
-         <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
-            <img src="../fertImages/Endometriosis.webp" alt="whyivf1" class="img-fluid" style="margin-top: 10px;">
-            <h6 class="text-center" style="margin-top: 10px; font-weight: bold;">Endometriosis</h6>
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-4">
+               <div class="zoom-effect-container">
+                  <img src="../fertImages/13.jpg" class="img-fluid image-card" alt="IVF Procedure">
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="zoom-effect-container">
+                  <img src="../fertImages/14.jpg" class="img-fluid image-card" alt="Fertility Consultation">
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="zoom-effect-container">
+                  <img src="../fertImages/15.jpg" class="img-fluid image-card" alt="Embryo Transfer">
+               </div>
+            </div>
          </div>
       </div>
-   </div>
+      <div class="info-box" id="info-box">
+         <h4 class="text-center" style="font-weight: bold;">In Vitro Fertilization (IVF)</h4>
+         <p>Welcome to Sterling Orthopaedic and IVF Centre, where we specialize in providing comprehensive and
+            compassionate fertility care. Our In Vitro Fertilization (IVF) program is dedicated to helping couples
+            achieve their dream of parenthood with the highest standards of medical excellence and personalized
+            attention.</p>
 
-   <div class="container-fluid my-5" id="info">
-      <div class="row justify-content-center">
-         <div class="col-12 text-center">
-            <h4 style="font-weight: bold;">The IVF Process</h4>
-            <p>Learn about the different steps involved in the IVF process and get answers to common
-               questions.</p>
-            <hr class="custom-hr">
-         </div>
-      </div>
-      <div class="row justify-content-center align-items-start">
-         <div class="col-md-4">
-            <div class="question-list" data-answer="answer1"><span class="toggle-icon">+</span> What is IVF?
-            </div>
-            <div class="question-list" data-answer="answer2"><span class="toggle-icon">+</span> Indications for
-               IVF.</div>
-            <div class="question-list" data-answer="answer3"><span class="toggle-icon">+</span> Our Comprehensive
-               IVF Services</div>
-            <div class="question-list" data-answer="answer4"><span class="toggle-icon">+</span> IVF Treatment
-               Cycle</div>
-            <div class="question-list" data-answer="answer5"><span class="toggle-icon">+</span> State-of-the-Art
-               Facilities</div>
-            <div class="question-list" data-answer="answer6"><span class="toggle-icon">+</span> Success Rates and
-               Patient Stories</div>
-         </div>
-         <div class="col-md-8">
-            <div id="answer1" class="answer">
-               <p>In Vitro Fertilization (IVF) is an advanced assisted reproductive technology (ART) used to help
-                  individuals and couples conceive a child. The process involves retrieving eggs from a woman's
-                  ovaries, fertilizing them with sperm in a laboratory, and then transferring the resulting embryos
-                  into the woman's uterus. IVF bypasses certain infertility issues and enhances the chances of a
-                  successful pregnancy.</p>
-            </div>
-            <div id="answer2" class="answer">
-               <p>IVF is recommended for various fertility challenges, including:</p>
-               <ul>
-                  <li><strong>Tubal Factor Infertility:</strong> Blocked or damaged fallopian tubes that prevent the
-                     egg and sperm from meeting.</li>
-                  <li><strong>Male Factor Infertility:</strong> Low sperm count, poor sperm motility, or abnormal
-                     sperm morphology.</li>
-                  <li><strong>Unexplained Infertility:</strong> No identifiable cause despite thorough evaluation.
-                  </li>
-                  <li><strong>Endometriosis:</strong> Severe cases that interfere with ovulation, fertilization, or
-                     implantation.</li>
-                  <li><strong>Ovulation Disorders:</strong> Conditions like Polycystic Ovary Syndrome (PCOS) and
-                     other hormonal disorders affecting ovulation.</li>
-                  <li><strong>Premature Ovarian Failure:</strong> Early menopause or significantly reduced ovarian
-                     function.</li>
-                  <li><strong>Genetic Disorders:</strong> Risk of passing on hereditary conditions, managed with
-                     Preimplantation Genetic Testing (PGT).</li>
-                  <li><strong>Previous Fertility Treatment Failures:</strong> Unsuccessful outcomes from fertility
-                     medications, intrauterine insemination (IUI), or surgery.</li>
-                  <li><strong>Age-Related Infertility:</strong> Advanced maternal age affecting egg quantity and
-                     quality.</li>
-                  <li><strong>Cancer Patients:</strong> Fertility preservation before undergoing treatments like
-                     chemotherapy or radiation.</li>
-                  <li><strong>Recurrent Pregnancy Loss:</strong> Multiple miscarriages that may benefit from genetic
-                     testing of embryos.</li>
-               </ul>
-               </p>
-            </div>
-            <div id="answer3" class="answer">
-               <h6>Initial Consultation and Assessment</h6>
-               <ul>
-                  <li><strong>Detailed Evaluation:</strong> Our fertility specialists conduct a thorough medical
-                     history review, physical examination, and diagnostic testing to identify the underlying causes
-                     of infertility.</li>
-                  <li><strong>Customized Treatment Plans:</strong> Based on your assessment, we create a personalized
-                     treatment plan designed to optimize your chances of success.</li>
-               </ul>
-            </div>
-            <div id="answer4" class="answer">
-               <ul>
-                  <li><strong>Ovarian Stimulation:</strong> Medications are used to stimulate the ovaries to produce
-                     multiple eggs.</li>
-                  <li><strong>Egg Retrieval:</strong> A minor surgical procedure to collect mature eggs from the
-                     ovaries.</li>
-                  <li><strong>Sperm Collection:</strong> Collection of a sperm sample from the male partner or a
-                     donor.</li>
-                  <li><strong>Fertilization:</strong> Eggs and sperm are combined in the laboratory to facilitate
-                     fertilization.</li>
-                  <li><strong>Embryo Culture:</strong> Monitoring the development of fertilized eggs (embryos) in a
-                     controlled environment.</li>
-                  <li><strong>Embryo Transfer:</strong> The best-quality embryos are transferred into the uterus for
-                     implantation.</li>
-               </ul>
-            </div>
-            <div id="answer5" class="answer">
-               <p>Our modern IVF laboratory is equipped with cutting-edge technology for embryo culture, genetic
-                  testing, and cryopreservation. We also offer private consultation rooms to ensure your privacy and
-                  comfort throughout your treatment journey.</p>
-            </div>
-            <div id="answer6" class="answer">
-               <p>At Sterling IVF, we pride ourselves on our impressive success rates, reflecting our commitment to
-                  excellence and patient care. We invite you to read heartwarming testimonials from couples who have
-                  successfully achieved their dream of parenthood with our help.</p>
-            </div>
+         <h5 class="text-center" style="font-weight: bold;">What is IVF?</h5>
+         <p>In Vitro Fertilization (IVF) is an advanced assisted reproductive technology (ART) used to help individuals
+            and couples conceive a child. The process involves retrieving eggs from a woman's ovaries, fertilizing them
+            with sperm in a laboratory, and then transferring the resulting embryos into the woman's uterus. IVF
+            bypasses certain infertility issues and enhances the chances of a successful pregnancy.</p>
 
-         </div>
+         <h5 class="text-center" style="font-weight: bold;">Indications for IVF</h5>
+         <p>IVF is recommended for various fertility challenges, including:</p>
+         <ul>
+            <li><strong>Tubal Factor Infertility:</strong> Blocked or damaged fallopian tubes that prevent the egg and
+               sperm from meeting.</li>
+            <li><strong>Male Factor Infertility:</strong> Low sperm count, poor sperm motility, or abnormal sperm
+               morphology.</li>
+            <li><strong>Unexplained Infertility:</strong> No identifiable cause despite thorough evaluation.</li>
+            <li><strong>Endometriosis:</strong> Severe cases that interfere with ovulation, fertilization, or
+               implantation.</li>
+            <li><strong>Ovulation Disorders:</strong> Conditions like Polycystic Ovary Syndrome (PCOS) and other
+               hormonal disorders affecting ovulation.</li>
+            <li><strong>Premature Ovarian Failure:</strong> Early menopause or significantly reduced ovarian function.
+            </li>
+            <li><strong>Genetic Disorders:</strong> Risk of passing on hereditary conditions, managed with
+               Preimplantation Genetic Testing (PGT).</li>
+            <li><strong>Previous Fertility Treatment Failures:</strong> Unsuccessful outcomes from fertility
+               medications, intrauterine insemination (IUI), or surgery.</li>
+            <li><strong>Age-Related Infertility:</strong> Advanced maternal age affecting egg quantity and quality.</li>
+            <li><strong>Cancer Patients:</strong> Fertility preservation before undergoing treatments like chemotherapy
+               or radiation.</li>
+            <li><strong>Recurrent Pregnancy Loss:</strong> Multiple miscarriages that may benefit from genetic testing
+               of embryos.</li>
+         </ul>
+
+         <h4 class="text-center" style="font-weight: bold;">Our Comprehensive IVF Services</h4>
+
+         <h5 style="font-weight: bold;">Initial Consultation and Assessment</h5>
+         <ul>
+            <li><strong>Detailed Evaluation:</strong> Our fertility specialists conduct a thorough medical history
+               review, physical examination, and diagnostic testing to identify the underlying causes of infertility.
+            </li>
+            <li><strong>Customized Treatment Plans:</strong> Based on your assessment, we create a personalized
+               treatment plan designed to optimize your chances of success.</li>
+         </ul>
+
+         <h5 style="font-weight: bold;">Advanced Diagnostic Testing</h5>
+         <ul>
+            <li><strong>Hormonal Testing:</strong> Comprehensive hormone profiling to assess ovarian reserve and
+               reproductive health.</li>
+            <li><strong>Ultrasound Scans:</strong> High-resolution imaging to evaluate the health of reproductive
+               organs.</li>
+            <li><strong>Male Fertility Testing:</strong> Semen analysis and additional tests to assess male fertility
+               factors.</li>
+         </ul>
+
+         <h5 style="font-weight: bold;">IVF Treatment Cycle</h5>
+         <ul>
+            <li><strong>Ovarian Stimulation:</strong> Medications are used to stimulate the ovaries to produce multiple
+               eggs.</li>
+            <li><strong>Egg Retrieval:</strong> A minor surgical procedure to collect mature eggs from the ovaries.</li>
+            <li><strong>Sperm Collection:</strong> Collection of a sperm sample from the male partner or a donor.</li>
+            <li><strong>Fertilization:</strong> Eggs and sperm are combined in the laboratory to facilitate
+               fertilization.</li>
+            <li><strong>Embryo Culture:</strong> Monitoring the development of fertilized eggs (embryos) in a controlled
+               environment.</li>
+            <li><strong>Embryo Transfer:</strong> The best-quality embryos are transferred into the uterus for
+               implantation.</li>
+         </ul>
+
+         <h5 style="font-weight: bold;">State-of-the-Art Facilities</h5>
+         <p>Our modern IVF laboratory is equipped with cutting-edge technology for embryo culture, genetic testing, and
+            cryopreservation. We also offer private consultation rooms to ensure your privacy and comfort throughout
+            your treatment journey.</p>
+
+         <h5 style="font-weight: bold;">Success Rates and Patient Stories</h5>
+         <p>At Sterling IVF, we pride ourselves on our impressive success rates, reflecting our commitment to excellence
+            and patient care. We invite you to read heartwarming testimonials from couples who have successfully
+            achieved their dream of parenthood with our help.</p>
+
+         <h5 style="font-weight: bold;">Begin Your Journey with Sterling IVF</h5>
+         <p>Your journey to parenthood starts here. Contact Us at <a href="tel:+918530064800"
+               style="font-weight: bold; color: #2c4b6b; text-decoration: underline;" class="contactss"> +918530046800/+918530064800</a>
+            today to
+            schedule a consultation or visit our state-of-the-art facility. Together, we can help you achieve the dream
+            of building your family.</p>
+         <p><strong><i>"Book an appointment today and let us help you achieve your dream of parenthood!"</i></strong></p>
+
       </div>
    </div>
 
@@ -890,7 +834,7 @@
                      incredibly thankful for their expertise and kindness."</div>
                </div>
                <div class="testimonial-card">
-                  <div class="testimonial-name">Ridzwan Syyed</div>
+                  <div class="testimonial-name">Ridzwan Syyed:</div>
                   <div class="testimonial-message">"The process was seamless, and the results exceeded my expectations.
                      The compassionate and professional staff made me feel at ease throughout the entire procedure. I’m
                      thrilled with the outcome and grateful for the wonderful care I received."</div>
@@ -1140,21 +1084,6 @@
             } else {
                video.pause();
             }
-         });
-      });
-   </script>
-   <script>
-      $(document).ready(function () {
-         $('.question-list').click(function () {
-            var answerId = $(this).data('answer');
-            $('.answer').hide();
-            $('#' + answerId).show();
-
-            // Remove active class from all questions
-            $('.question-list').removeClass('active');
-
-            // Add active class to the clicked question
-            $(this).addClass('active');
          });
       });
    </script>

@@ -663,8 +663,7 @@
                     </div>
                     <!-- Card 5: Vertebroplasty -->
                     <div class="card">
-                        <img src="orthoImages/o7.jpg"
-                            alt="Vertebroplasty">
+                        <img src="orthoImages/o7.jpg" alt="Vertebroplasty">
                         <div class="card-body">
                             <h6 class="card-title" style="font-weight: 200;">Vertebroplasty</h6>
                             <a href="orthopaedic/ortho3.html" class="btn btn-primary btn-appointment">Learn More</a>
@@ -839,55 +838,59 @@
     <script>
         let ivfIndex = 0;
         let orthoIndex = 0;
-
+    
         function showSlides(sliderId, index) {
             const slider = document.getElementById(sliderId);
             const slides = slider.querySelectorAll('.card');
             const totalSlides = slides.length;
-
+    
             const cardsToShow = window.innerWidth >= 768 ? 3 : 1;
-
-            const maxIndex = Math.max(0, Math.ceil((totalSlides / cardsToShow) - 1));
-
+    
+            const maxIndex = Math.max(0, Math.ceil(totalSlides / cardsToShow) - 1);
+    
             index = Math.max(0, Math.min(index, maxIndex));
-
+    
             const sliderWrapper = slider.querySelector('.slider-wrapper');
             sliderWrapper.style.transform = `translateX(${-index * (100 / cardsToShow)}%)`;
-
+    
             if (sliderId === 'ivf-slider') {
                 ivfIndex = index;
             } else if (sliderId === 'ortho-slider') {
                 orthoIndex = index;
             }
-
-            // Disable buttons if no more slides
+    
             toggleButtons(sliderId);
         }
-
+    
         function toggleButtons(sliderId) {
             const slider = document.getElementById(sliderId);
             const slides = slider.querySelectorAll('.card');
-            const cardsToShow = window.innerWidth >= 768 ? 2 : 1;
+            const cardsToShow = window.innerWidth >= 768 ? 3 : 1;
             const totalSlides = slides.length;
-            const maxIndex = Math.max(0, Math.ceil((totalSlides / cardsToShow) - 1));
-
+            const maxIndex = Math.max(0, Math.ceil(totalSlides / cardsToShow) - 1);
+    
+            const prevButton = slider.querySelector('.prev');
+            const nextButton = slider.querySelector('.next');
+    
             if (sliderId === 'ivf-slider') {
-                document.querySelector(`#${sliderId} .prev`).disabled = ivfIndex === 0;
-                document.querySelector(`#${sliderId} .next`).disabled = ivfIndex >= maxIndex;
+                prevButton.disabled = ivfIndex === 0;
+                nextButton.disabled = ivfIndex >= maxIndex;
             } else if (sliderId === 'ortho-slider') {
-                document.querySelector(`#${sliderId} .prev`).disabled = orthoIndex === 0;
-                document.querySelector(`#${sliderId} .next`).disabled = orthoIndex >= maxIndex;
+                prevButton.disabled = orthoIndex === 0;
+                nextButton.disabled = orthoIndex >= maxIndex;
             }
         }
-
+    
         function nextSlide(sliderId) {
-            if (sliderId === 'ivf-slider' && ivfIndex < Math.max(0, Math.ceil((document.querySelectorAll(`#${sliderId} .card`).length / (window.innerWidth >= 768 ? 3 : 1)) - 1))) {
+            const maxIndex = Math.max(0, Math.ceil(document.querySelectorAll(`#${sliderId} .card`).length / (window.innerWidth >= 768 ? 3 : 1)) - 1);
+    
+            if (sliderId === 'ivf-slider' && ivfIndex < maxIndex) {
                 showSlides(sliderId, ivfIndex + 1);
-            } else if (sliderId === 'ortho-slider' && orthoIndex < Math.max(0, Math.ceil((document.querySelectorAll(`#${sliderId} .card`).length / (window.innerWidth >= 768 ? 3 : 1)) - 1))) {
+            } else if (sliderId === 'ortho-slider' && orthoIndex < maxIndex) {
                 showSlides(sliderId, orthoIndex + 1);
             }
         }
-
+    
         function prevSlide(sliderId) {
             if (sliderId === 'ivf-slider' && ivfIndex > 0) {
                 showSlides(sliderId, ivfIndex - 1);
@@ -895,20 +898,19 @@
                 showSlides(sliderId, orthoIndex - 1);
             }
         }
-
-        // Handle window resize to adjust slider behavior
+    
         window.addEventListener('resize', () => {
             showSlides('ivf-slider', ivfIndex);
             showSlides('ortho-slider', orthoIndex);
         });
-
-        // Initialize slider state
+    
         document.addEventListener('DOMContentLoaded', function () {
             showSlides('ivf-slider', ivfIndex);
             showSlides('ortho-slider', orthoIndex);
         });
-
     </script>
+    
+
 </body>
 <!-- Mirrored from sterlingorthoivf.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jun 2024 08:38:44 GMT -->
 
