@@ -48,9 +48,11 @@
 
       .image-crd {
          width: 100%;
-         height: 0px;
+         height: auto;
          object-fit: cover;
+         object-position: center;
       }
+
 
       .carousel-item {
          height: auto;
@@ -70,6 +72,10 @@
             height: auto;
             object-fit: cover;
             transition: transform 0.5s ease;
+         }
+
+         #slider-xray {
+            height: 500px;
          }
       }
    </style>
@@ -159,7 +165,8 @@
                            <li>
                               <hr class="dropdown-divider">
                            </li>
-                           <li><a class="dropdown-item" href="../fertilityServices/fertility9.html">Recurrent Pregnancy Loss</a>
+                           <li><a class="dropdown-item" href="../fertilityServices/fertility9.html">Recurrent Pregnancy
+                                 Loss</a>
                            </li>
                            <li>
                               <hr class="dropdown-divider">
@@ -433,19 +440,19 @@
       <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="1000">
          <div class="carousel-inner" id="slider-xray">
             <div class="carousel-item active">
-               <img src="../orthoImages/image. 1.png" class="d-block w-100 image-card" alt="Orthopaedic Care">
+               <img src="../orthoImages/image. 1.png" class="image-crd" alt="Orthopaedic Care">
             </div>
             <div class="carousel-item">
-               <img src="../orthoImages/image 2.png" class="d-block w-100 image-card" alt="Trauma Care">
+               <img src="../orthoImages/image 2.webp" class="image-crd" alt="Trauma Care" style="max-height: auto;">
             </div>
             <div class="carousel-item">
-               <img src="../orthoImages/image 3 (1).png" class="d-block w-100 image-card" alt="Joint Replacement">
+               <img src="../orthoImages/image 3 (1).png" class="w-100 image-crd" alt="Joint Replacement">
             </div>
             <div class="carousel-item">
-               <img src="../orthoImages/image 4 (1).png" class="d-block w-100 image-card" alt="Orthopaedic Care">
+               <img src="../orthoImages/image 4 (1).png" class="image-crd" alt="Orthopaedic Care">
             </div>
             <div class="carousel-item">
-               <img src="../orthoImages/image 5 (2).jpg" class="d-block w-100 image-card" alt="Trauma Care">
+               <img src="../orthoImages/image 5 (2).jpg" class="image-crd" alt="Trauma Care">
             </div>
          </div>
       </div>
