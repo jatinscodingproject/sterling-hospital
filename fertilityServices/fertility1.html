@@ -19,38 +19,17 @@
    <style>
       .jumbotron {
          width: 100%;
-         background-image: url("https://media.istockphoto.com/id/685594006/photo/checking-result-of-in-vitro-fertilization.jpg?s=612x612&w=0&k=20&c=0UztVDSarmUaqObryeRblRRzHN7ki0m89R97Zop37AE=");
+         /* background-image: url("https://media.istockphoto.com/id/685594006/photo/checking-result-of-in-vitro-fertilization.jpg?s=612x612&w=0&k=20&c=0UztVDSarmUaqObryeRblRRzHN7ki0m89R97Zop37AE="); */
          background-size: cover;
          background-position: center;
          background-repeat: no-repeat;
          position: relative;
-         min-height: 400px;
+         min-height: auto;
          display: flex;
          align-items: center;
          justify-content: center;
       }
 
-      #back_img {
-         background: #fff;
-         padding: 20px;
-         border-radius: 8px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-         position: absolute;
-         top: 87%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-         width: 30%;
-         box-sizing: border-box;
-      }
-
-      #back_img {
-         background: rgba(255, 255, 255, 0.8);
-         padding: 20px;
-         border-radius: 8px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-         margin-top: 50px;
-         width: auto;
-      }
 
       .zoom-effect-container {
          position: relative;
@@ -116,7 +95,7 @@
          background-color: #ffb6c1;
       }
 
-      
+
 
       .row-equal-height {
          display: flex;
@@ -249,25 +228,6 @@
          margin: 0;
       }
 
-      @media (max-width: 680px) {
-         #back_img {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: absolute;
-            top: 79%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 30%;
-            box-sizing: border-box;
-         }
-
-         #back_img {
-            width: 100%;
-         }
-      }
-
       .slider-container {
          position: relative;
          width: 100%;
@@ -296,6 +256,7 @@
             margin: 0 10px;
          }
       }
+
       @media (max-width: 767px) {
          .card {
             margin: 0;
@@ -690,6 +651,7 @@
       <div class="container-fluid" id="back_img">
          <h4 style="color: #2c4b6b; font-size: 20pxx; font-weight: bold;" class="text-center">In Vitro Fertilization
             (IVF)</h4>
+         <p class="text-center lead" style="color: #7a5a4b;">Advanced Fertility Treatment in Virar & Mumbai</p>
       </div>
    </div>
 
@@ -798,11 +760,13 @@
 
          <h5 style="font-weight: bold;">Begin Your Journey with Sterling IVF</h5>
          <p>Your journey to parenthood starts here. Contact Us at <a href="tel:+918530064800"
-               style="font-weight: bold; color: #2c4b6b; text-decoration: underline;" class="contactss"> +918530046800/+918530064800</a>
+               style="font-weight: bold; color: #2c4b6b; text-decoration: underline;" class="contactss">
+               +918530046800/+918530064800</a>
             today to
             schedule a consultation or visit our state-of-the-art facility. Together, we can help you achieve the dream
             of building your family.</p>
-         <p><strong><i>"Book an appointment today and let us help you achieve your dream of parenthood!"</i></strong></p>
+         <p><strong><i>"Book an appointment today and let us help you achieve your dream of parenthood!"</i></strong>
+         </p>
 
       </div>
    </div>
@@ -814,9 +778,26 @@
          </div>
          <img src="../renu.webp" alt="IVF Specialist">
          <div class="text-right" style="margin-top: 20px;">
-            <i class="fas fa-video"></i>
-            <div>
-               <h4 style="font-weight: bold;">IVF Video</h4>
+            <i class="fas fa-video" data-toggle="modal" data-target="#videoModal" style="cursor: pointer;"></i>
+            <h4 style="font-weight: bold;">IVF Video</h4>
+         </div>
+      </div>
+   </div>
+
+   <!-- Modal -->
+   <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="videoModalLabel">IVF Video</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" id="videoIframe" src="" allowfullscreen></iframe>
+               </div>
             </div>
          </div>
       </div>
@@ -874,8 +855,6 @@
          </div>
       </div>
    </div>
-
-
 
    <section id="ivf-services" class="my-5">
       <div class="container-fluid">
@@ -982,8 +961,6 @@
          </div>
       </div>
    </section>
-
-
 
    <!-- Footer -->
    <footer id="contactus" class="py-3">
@@ -1159,6 +1136,15 @@
          showSlides('ortho-slider', orthoIndex);
       });
 
+   </script>
+   <script>
+      $('#videoModal').on('show.bs.modal', function () {
+         $('#videoIframe').attr('src', 'https://www.youtube.com/embed/4Ju696mZgtg?autoplay=1');
+      });
+
+      $('#videoModal').on('hide.bs.modal', function () {
+         $('#videoIframe').attr('src', '');
+      });
    </script>
 </body>
 
