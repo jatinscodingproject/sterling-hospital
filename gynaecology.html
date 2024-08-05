@@ -43,6 +43,44 @@
    <script src="../cdn.jsdelivr.net/npm/popper.js%401.16.0/dist/umd/popper.min.js"></script>
    <title>Sterling Hospital | Best IVF & Fertility Hospital in Virar</title>
    <link rel="stylesheet" href="style.css">
+   <style>
+      .gynaecology-card img {
+         height: 400px;
+         object-fit: cover;
+      }
+
+      .gynaecology-card {
+         display: flex;
+         flex-direction: column;
+         height: 100%;
+      }
+
+      .gynaecology-card .card-body {
+         flex: 1 1 auto;
+         display: flex;
+         flex-direction: column;
+      }
+
+      .gynaecology-card .card-title {
+         margin-bottom: 0.75rem;
+      }
+
+      .gynaecology-card .card-text {
+         flex: 1 1 auto;
+      }
+
+      .gynaecology-card ul {
+         padding-left: 20px;
+      }
+
+      @media (max-width:768px) {
+         .gynaecology-card img {
+            height: auto;
+            object-fit: cover;
+         }
+
+      }
+   </style>
 </head>
 
 <body>
@@ -82,87 +120,95 @@
                   <ul class="dropdown-menu">
                      <li class="nav-item dropend">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                          aria-expanded="false">
-                          Fertility Services
+                           aria-expanded="false">
+                           Fertility Services
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="fertilityServices/fertility1.html">In Vitro Fertilization(IVF)</a>
-                          </li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="fertilityServices/fertility2.html">Intracytoplasmic Sperm
-                              Injection(ICSI)</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="fertilityServices/fertility3.html">Intrauterine
-                              Insemination(IUI)</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="fertilityServices/fertility4.html">Blastocyst Culture</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="fertilityServices/fertility5.html">Frozen Embryo Transfer(FET)</a>
-                          </li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="fertilityServices/fertility6.html">Embryo
-                              Cryopreservation(freezing)</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="fertilityServices/fertility7.html">Egg Freezing</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="fertilityServices/fertility8.html">Sperm Freezing</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="fertilityServices/fertility9.html">Recurrent Pregnancy Loss</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="fertilityServices/fertility10.html">PCOS Clinic</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="fertilityServices/fertility11.html">Laparoscopy</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="fertilityServices/fertility12.html">Hysteroscopy</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="fertilityServices/fertility13.html">Male Infertility</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li class="nav-item dropdown dropend">
-                            <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                              aria-expanded="false">
-                              Donor Program
-                            </a>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="fertilityServices/donor/donor1.html">Donor Egg</a></li>
-                              <li>
-                                <hr class="dropdown-divider">
-                              </li>
-                              <li><a class="dropdown-item" href="fertilityServices/donor/donor1.html">Donor sperm</a></li>
-                            </ul>
-                          </li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="fertilityServices/fertility15.html">Advanced Technology and
-                              Diagnostics</a></li>
+                           <li><a class="dropdown-item" href="fertilityServices/fertility1.html">In Vitro
+                                 Fertilization(IVF)</a>
+                           </li>
+                           <li>
+                              <hr class="dropdown-divider">
+                           </li>
+                           <li><a class="dropdown-item" href="fertilityServices/fertility2.html">Intracytoplasmic Sperm
+                                 Injection(ICSI)</a></li>
+                           <li>
+                              <hr class="dropdown-divider">
+                           </li>
+                           <li><a class="dropdown-item" href="fertilityServices/fertility3.html">Intrauterine
+                                 Insemination(IUI)</a></li>
+                           <li>
+                              <hr class="dropdown-divider">
+                           </li>
+                           <li><a class="dropdown-item" href="fertilityServices/fertility4.html">Blastocyst Culture</a>
+                           </li>
+                           <li>
+                              <hr class="dropdown-divider">
+                           </li>
+                           <li><a class="dropdown-item" href="fertilityServices/fertility5.html">Frozen Embryo
+                                 Transfer(FET)</a>
+                           </li>
+                           <li>
+                              <hr class="dropdown-divider">
+                           </li>
+                           <li><a class="dropdown-item" href="fertilityServices/fertility6.html">Embryo
+                                 Cryopreservation(freezing)</a></li>
+                           <li>
+                              <hr class="dropdown-divider">
+                           </li>
+                           <li><a class="dropdown-item" href="fertilityServices/fertility7.html">Egg Freezing</a></li>
+                           <li>
+                              <hr class="dropdown-divider">
+                           </li>
+                           <li><a class="dropdown-item" href="fertilityServices/fertility8.html">Sperm Freezing</a></li>
+                           <li>
+                              <hr class="dropdown-divider">
+                           </li>
+                           <li><a class="dropdown-item" href="fertilityServices/fertility9.html">Recurrent Pregnancy
+                                 Loss</a></li>
+                           <li>
+                              <hr class="dropdown-divider">
+                           </li>
+                           <li><a class="dropdown-item" href="fertilityServices/fertility10.html">PCOS Clinic</a></li>
+                           <li>
+                              <hr class="dropdown-divider">
+                           </li>
+                           <li><a class="dropdown-item" href="fertilityServices/fertility11.html">Laparoscopy</a></li>
+                           <li>
+                              <hr class="dropdown-divider">
+                           </li>
+                           <li><a class="dropdown-item" href="fertilityServices/fertility12.html">Hysteroscopy</a></li>
+                           <li>
+                              <hr class="dropdown-divider">
+                           </li>
+                           <li><a class="dropdown-item" href="fertilityServices/fertility13.html">Male Infertility</a>
+                           </li>
+                           <li>
+                              <hr class="dropdown-divider">
+                           </li>
+                           <li class="nav-item dropdown dropend">
+                              <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                 aria-expanded="false">
+                                 Donor Program
+                              </a>
+                              <ul class="dropdown-menu">
+                                 <li><a class="dropdown-item" href="fertilityServices/donor/donor1.html">Donor Egg</a>
+                                 </li>
+                                 <li>
+                                    <hr class="dropdown-divider">
+                                 </li>
+                                 <li><a class="dropdown-item" href="fertilityServices/donor/donor1.html">Donor sperm</a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li>
+                              <hr class="dropdown-divider">
+                           </li>
+                           <li><a class="dropdown-item" href="fertilityServices/fertility15.html">Advanced Technology
+                                 and
+                                 Diagnostics</a></li>
                         </ul>
-                      </li>
+                     </li>
                      <li>
                         <hr class="dropdown-divider">
                      </li>
@@ -271,38 +317,36 @@
    <section id="gynaecology" class="">
       <div class="jumbotron jumbotron-fluid">
          <div class="container">
-            <h2 style="color: #2c4b6b;">Gynaecology Treatment Services</h2>
-            <p class="lead" style="color: #7a5a4b;">At Sterling Hospital, we offer comprehensive
+            <h4 style="color: #2c4b6b; font-size: 30px; font-weight: bold;" class="text-center">Gynaecology Treatment
+               Services</h4>
+            <p class="lead" style="text-align: center;">At Sterling Hospital, we offer comprehensive
                gynaecological care
                including routine check-ups
                diagnostic services, and specialized treatments for a wide range of conditions affecting women's
                reproductive health. Our experienced team is dedicated to providing personalized and compassionate
                care.</p>
-            <p class="lead" style="color: #7a5a4b;">Our team of gynaecologists is highly
+            <p class="lead" style="color: #7a5a4b; text-align: center;">Our team of gynaecologists is highly
                experienced and committed to
                providing the best possible care to our patients. We ensure that each patient receives personalized
                treatment and support throughout their journey to better health.</p>
          </div>
       </div>
-      <div class="container"> <!-- Added container class for margins -->
+      <div class="container-fluid">
          <div class="row justify-content-center">
             <!-- Image 1 -->
             <div class="col-lg-4 col-md-6 mb-4">
                <div class="card gynaecology-card">
-                  <img src="gyna/1.jpg" class="card-img-top" alt="Image Description 1"
-                     style="width: 100%; height: auto; object-fit: cover;">
+                  <img src="gyna/1.jpg" class="card-img-top" alt="Image Description 1">
                   <div class="card-body">
                      <h5 class="card-title">Routine Gynecological Exams</h5>
                      <p class="card-text">Regular health check-ups for early detection and prevention of gynecological
                         issues. Our expert gynecologists perform thorough examinations and provide personalized care,
                         including Pap smears, breast exams, and pelvic exams, to ensure optimal health and address all
-                        individual concerns.
-                     </p>
+                        individual concerns.</p>
                      <ul>
                         <li>Annual pelvic examinations</li>
                         <li>Pap smears and HPV testing</li>
                         <li>Breast examinations</li>
-                        <!-- <li>General Health Assessment</li> -->
                      </ul>
                   </div>
                </div>
@@ -310,8 +354,7 @@
             <!-- Image 2 -->
             <div class="col-lg-4 col-md-6 mb-4">
                <div class="card gynaecology-card">
-                  <img src="gyna/3.jpg" class="card-img-top" alt="Image Description 3"
-                     style="width: 100%; height: auto; object-fit: cover;">
+                  <img src="gyna/3.jpg" class="card-img-top" alt="Image Description 3">
                   <div class="card-body">
                      <h5 class="card-title">Gynaecological Surgery</h5>
                      <p class="card-text">We offer minimally invasive gynecological surgeries for fibroids, cysts, and
@@ -331,8 +374,7 @@
             <!-- Image 3 -->
             <div class="col-lg-4 col-md-6 mb-4">
                <div class="card gynaecology-card">
-                  <img src="gyna/2.jpg" class="card-img-top" alt="Image Description 2"
-                     style="width: 100%; height: auto; object-fit: cover;">
+                  <img src="gyna/2.jpg" class="card-img-top" alt="Image Description 2">
                   <div class="card-body">
                      <h5 class="card-title">Menstrual Disorders Treatment</h5>
                      <p class="card-text">Menstrual disorders, such as irregular periods and severe cramps, can impact
@@ -350,8 +392,7 @@
             <!-- Image 4 -->
             <div class="col-lg-4 col-md-6 mb-4">
                <div class="card gynaecology-card">
-                  <img src="gyna/8.jpg" class="card-img-top" alt="Image Description 6"
-                     style="width: 100%; height: auto; object-fit: cover;">
+                  <img src="gyna/8.jpg" class="card-img-top" alt="Image Description 6">
                   <div class="card-body">
                      <h5 class="card-title">PCOS clinic</h5>
                      <p class="card-text">Our PCOS clinic provides comprehensive care and support for women with
@@ -367,8 +408,7 @@
             <!-- Image 5 -->
             <div class="col-lg-4 col-md-6 mb-4">
                <div class="card gynaecology-card">
-                  <img src="gyna/7.jpg" class="card-img-top" alt="Image Description 6"
-                     style="width: 100%; height: auto; object-fit: cover;">
+                  <img src="gyna/7.jpg" class="card-img-top" alt="Image Description 6">
                   <div class="card-body">
                      <h5 class="card-title">Menopause Management</h5>
                      <p class="card-text">Comprehensive care and support for women going through menopause. Our
@@ -385,18 +425,17 @@
             <!-- Image 6 -->
             <div class="col-lg-4 col-md-6 mb-4">
                <div class="card gynaecology-card">
-                  <img src="gyna/5.jpg" class="card-img-top" alt="Image Description 5"
-                     style="width: 100%; height: auto; object-fit: cover;">
+                  <img src="gyna/5.jpg" class="card-img-top" alt="Image Description 5">
                   <div class="card-body">
                      <h5 class="card-title">Adolescent Gynecology</h5>
                      <p class="card-text">Our adolescent gynecology services offer care for menstrual irregularities,
                         puberty-related issues, and reproductive health education, ensuring a smooth transition through
                         adolescence and promoting overall well-being.</p>
-
-                     <li>Education on reproductive health</li>
-                     <li>Management of menstrual disorders</li>
-                     <li>HPV vaccination</li>
-                     <li>Managing PCOS</li>
+                     <ul>
+                        <li>Education on reproductive health</li>
+                        <li>Management of menstrual disorders</li>
+                        <li>HPV vaccination</li>
+                        <li>Managing PCOS</li>
                      </ul>
                   </div>
                </div>
@@ -404,8 +443,7 @@
             <!-- Image 7 -->
             <div class="col-lg-4 col-md-6 mb-4">
                <div class="card gynaecology-card">
-                  <img src="gyna/4.jpg" class="card-img-top" alt="Image Description 4"
-                     style="width: 100%; height: auto; object-fit: cover;">
+                  <img src="gyna/4.jpg" class="card-img-top" alt="Image Description 4">
                   <div class="card-body">
                      <h5 class="card-title">Gynecological Cancer Screening and Treatment</h5>
                      <p class="card-text">We offer comprehensive screening and treatment for gynecological cancers,
@@ -422,8 +460,7 @@
             <!-- Image 8 -->
             <div class="col-lg-4 col-md-6 mb-4">
                <div class="card gynaecology-card">
-                  <img src="gyna/6.jpg" class="card-img-top" alt="Image Description 6"
-                     style="width: 100%; height: auto; object-fit: cover;">
+                  <img src="gyna/6.jpg" class="card-img-top" alt="Image Description 6">
                   <div class="card-body">
                      <h5 class="card-title">Contraception and Family Planning</h5>
                      <p class="card-text">Our contraception and family planning services provide personalized care,
@@ -437,9 +474,6 @@
                   </div>
                </div>
             </div>
-
-         </div>
-      </div>
    </section>
 
    <!-- Footer -->
