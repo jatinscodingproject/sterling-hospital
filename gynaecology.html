@@ -45,7 +45,7 @@
    <link rel="stylesheet" href="style.css">
    <style>
       .gynaecology-card img {
-         height: 400px;
+         height: 300px;
          object-fit: cover;
       }
 
@@ -80,6 +80,290 @@
          }
 
       }
+
+      .testimonial,
+      .contact {
+         background-color: #f8f9fa;
+         padding: 20px;
+         border-radius: 8px;
+         flex: 1;
+      }
+
+      .contact {
+         background-color: #e9ecef;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+         margin-bottom: 15px;
+      }
+
+      .contact-form button {
+         margin-top: 10px;
+      }
+
+      .testimonial-card {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-bottom: 20px;
+         padding: 15px;
+         border: 1px solid #ddd;
+         border-radius: 5px;
+         text-align: center;
+      }
+
+      .testimonial-image-container {
+         width: 80px;
+         height: 80px;
+         margin-bottom: 15px;
+      }
+
+      .testimonial-image {
+         width: 100%;
+         height: 100%;
+         border-radius: 50%;
+         object-fit: cover;
+      }
+
+      .testimonial-name {
+         font-weight: bold;
+         color: #1a355d;
+         text-align: center;
+      }
+
+      .testimonial-message {
+         margin-top: 5px;
+         text-align: center;
+         font-style: italic;
+      }
+
+      .testimonial-card:nth-child(even) {
+         background-color: #f1f1f1;
+      }
+
+      .contact {
+         background-color: #e9ecef;
+         padding: 20px;
+         border-radius: 8px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .contact h4 {
+         font-weight: bold;
+         margin-bottom: 20px;
+      }
+
+      .contact-info {
+         text-align: center;
+         margin-bottom: 15px;
+         display: flex;
+         align-items: center;
+      }
+
+      .contact-info i {
+         font-size: 24px;
+         color: #ffffff;
+         margin-right: 10px;
+         border-radius: 50%;
+         padding: 10px;
+      }
+
+      .contact-info p {
+         display: inline;
+         margin: 0;
+      }
+
+      .contact-info a {
+         text-decoration: none;
+      }
+
+      .contact-info.phone i {
+         background-color: #28a745;
+      }
+
+      .whatsapp-info {
+         text-align: center;
+         margin-bottom: 15px;
+         display: flex;
+         align-items: center;
+      }
+
+      .whatsapp-info i {
+         font-size: 40px;
+         color: #ffffff;
+         margin-right: 10px;
+         border-radius: 50%;
+         padding: 10px;
+      }
+
+      .whatsapp-info p {
+         display: inline;
+         margin: 0;
+      }
+
+      .whatsapp-info a {
+         text-decoration: none;
+      }
+
+      .whatsapp-info.phone i {
+         background-color: #28a745;
+      }
+
+      .contact-info.email i {
+         background-color: #dc3545;
+      }
+
+      hr {
+         border: 0;
+         height: 1px;
+         background: #ddd;
+         margin: 20px 0;
+         width: 100%;
+      }
+
+      .visit-info {
+         display: flex;
+         align-items: center;
+         text-align: left;
+         margin-top: 20px;
+      }
+
+      .visit-info i {
+         font-size: 24px;
+         color: #007bff;
+         background-color: #f8f9fa;
+         border-radius: 50%;
+         padding: 15px;
+         margin-right: 15px;
+      }
+
+      .visit-info p {
+         margin: 0;
+      }
+
+      .slider-container {
+         position: relative;
+         width: 100%;
+         overflow: hidden;
+         padding: 0;
+      }
+
+      .slider-wrapper {
+         display: flex;
+         transition: transform 0.5s ease;
+         width: 100%;
+      }
+
+
+      .btn-appointment {
+         margin-top: auto;
+         text-align: center;
+      }
+
+      .slider-button {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         background-color: white;
+         color: black;
+         border: none;
+         padding: 10px;
+         cursor: pointer;
+         border-radius: 50%;
+         width: 40px;
+         height: 40px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .prev {
+         left: 10px;
+      }
+
+      .next {
+         right: 10px;
+      }
+
+      .slider-button[disabled] {
+         background-color: #ddd;
+         cursor: not-allowed;
+         color: #aaa;
+      }
+
+      .image-container {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 50vh;
+         padding: 20px;
+         box-sizing: border-box;
+      }
+
+      .image-content {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         position: relative;
+         text-align: center;
+      }
+
+      .image-content img {
+         max-width: 80%;
+         height: auto;
+         border-radius: 8px;
+      }
+
+      .text-left,
+      .text-right {
+         font-weight: bold;
+      }
+
+      .text-left {
+         flex: 1;
+         text-align: center;
+         margin-right: 20px;
+      }
+
+      @media (max-width: 992px) {
+         .image-content {
+            flex-direction: column;
+            text-align: center;
+         }
+
+         .text-left,
+         .text-right {
+            margin: 0;
+            text-align: center;
+            width: 100%;
+         }
+
+         .text-left {
+            order: 1;
+            margin-bottom: 20px;
+         }
+
+
+         .image-content img {
+            max-width: 100%;
+            height: auto;
+         }
+      }
+
+      .row-equal-height {
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+
+      .col-md-6 {
+         display: flex;
+         flex-direction: column;
+      }
    </style>
 </head>
 
@@ -90,8 +374,8 @@
          <div class="row">
             <div class="col-md-12 text-center">
                <a href="tel:+918530064800" style="text-decoration: none;"><span
-                     class="py-1 px-2 rounded font-weight-bold" style="color: #1a355d;">
-                     <i class="fa fa-phone fa-lg fa-inverse" style="color: #1a355d;"></i> Tel: 8530046800/8530064800
+                     class="py-1 px-2 rounded font-weight-bold" style="color: #2c4b6b;">
+                     <i class="fa fa-phone fa-lg fa-inverse" style="color: #2c4b6b;"></i> Tel: 8530046800/8530064800
                   </span></a>
             </div>
          </div>
@@ -319,7 +603,7 @@
          <div class="container">
             <h4 style="color: #2c4b6b; font-size: 30px; font-weight: bold;" class="text-center">Gynaecology Treatment
                Services</h4>
-            <p class="lead" style="text-align: center;">At Sterling Hospital, we offer comprehensive
+            <p class="lead" style="text-align: center;">At Sterling Orthopaedic and Ivf center, we offer comprehensive
                gynaecological care
                including routine check-ups
                diagnostic services, and specialized treatments for a wide range of conditions affecting women's
@@ -339,7 +623,8 @@
                   <img src="gyna/1.jpg" class="card-img-top" alt="Image Description 1">
                   <div class="card-body">
                      <h5 class="card-title">Routine Gynecological Exams</h5>
-                     <p class="card-text">Regular health check-ups for early detection and prevention of gynecological
+                     <p class="card-text" style="text-align: start;">Regular health check-ups for early detection and
+                        prevention of gynecological
                         issues. Our expert gynecologists perform thorough examinations and provide personalized care,
                         including Pap smears, breast exams, and pelvic exams, to ensure optimal health and address all
                         individual concerns.</p>
@@ -475,6 +760,84 @@
                </div>
             </div>
    </section>
+
+   <div class="container-fluid image-container">
+      <div class="image-content">
+         <div class="text-center">
+            <h4 style="font-weight: bold;">Our Gynaecology Specialist</h4>
+         </div>
+         <img src="../renu.webp" alt="IVF Specialist">
+      </div>
+   </div>
+
+   <div class="container-fluid my-5">
+      <div class="row row-equal-height">
+         <div class="col-md-6 mx-auto">
+            <div class="testimonial">
+               <h4 class="text-center" style="font-weight: bold;">Patient Testimonials</h4>
+               <div class="testimonial-card">
+                  <div class="testimonial-image-container">
+                     <img src="data:image/jpeg;base64,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" alt="Jatin Dixit" class="testimonial-image">
+                  </div>
+                  <div class="testimonial-content">
+                     <div class="testimonial-name">Jatin Dixit:</div>
+                     <div class="testimonial-message">"From the moment I stepped into the clinic, I felt supported and
+                        valued. The team’s commitment to my well-being made all the difference in my treatment journey.
+                        I’m incredibly thankful for their expertise and kindness."</div>
+                  </div>
+               </div>
+               <div class="testimonial-card">
+                  <div class="testimonial-image-container">
+                     <img src="data:image/jpeg;base64,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" alt="Ridzwan Syyed" class="testimonial-image">
+                  </div>
+                  <div class="testimonial-content">
+                     <div class="testimonial-name">Ridzwan Syyed:</div>
+                     <div class="testimonial-message">"The process was seamless, and the results exceeded my
+                        expectations.
+                        The compassionate and professional staff made me feel at ease throughout the entire procedure.
+                        I’m thrilled with the outcome and grateful for the wonderful care I received."</div>
+                  </div>
+               </div>
+               <div class="testimonial-card">
+                  <div class="testimonial-image-container">
+                     <img src="data:image/jpeg;base64,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" alt="Kirti Sanon" class="testimonial-image">
+                  </div>
+                  <div class="testimonial-content">
+                     <div class="testimonial-name">Kirti Sanon:</div>
+                     <div class="testimonial-message">"I felt cared for every step of the way. The team’s dedication and
+                        personal touch made me feel like I was in the best hands possible. Their support and
+                        professionalism truly made my experience exceptional."</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="contact">
+               <h4 class="text-center">You can reach us at</h4>
+               <hr class="custom-hr">
+               <div class="contact-info phone">
+                  <i class="fas fa-phone-alt" style="background-color: #1a355d;"></i>
+                  <p><a href="tel:+918530064800" id="phone-number"
+                        style="text-decoration: none; color: #1a355d;">+918530046800 /
+                        +918530064800</a></p>
+               </div>
+               <hr>
+               <div class="whatsapp-info whatsapp">
+                  <i class="fa-brands fa-whatsapp" style="color: green; font-size: px;"></i>
+                  <p><a href="https://wa.me/+919970947724/?text=Hi I want to book appointment" style="text-decoration: none;">WhatsApp us</a></p>
+               </div>
+               <hr>
+               <div class="visit-info">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p><a href="https://www.google.com/maps?q=Yashwant+Vihar+Complex,+Virar+Nalasopara+Link+Road,+Bolinj,+Virar+West,+Maharashtra,+India+401303"
+                        style="text-decoration: none;">Besides Yashwant Vihar Complex, Virar Nalasopara Link Road,<br>
+                        Bolinj, Virar West, Maharashtra,
+                        India 401303</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 
    <!-- Footer -->
    <footer id="contactus" class="py-3">
