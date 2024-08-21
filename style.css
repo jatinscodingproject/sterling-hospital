@@ -4,6 +4,8 @@ body {
   background-color: #ffffff;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 section {
@@ -24,94 +26,71 @@ h6 {
   font-family: 'Lora', serif;
 }
 
-h2{
+h2 {
   font-size: 45px;
 }
 
 p,
 a {
   color: #7a5a4b;
-  /* Warm brown text */
 }
 
 a:hover {
   color: #1a355d;
 }
 
-/* Button styles */
 .btn-primary {
   background-color: #ffb6c1;
-  /* Light pink primary button */
   border-color: #ffb6c1;
   color: #ffffff;
-  /* White text */
   font-family: 'Poppins', sans-serif;
-  /* Set the button font */
 }
 
 .btn-primary:hover {
   background-color: #ff96a9;
-  /* Darker pink on hover */
   border-color: #ff96a9;
 }
 
 .btn-secondary {
   background-color: #2c4b6b;
-  /* Navy blue secondary button */
   border-color: #2c4b6b;
   color: #ffffff;
-  /* White text */
   font-family: 'Poppins', sans-serif;
-  /* Set the button font */
 }
 
 .btn-secondary:hover {
   background-color: #3eb2c4;
-  /* Teal on hover */
   border-color: #3eb2c4;
 }
 
-/* Navigation bar styles */
 .navbar {
   background-color: #ffffff;
-  /* White navigation bar */
   font-family: 'Poppins', sans-serif;
-  /* Set the navigation font */
 }
 
 .navbar .navbar-nav .nav-link {
   color: #7a5a4b;
-  /* Warm brown nav links */
 }
 
 .navbar .navbar-nav .nav-link:hover {
   color: #ffb6c1;
-  /* Light pink nav link hover */
 }
 
-/* Custom styles */
 .bg-maternity {
   background-color: #ffb6c1 !important;
-  /* Light pink top bar */
   border-color: #ffb6c1 !important;
   color: #ffffff;
-  /* White text */
 }
 
 .card {
   border-color: #ffb6c1;
-  /* Light pink card borders */
   font-family: 'Poppins', sans-serif;
-  /* Set the card font */
 }
 
 .card-header {
   background-color: #ffb6c1;
-  /* Light pink card headers */
   color: #ffffff;
-  /* White card header text */
   font-family: 'Lora', serif;
-  /* Set the card header font */
 }
 
 .btn-appointment {
@@ -120,7 +99,6 @@ a:hover {
   border-color: #2c4b6b;
   transition: all 0.3s ease;
   font-family: 'Poppins', sans-serif;
-  /* Set the button font */
 }
 
 .btn-appointment:hover {
@@ -134,47 +112,35 @@ a:hover {
 
 .card-img-top {
   width: 100%;
-  /* Ensure gallery images span the entire width of their parent container */
   height: auto;
-  /* Automatically adjust height based on aspect ratio */
 }
 
-/* Gallery styles */
 .gallery-item {
   margin-bottom: 20px;
-  /* Add some space between each gallery item */
 }
 
 .gallery-item img {
   width: 100%;
-  /* Ensure gallery images span the entire width of their parent container */
   height: auto;
-  /* Automatically adjust height based on aspect ratio */
   cursor: pointer;
-  /* Change cursor to pointer on hover to indicate clickability */
 }
 
 .modal-body img {
   max-width: 100%;
-  /* Ensure modal image doesn't exceed the width of its container */
   height: auto;
-  /* Automatically adjust height based on aspect ratio */
 }
 
-/* Carousel styles */
 .carousel-inner {
   position: relative;
   overflow: hidden;
   width: 100%;
   max-height: auto;
-  /* Add a max-height for desktop */
 }
 
 .carousel-inner::before {
   display: block;
   content: "";
   padding-top: 56.25%;
-  /* 16:9 aspect ratio */
 }
 
 .carousel-inner .carousel-item {
@@ -190,8 +156,6 @@ a:hover {
   height: 100%;
   object-fit: cover;
 }
-
-
 
 .carousel-caption {
   background-color: rgba(255, 255, 255, 0.8);
@@ -211,7 +175,7 @@ a:hover {
 .card-text {
   font-size: 1rem;
   font-family: 'Poppins', sans-serif;
-  color:#7a5a4b
+  color: #7a5a4b;
 }
 
 @media (max-width: 768px) {
@@ -231,9 +195,7 @@ a:hover {
 
 .gmap_canvas {
   display: inline-block;
-
 }
-
 
 #Book:hover {
   color: #1a355d;
@@ -259,8 +221,6 @@ a {
   font-weight: 600;
   color: #2c4b6b;
 }
-
-/* dropdown css */
 
 .navbar-nav .nav-link {
   color: #fff;
@@ -296,8 +256,6 @@ a {
     margin-left: 0;
   }
 }
-
-/* patient page */
 
 .patient-testimonials {
   background-color: #f8f9fa;
@@ -340,10 +298,6 @@ a {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-
-/* doctor page css */
-
-/* */
 
 .card {
   border: none;
@@ -392,16 +346,17 @@ a {
   border: 1px solid #ccc;
   margin-bottom: 20px;
 }
+
 .custom-carousel .custom-card .custom-card-body {
   padding: 20px;
 }
+
 .custom-carousel .custom-card .custom-card-title {
   font-size: 1.5rem;
   margin-bottom: 15px;
 }
+
 .custom-carousel .custom-card .custom-card-text {
   font-size: 1rem;
   line-height: 1.6;
 }
-
-

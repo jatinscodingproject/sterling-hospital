@@ -56,6 +56,7 @@
             width: 100%;
         }
 
+
         .card {
             flex: 0 0 100%;
             box-sizing: border-box;
@@ -68,17 +69,13 @@
         @media (min-width: 768px) {
             .card {
                 flex: 0 0 calc(33.33% - 20px);
-                /* Show three cards at a time, adjusting for gaps */
                 margin: 0 10px;
-                /* Add margin to create space between cards */
             }
         }
 
-        /* Ensure no gap on smaller screens */
         @media (max-width: 767px) {
             .card {
                 margin: 0;
-                /* No margin for smaller screens */
             }
         }
 
@@ -104,7 +101,6 @@
             text-align: center;
         }
 
-        /* Slider buttons styling */
         .slider-button {
             position: absolute;
             top: 50%;
@@ -134,6 +130,16 @@
             background-color: #ddd;
             cursor: not-allowed;
             color: #aaa;
+        }
+
+        .dropdown-menu {
+            padding-top: 0.3rem;
+            padding-bottom: 0rem;
+        }
+
+        .dropdown-item {
+            padding-top:  0.3rem;
+            padding-bottom: 0rem;
         }
     </style>
 </head>
@@ -517,17 +523,70 @@
         </div>
     </div>
 
+    <!-- why choose us -->
+    <section id="aboutus" class="my-5">
+        <div class="container-fluid">
+            <h3 class="text-center" style="margin-bottom: 20px; font-weight: bold;">Why Choose Us</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="p1.jpg" class="card-img-top img-fluid" alt="Trusted Infertility Solutions">
+                        <div class="card-body">
+                            <h5 class="card-title">Trusted fertility Solutions</h5>
+                            <p class="card-text" style="color:#7a5a4b">Embarking on the path to parenthood shouldn't in
+                                uncertainty. Trusted
+                                fertility solutions offer personalized care, cutting-edge treatments, and transparent
+                                communication, ensuring you navigate your journey with clarity and the highest success
+                                chance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="c4.jpg" class="card-img-top img-fluid" alt="Compassionate Care">
+                        <div class="card-body">
+                            <h5 class="card-title">Compassionate Care</h5>
+                            <p class="card-text" style="color:#7a5a4b">Understanding the emotional journey that
+                                accompanies
+                                fertility challenges, we
+                                prioritize compassionate care. Our team goes beyond medical expertise, offering genuine
+                                empathy
+                                and understanding throughout your treatment process and every step taken.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="p3.jpg" class="card-img-top img-fluid" alt="Cutting-edge Technology">
+                        <div class="card-body">
+                            <h5 class="card-title">Honest & Transparent Pricing</h5>
+                            <p class="card-text" style="color:#7a5a4b">At our hospital, we believe in clear
+                                communication and
+                                informed
+                                decision-making. We prioritize straightforward treatment plans tailored to your
+                                individual
+                                needs, and transparent pricing that allows you to understand your financial obligations
+                                upfront.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ivf section -->
     <section id="ivf-services" class="my-5">
         <div class="container-fluid">
-            <h4 class="text-center mb-5"><b>Our IVF Services</b></h4>
+            <h3 class="text-center mb-5"><b>Our IVF Services</b></h3>
             <div class="slider-container" id="ivf-slider">
                 <div class="slider-wrapper">
                     <!-- Card 1: IVF -->
                     <div class="card">
                         <img src="fertImages/14.jpg" alt="IVF">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">In-Vitro Fertilization</h6>
+                            <h6 class="card-title" fon>In-Vitro Fertilization</h6>
                             <a href="fertilityServices/fertility1.html" class="btn btn-primary btn-appointment">Learn
                                 More</a>
                         </div>
@@ -536,7 +595,7 @@
                     <div class="card">
                         <img src="fertImages/12.jpg" alt="Intrauterine Insemination (IUI)">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Intrauterine Insemination (IUI)</h6>
+                            <h6 class="card-title">Intrauterine Insemination (IUI)</h6>
                             <a href="fertilityServices/fertility3.html" class="btn btn-primary btn-appointment">Learn
                                 More</a>
                         </div>
@@ -545,7 +604,7 @@
                     <div class="card">
                         <img src="fertImages/16.jpg" alt="Intracytoplasmic Sperm Injection">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Intracytoplasmic Sperm Injection</h6>
+                            <h6 class="card-title">Intracytoplasmic Sperm Injection</h6>
                             <a href="fertilityServices/fertility2.html" class="btn btn-primary btn-appointment">Learn
                                 More</a>
                         </div>
@@ -555,7 +614,7 @@
                         <img src="fertImages/nurse-holding-model-of-male-reproductive-system.jpg"
                             alt="Male Infertility">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Male Infertility</h6>
+                            <h6 class="card-title">Male Infertility</h6>
                             <a href="fertilityServices/fertility13.html" class="btn btn-primary btn-appointment">Learn
                                 More</a>
                         </div>
@@ -564,7 +623,7 @@
                     <div class="card">
                         <img src="fertImages/20.jpg" alt="Blastocyst Culture">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Blastocyst Culture</h6>
+                            <h6 class="card-title">Blastocyst Culture</h6>
                             <a href="fertilityServices/fertility4.html" class="btn btn-primary btn-appointment">Learn
                                 More</a>
                         </div>
@@ -573,7 +632,7 @@
                     <div class="card">
                         <img src="fertImages/30.jpg" alt="Frozen Embryo Transfer">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Frozen Embryo Transfer</h6>
+                            <h6 class="card-title">Frozen Embryo Transfer</h6>
                             <a href="fertilityServices/fertility5.html" class="btn btn-primary btn-appointment">Learn
                                 More</a>
                         </div>
@@ -582,7 +641,7 @@
                     <div class="card">
                         <img src="fertImages/36.jpg" alt="Embryo Cryopreservation">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Embryo Cryopreservation</h6>
+                            <h6 class="card-title">Embryo Cryopreservation</h6>
                             <a href="fertilityServices/fertility6.html" class="btn btn-primary btn-appointment">Learn
                                 More</a>
                         </div>
@@ -592,7 +651,7 @@
                         <img src="https://media.istockphoto.com/id/1454161996/photo/doctor-in-a-white-coat-holding-virtual-uterus-reproductive-system-woman-health-pcos-ovary.jpg?s=612x612&w=0&k=20&c=BhfIZQinXyHSwNDfFP2uECobj6ll3j4lsN32Skt_acY="
                             alt="Blastocyst Culture">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">PCOS Clinic</h6>
+                            <h6 class="card-title">PCOS Clinic</h6>
                             <a href="fertilityServices/fertility10.html" class="btn btn-primary btn-appointment">Learn
                                 More</a>
                         </div>
@@ -601,7 +660,7 @@
                     <div class="card">
                         <img src="fertImages/donoregg.jpg" alt="Donor Egg">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Donor Egg</h6>
+                            <h6 class="card-title">Donor Egg</h6>
                             <a href="fertilityServices/donor/donor1.html" class="btn btn-primary btn-appointment">Learn
                                 More</a>
                         </div>
@@ -611,7 +670,7 @@
                         <img src="https://media.istockphoto.com/id/1318458414/photo/donor-giving-container-of-sperm-to-doctor-in-hospital-closeup.jpg?s=612x612&w=0&k=20&c=Y_RVgDoZgPbnRdq5q-0NqVW42qqFG8MIePz6GFFzncg="
                             alt="Donor Sperm">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Donor Sperm</h6>
+                            <h6 class="card-title">Donor Sperm</h6>
                             <a href="fertilityServices/donor/donor2.html" class="btn btn-primary btn-appointment">Learn
                                 More</a>
                         </div>
@@ -626,14 +685,14 @@
     <!-- ortho services -->
     <section id="ortho-services" class="my-5">
         <div class="container-fluid">
-            <h4 class="text-center mb-5"><b>Our Orthopaedic Services</b></h4>
+            <h3 class="text-center mb-5"><b>Our Orthopaedic Services</b></h3>
             <div class="slider-container" id="ortho-slider">
                 <div class="slider-wrapper">
                     <!-- Card 1: Orthopaedic and Trauma Care -->
                     <div class="card">
                         <img src="orthoImages/o1.jpg" alt="Orthopaedic and Trauma Care">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Orthopaedic and Trauma Care</h6>
+                            <h6 class="card-title">Orthopaedic and Trauma Care</h6>
                             <a href="orthopaedic/ortho1.html" class="btn btn-primary btn-appointment">Learn More</a>
                         </div>
                     </div>
@@ -641,7 +700,7 @@
                     <div class="card">
                         <img src="orthoImages/o5.jpg" alt="Spine Surgery and Spinal Disorders">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Spine Surgery and Spinal Disorders</h6>
+                            <h6 class="card-title">Spine Surgery and Spinal Disorders</h6>
                             <a href="orthopaedic/ortho2.html" class="btn btn-primary btn-appointment">Learn More</a>
                         </div>
                     </div>
@@ -649,7 +708,7 @@
                     <div class="card">
                         <img src="orthoImages/o12.jpg" alt="Joint Replacement">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Joint Replacement</h6>
+                            <h6 class="card-title">Joint Replacement</h6>
                             <a href="orthopaedic/ortho3.html" class="btn btn-primary btn-appointment">Learn More</a>
                         </div>
                     </div>
@@ -657,7 +716,7 @@
                     <div class="card">
                         <img src="orthoImages/o17.jpg" alt="Arthroscopy Knee, Shoulder & Ankle">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Arthroscopy Knee, Shoulder & Ankle</h6>
+                            <h6 class="card-title">Arthroscopy Knee, Shoulder & Ankle</h6>
                             <a href="orthopaedic/ortho4.html" class="btn btn-primary btn-appointment">Learn More</a>
                         </div>
                     </div>
@@ -665,7 +724,7 @@
                     <div class="card">
                         <img src="orthoImages/o7.jpg" alt="Vertebroplasty">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Vertebroplasty</h6>
+                            <h6 class="card-title">Vertebroplasty</h6>
                             <a href="orthopaedic/ortho3.html" class="btn btn-primary btn-appointment">Learn More</a>
                         </div>
                     </div>
@@ -673,7 +732,7 @@
                     <div class="card">
                         <img src="orthoImages/o13.jpg" alt="Ankle Foot Surgery">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Ankle Foot Surgery</h6>
+                            <h6 class="card-title">Ankle Foot Surgery</h6>
                             <a href="orthopaedic/ortho5.html" class="btn btn-primary btn-appointment">Learn More</a>
                         </div>
                     </div>
@@ -681,7 +740,7 @@
                     <div class="card">
                         <img src="orthoImages/o20.jpg" alt="Sports Medicine">
                         <div class="card-body">
-                            <p class="card-title" style="font-weight: 200;">Sports Medicine</p>
+                            <p class="card-title">Sports Medicine</p>
                             <a href="orthopaedic/ortho7.html" class="btn btn-primary btn-appointment">Learn More</a>
                         </div>
                     </div>
@@ -689,7 +748,7 @@
                     <div class="card">
                         <img src="orthoImages/o23.jpg" alt="Hand & Microvascular Surgeries">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Hand & Microvascular Surgeries</h6>
+                            <h6 class="card-title">Hand & Microvascular Surgeries</h6>
                             <a href="orthopaedic/ortho8.html" class="btn btn-primary btn-appointment">Learn More</a>
                         </div>
                     </div>
@@ -697,7 +756,7 @@
                     <div class="card">
                         <img src="orthoImages/o25.jpeg" alt="Pediatric Orthopaedics">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Pediatric Orthopaedics</h6>
+                            <h6 class="card-title">Pediatric Orthopaedics</h6>
                             <a href="orthopaedic/ortho9.html" class="btn btn-primary btn-appointment">Learn More</a>
                         </div>
                     </div>
@@ -705,7 +764,7 @@
                     <div class="card">
                         <img src="orthoImages/o30.jpg" alt="Rheumatology & Arthritis">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: 200;">Rheumatology & Arthritis</h6>
+                            <h6 class="card-title">Rheumatology & Arthritis</h6>
                             <a href="orthopaedic/ortho10.html" class="btn btn-primary btn-appointment">Learn More</a>
                         </div>
                     </div>
@@ -719,7 +778,7 @@
     <!-- Maps -->
     <section class="py-5">
         <div class="container-fluid">
-            <h4 class="text-center mb-5"><b>Locate Us</b></h4>
+            <h3 class="text-center mb-5"><b>Locate Us</b></h3>
             <div class="map-container d-flex justify-content-center" style="width: 100%; height: auto;">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.2082699617235!2d72.8057023!3d19.4465853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a91a1ee13b67%3A0xf06c4b71b7aadd5a!2sSterling%20Orthopaedic%20Hospital%20and%20IVF%20Centre!5e0!3m2!1sen!2sin!4v1719428582567!5m2!1sen!2sin"
@@ -838,59 +897,52 @@
     <script>
         let ivfIndex = 0;
         let orthoIndex = 0;
-    
+
         function showSlides(sliderId, index) {
             const slider = document.getElementById(sliderId);
             const slides = slider.querySelectorAll('.card');
             const totalSlides = slides.length;
-    
             const cardsToShow = window.innerWidth >= 768 ? 3 : 1;
-    
-            const maxIndex = Math.max(0, Math.ceil(totalSlides / cardsToShow) - 1);
-    
+            const maxIndex = Math.ceil(totalSlides / cardsToShow) - 1;
+
             index = Math.max(0, Math.min(index, maxIndex));
-    
+
             const sliderWrapper = slider.querySelector('.slider-wrapper');
-            sliderWrapper.style.transform = `translateX(${-index * (100 / cardsToShow)}%)`;
-    
+            const slideWidth = 100 / cardsToShow;
+            sliderWrapper.style.transform = `translateX(${-index * slideWidth}%)`;
+
             if (sliderId === 'ivf-slider') {
                 ivfIndex = index;
             } else if (sliderId === 'ortho-slider') {
                 orthoIndex = index;
             }
-    
-            toggleButtons(sliderId);
+
+            toggleButtons(sliderId, maxIndex);
         }
-    
-        function toggleButtons(sliderId) {
+
+        function toggleButtons(sliderId, maxIndex) {
             const slider = document.getElementById(sliderId);
-            const slides = slider.querySelectorAll('.card');
-            const cardsToShow = window.innerWidth >= 768 ? 3 : 1;
-            const totalSlides = slides.length;
-            const maxIndex = Math.max(0, Math.ceil(totalSlides / cardsToShow) - 1);
-    
             const prevButton = slider.querySelector('.prev');
             const nextButton = slider.querySelector('.next');
-    
-            if (sliderId === 'ivf-slider') {
-                prevButton.disabled = ivfIndex === 0;
-                nextButton.disabled = ivfIndex >= maxIndex;
-            } else if (sliderId === 'ortho-slider') {
-                prevButton.disabled = orthoIndex === 0;
-                nextButton.disabled = orthoIndex >= maxIndex;
-            }
+
+            const currentIndex = sliderId === 'ivf-slider' ? ivfIndex : orthoIndex;
+
+            prevButton.disabled = currentIndex === 0;
+            nextButton.disabled = currentIndex >= maxIndex;
         }
-    
+
         function nextSlide(sliderId) {
-            const maxIndex = Math.max(0, Math.ceil(document.querySelectorAll(`#${sliderId} .card`).length / (window.innerWidth >= 768 ? 3 : 1)) - 1);
-    
+            const slides = document.querySelectorAll(`#${sliderId} .card`);
+            const cardsToShow = window.innerWidth >= 768 ? 3 : 1;
+            const maxIndex = Math.ceil(slides.length / cardsToShow) - 1;
+
             if (sliderId === 'ivf-slider' && ivfIndex < maxIndex) {
                 showSlides(sliderId, ivfIndex + 1);
             } else if (sliderId === 'ortho-slider' && orthoIndex < maxIndex) {
                 showSlides(sliderId, orthoIndex + 1);
             }
         }
-    
+
         function prevSlide(sliderId) {
             if (sliderId === 'ivf-slider' && ivfIndex > 0) {
                 showSlides(sliderId, ivfIndex - 1);
@@ -898,18 +950,17 @@
                 showSlides(sliderId, orthoIndex - 1);
             }
         }
-    
+
         window.addEventListener('resize', () => {
             showSlides('ivf-slider', ivfIndex);
             showSlides('ortho-slider', orthoIndex);
         });
-    
+
         document.addEventListener('DOMContentLoaded', function () {
             showSlides('ivf-slider', ivfIndex);
             showSlides('ortho-slider', orthoIndex);
         });
     </script>
-    
 
 </body>
 <!-- Mirrored from sterlingorthoivf.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jun 2024 08:38:44 GMT -->

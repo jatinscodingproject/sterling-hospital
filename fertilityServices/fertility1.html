@@ -92,10 +92,7 @@
       .custom-hr {
          height: 1px;
          border: none;
-         background-color: #ffb6c1;
       }
-
-
 
       .row-equal-height {
          display: flex;
@@ -129,11 +126,30 @@
       }
 
       .testimonial-card {
-         margin-bottom: 15px;
-         border: 1px solid #ddd;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-bottom: 20px;
          padding: 15px;
-         border-radius: 8px;
-         background-color: #ffffff;
+         border: 1px solid #ddd;
+         border-radius: 5px;
+         text-align: center;
+      }
+
+      .testimonial-image-container {
+         width: 80px;
+         height: 80px;
+         margin-bottom: 15px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .testimonial-image {
+         width: 100%;
+         height: 100%;
+         border-radius: 50%;
+         object-fit: cover;
       }
 
       .testimonial-name {
@@ -193,11 +209,34 @@
       }
 
       .contact-info.phone i {
-         background-color: #28a745;
+         background-color: #1a355d;
       }
 
-      .contact-info.email i {
-         background-color: #dc3545;
+      .whatsapp-info {
+         text-align: center;
+         margin-bottom: 15px;
+         display: flex;
+         align-items: center;
+      }
+
+      .whatsapp-info i {
+         font-size: 40px;
+         color: #ffffff;
+         border-radius: 50%;
+         padding: 10px;
+      }
+
+      .whatsapp-info p {
+         display: inline;
+         margin: 0;
+      }
+
+      .whatsapp-info a {
+         text-decoration: none;
+      }
+
+      .whatsapp-info.phone i {
+         background-color: #28a745;
       }
 
       hr {
@@ -682,13 +721,13 @@
             achieve their dream of parenthood with the highest standards of medical excellence and personalized
             attention.</p>
 
-         <h5 class="text-center" style="font-weight: bold;">What is IVF?</h5>
+         <h5 style="font-weight: bold;">What is IVF?</h5>
          <p>In Vitro Fertilization (IVF) is an advanced assisted reproductive technology (ART) used to help individuals
             and couples conceive a child. The process involves retrieving eggs from a woman's ovaries, fertilizing them
             with sperm in a laboratory, and then transferring the resulting embryos into the woman's uterus. IVF
             bypasses certain infertility issues and enhances the chances of a successful pregnancy.</p>
 
-         <h5 class="text-center" style="font-weight: bold;">Indications for IVF</h5>
+         <h5 style="font-weight: bold;">Indications for IVF</h5>
          <p>IVF is recommended for various fertility challenges, including:</p>
          <ul>
             <li><strong>Tubal Factor Infertility:</strong> Blocked or damaged fallopian tubes that prevent the egg and
@@ -713,7 +752,7 @@
                of embryos.</li>
          </ul>
 
-         <h4 class="text-center" style="font-weight: bold;">Our Comprehensive IVF Services</h4>
+         <h4 style="font-weight: bold;">Our Comprehensive IVF Services</h4>
 
          <h5 style="font-weight: bold;">Initial Consultation and Assessment</h5>
          <ul>
@@ -809,22 +848,28 @@
             <div class="testimonial">
                <h4 class="text-center" style="font-weight: bold;">Patient Testimonials</h4>
                <div class="testimonial-card">
-                  <div class="testimonial-name">Jatin Dixit:</div>
-                  <div class="testimonial-message">"From the moment I stepped into the clinic, I felt supported and
-                     valued. The team’s commitment to my well-being made all the difference in my treatment journey. I’m
-                     incredibly thankful for their expertise and kindness."</div>
+                  <div class="testimonial-image-container d-flex justify-content-center">
+                     <img
+                        src="data:image/png;base64,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"
+                        alt="patient_image" class="testimonial-image">
+                  </div>
+                  <div class="testimonial-name">Seema Dubey:</div>
+                  <div class="testimonial-message">"My journey with IVF at this hospital was nothing short of incredible.
+                     The team was supportive and understanding throughout every step. They made a challenging process
+                     feel manageable and hopeful. Thanks to their expertise and care, we’re now blessed with a beautiful
+                     baby!"</div>
                </div>
                <div class="testimonial-card">
-                  <div class="testimonial-name">Ridzwan Syyed:</div>
-                  <div class="testimonial-message">"The process was seamless, and the results exceeded my expectations.
-                     The compassionate and professional staff made me feel at ease throughout the entire procedure. I’m
-                     thrilled with the outcome and grateful for the wonderful care I received."</div>
-               </div>
-               <div class="testimonial-card">
-                  <div class="testimonial-name">Kirti Sanon:</div>
-                  <div class="testimonial-message">"I felt cared for every step of the way. The team’s dedication and
-                     personal touch made me feel like I was in the best hands possible. Their support and
-                     professionalism truly made my experience exceptional."</div>
+                  <div class="testimonial-image-container d-flex justify-content-center">
+                     <img
+                        src="data:image/png;base64,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"
+                        alt="patient_image" class="testimonial-image">
+                  </div>
+                  <div class="testimonial-name">Simran Patil:</div>
+                  <div class="testimonial-message">"From our first consultation to the final treatment, the care we
+                     received was exceptional. The staff was always available to answer our questions and provide
+                     reassurance. Their commitment and empathy turned a daunting experience into a positive one. We’re
+                     deeply grateful for their help in making our dream of parenthood a reality."</div>
                </div>
             </div>
          </div>
@@ -834,14 +879,16 @@
                <hr class="custom-hr">
                <div class="contact-info phone">
                   <i class="fas fa-phone-alt"></i>
-                  <p><a href="tel:+918530064800" id="phone-number" style="text-decoration: none;">+918530046800 /
+                  <p><a href="tel:+918530064800" id="phone-number"
+                        style="text-decoration: none; color: #1a355d;">+918530046800 /
                         +918530064800</a></p>
                </div>
                <hr>
-               <div class="contact-info email">
-                  <i class="fas fa-envelope"></i>
-                  <p><a href="mailto:sterlingorthohospital@gmail.com"
-                        style="text-decoration: none;">sterlingorthohospital@gmail.com</a></p>
+               <div class="whatsapp-info whatsapp">
+                  <i class="fa-brands fa-whatsapp" style="color: green; font-size: px;"></i>
+                  <p><a href="https://wa.me/+919970947724/?text=Hi I want to book appointment"
+                        style="text-decoration: none; color: #1a355d;">+918530046800 /
+                        +918530064800</a></p>
                </div>
                <hr>
                <div class="visit-info">
@@ -865,7 +912,7 @@
                <div class="card">
                   <img src="../fertImages/14.jpg" alt="IVF">
                   <div class="card-body">
-                     <h6 class="card-title" style="font-weight: 200;">In-Vitro Fertilization</h6>
+                     <h6 class="card-title" style="font-weight: bold;">In-Vitro Fertilization</h6>
                      <a href="fertility1.html" class="btn btn-primary btn-appointment">Learn
                         More</a>
                   </div>
@@ -874,7 +921,7 @@
                <div class="card">
                   <img src="../fertImages/12.jpg" alt="Intrauterine Insemination (IUI)">
                   <div class="card-body">
-                     <h6 class="card-title" style="font-weight: 200;">Intrauterine Insemination (IUI)</h6>
+                     <h6 class="card-title" style="font-weight: bold">Intrauterine Insemination (IUI)</h6>
                      <a href="fertility3.html" class="btn btn-primary btn-appointment">Learn
                         More</a>
                   </div>
@@ -883,7 +930,7 @@
                <div class="card">
                   <img src="../fertImages/16.jpg" alt="Intracytoplasmic Sperm Injection">
                   <div class="card-body">
-                     <h6 class="card-title" style="font-weight: 200;">Intracytoplasmic Sperm Injection</h6>
+                     <h6 class="card-title" style="font-weight: bold">Intracytoplasmic Sperm Injection</h6>
                      <a href="fertility2.html" class="btn btn-primary btn-appointment">Learn
                         More</a>
                   </div>
@@ -892,7 +939,7 @@
                <div class="card">
                   <img src="../fertImages/nurse-holding-model-of-male-reproductive-system.jpg" alt="Male Infertility">
                   <div class="card-body">
-                     <h6 class="card-title" style="font-weight: 200;">Male Infertility</h6>
+                     <h6 class="card-title" style="font-weight: bold">Male Infertility</h6>
                      <a href="fertility13.html" class="btn btn-primary btn-appointment">Learn
                         More</a>
                   </div>
@@ -901,7 +948,7 @@
                <div class="card">
                   <img src="../fertImages/20.jpg" alt="Blastocyst Culture">
                   <div class="card-body">
-                     <h6 class="card-title" style="font-weight: 200;">Blastocyst Culture</h6>
+                     <h6 class="card-title" style="font-weight:bold">Blastocyst Culture</h6>
                      <a href="fertility4.html" class="btn btn-primary btn-appointment">Learn
                         More</a>
                   </div>
@@ -910,7 +957,7 @@
                <div class="card">
                   <img src="../fertImages/30.jpg" alt="Frozen Embryo Transfer">
                   <div class="card-body">
-                     <h6 class="card-title" style="font-weight: 200;">Frozen Embryo Transfer</h6>
+                     <h6 class="card-title" style="font-weight:bold;">Frozen Embryo Transfer</h6>
                      <a href="fertility5.html" class="btn btn-primary btn-appointment">Learn
                         More</a>
                   </div>
@@ -919,7 +966,7 @@
                <div class="card">
                   <img src="../fertImages/36.jpg" alt="Embryo Cryopreservation">
                   <div class="card-body">
-                     <h6 class="card-title" style="font-weight: 200;">Embryo Cryopreservation</h6>
+                     <h6 class="card-title" style="font-weight:bold">Embryo Cryopreservation</h6>
                      <a href="fertility6.html" class="btn btn-primary btn-appointment">Learn
                         More</a>
                   </div>
@@ -930,7 +977,7 @@
                      src="https://media.istockphoto.com/id/1454161996/photo/doctor-in-a-white-coat-holding-virtual-uterus-reproductive-system-woman-health-pcos-ovary.jpg?s=612x612&w=0&k=20&c=BhfIZQinXyHSwNDfFP2uECobj6ll3j4lsN32Skt_acY="
                      alt="Blastocyst Culture">
                   <div class="card-body">
-                     <h6 class="card-title" style="font-weight: 200;">PCOS Clinic</h6>
+                     <h6 class="card-title" style="font-weight:bold">PCOS Clinic</h6>
                      <a href="fertility10.html" class="btn btn-primary btn-appointment">Learn
                         More</a>
                   </div>
@@ -939,7 +986,7 @@
                <div class="card">
                   <img src="../fertImages/donoregg.jpg" alt="Donor Egg">
                   <div class="card-body">
-                     <h6 class="card-title" style="font-weight: 200;">Donor Egg</h6>
+                     <h6 class="card-title" style="font-weight:bold">Donor Egg</h6>
                      <a href="donor/donor1.html" class="btn btn-primary btn-appointment">Learn
                         More</a>
                   </div>
@@ -950,7 +997,7 @@
                      src="https://media.istockphoto.com/id/1318458414/photo/donor-giving-container-of-sperm-to-doctor-in-hospital-closeup.jpg?s=612x612&w=0&k=20&c=Y_RVgDoZgPbnRdq5q-0NqVW42qqFG8MIePz6GFFzncg="
                      alt="Donor Sperm">
                   <div class="card-body">
-                     <h6 class="card-title" style="font-weight: 200;">Donor Sperm</h6>
+                     <h6 class="card-title" style="font-weight: bold">Donor Sperm</h6>
                      <a href="donor/donor2.html" class="btn btn-primary btn-appointment">Learn
                         More</a>
                   </div>
@@ -1088,7 +1135,6 @@
             orthoIndex = index;
          }
 
-         // Disable buttons if no more slides
          toggleButtons(sliderId);
       }
 
@@ -1124,13 +1170,11 @@
          }
       }
 
-      // Handle window resize to adjust slider behavior
       window.addEventListener('resize', () => {
          showSlides('ivf-slider', ivfIndex);
          showSlides('ortho-slider', orthoIndex);
       });
 
-      // Initialize slider state
       document.addEventListener('DOMContentLoaded', function () {
          showSlides('ivf-slider', ivfIndex);
          showSlides('ortho-slider', orthoIndex);

@@ -2,444 +2,1146 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description"
-      content="Sterling Hospital is a leading IVF and fertility hospital in Virar, providing trusted infertility solutions, compassionate care, and cutting-edge technology for achieving parenthood.">
-   <meta name="keywords"
-      content="Sterling Hospital, IVF hospital, fertility hospital, Virar hospital, infertility solutions">
-   <meta name="author" content="Sterling Hospital">
-   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <title>Our Doctors | Sterling Hospital</title>
-   <link rel="stylesheet" href="../style.css">
-   <style>
-      .zoom-effect-container {
-         position: relative;
-         width: 100%;
-         overflow: hidden;
-      }
-
-      .image-card {
-         width: 100%;
-         height: 300px;
-         object-fit: cover;
-         transition: transform 0.5s ease;
-      }
-
-      .zoom-effect-container:hover .image-card {
-         transform: scale(1.1);
-      }
-
-      .info-box {
-         background: #f8f9fa;
-         padding: 20px;
-         border-radius: 5px;
-         margin-top: 20px;
-      }
-
-      .content {
-         display: none;
-         margin-top: 10px;
-      }
-
-      @media (max-width: 768px) {
-         .image-card {
-            margin-bottom: 15px;
-         }
-
-         .image-card {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sterling Hospital is a leading IVF and fertility hospital in Virar, providing trusted infertility solutions, compassionate care, and cutting-edge technology for achieving parenthood.">
+    <meta name="keywords"
+        content="Sterling Hospital, IVF hospital, fertility hospital, Virar hospital, infertility solutions">
+    <meta name="author" content="Sterling Hospital">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Our Doctors | Sterling Hospital</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .jumbotron {
             width: 100%;
-            height: auto;
+            /* background-image: url("https://media.istockphoto.com/id/685594006/photo/checking-result-of-in-vitro-fertilization.jpg?s=612x612&w=0&k=20&c=0UztVDSarmUaqObryeRblRRzHN7ki0m89R97Zop37AE="); */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .zoom-effect-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .image-card {
+            width: 100%;
+            height: 400px;
             object-fit: cover;
             transition: transform 0.5s ease;
-         }
-      }
-   </style>
+        }
+
+        .zoom-effect-container:hover .image-card {
+            transform: scale(1.1);
+        }
+
+        #info-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .image-card {
+                margin-bottom: 15px;
+                height: 300px;
+            }
+        }
+
+        #info-box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #info {
+            position: relative;
+            padding: 50px 0;
+            overflow: hidden;
+        }
+
+        #info::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://media.istockphoto.com/id/1388613536/photo/shot-of-a-young-couple-celebrating-their-pregnancy-while-sitting-with-their-obstetrician-in.jpg?s=612x612&w=0&k=20&c=6XojsdsP38AAW9bY_k0pK_gFEnh1zRozkGtWvm7ctCA=');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+
+        .custom-hr {
+            height: 1px;
+            border: none;
+        }
+
+        .row-equal-height {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-md-6 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial,
+        .contact {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+        }
+
+        .contact {
+            background-color: #e9ecef;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 15px;
+        }
+
+        .contact-form button {
+            margin-top: 10px;
+        }
+
+        .testimonial-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .testimonial-image-container {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .testimonial-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-name {
+            font-weight: bold;
+            color: #1a355d;
+            text-align: center;
+        }
+
+        .testimonial-message {
+            margin-top: 5px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .testimonial-card:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+
+        .contact {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact h4 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            font-size: 24px;
+            color: #ffffff;
+            margin-right: 10px;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        .contact-info p {
+            display: inline;
+            margin: 0;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .contact-info.phone i {
+            background-color: #1a355d;
+        }
+
+        .whatsapp-info {
+            text-align: center;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .whatsapp-info i {
+            font-size: 40px;
+            color: #ffffff;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        .whatsapp-info p {
+            display: inline;
+            margin: 0;
+        }
+
+        .whatsapp-info a {
+            text-decoration: none;
+        }
+
+        .whatsapp-info.phone i {
+            background-color: #28a745;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        .visit-info {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .visit-info i {
+            font-size: 24px;
+            color: #007bff;
+            background-color: #f8f9fa;
+            border-radius: 50%;
+            padding: 15px;
+            margin-right: 15px;
+        }
+
+        .visit-info p {
+            margin: 0;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 100%;
+        }
+
+        .card {
+            flex: 0 0 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (min-width: 768px) {
+            .card {
+                flex: 0 0 calc(33.33% - 20px);
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .card {
+                margin: 0;
+            }
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .card-title {
+            margin-bottom: 15px;
+        }
+
+        .btn-appointment {
+            margin-top: auto;
+            text-align: center;
+        }
+
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .slider-button[disabled] {
+            background-color: #ddd;
+            cursor: not-allowed;
+            color: #aaa;
+        }
+
+        .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .image-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            text-align: center;
+        }
+
+        .image-content img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .text-left,
+        .text-right {
+            font-weight: bold;
+        }
+
+        .text-left {
+            flex: 1;
+            text-align: center;
+            margin-right: 20px;
+        }
+
+        .text-right {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            text-align: center;
+            margin-left: 20px;
+        }
+
+        .text-right i {
+            font-size: 24px;
+            color: #007bff;
+            margin-right: 10px;
+        }
+
+        .text-right h4 {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .text-right p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        @media (max-width: 992px) {
+            .image-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-left,
+            .text-right {
+                margin: 0;
+                text-align: center;
+                width: 100%;
+            }
+
+            .text-left {
+                order: 1;
+                margin-bottom: 20px;
+            }
+
+            .text-right {
+                order: 2;
+                justify-content: center;
+            }
+
+            .image-content img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .text-right i {
+                font-size: 20px;
+            }
+
+            .text-right h4 {
+                font-size: 18px;
+            }
+
+            .text-right p {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-   <!-- Top Bar -->
-   <div class="bg-maternity text-white py-2">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12 text-center">
-               <a href="tel:+918530064800" style="text-decoration: none;"><span
-                     class="py-1 px-2 rounded font-weight-bold" style="color: #1a355d;">
-                     <i class="fa fa-phone fa-lg fa-inverse" style="color: #1a355d;"></i> Tel: 8530046800/8530064800
-                  </span></a>
+    <!-- Top Bar -->
+    <div class="bg-maternity text-white py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a href="tel:+918530064800" style="text-decoration: none;"><span
+                            class="py-1 px-2 rounded font-weight-bold" style="color: #1a355d;">
+                            <i class="fa fa-phone fa-lg fa-inverse" style="color: #1a355d;"></i> Tel:
+                            8530046800/8530064800
+                        </span></a>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
-   <!-- Nav Bar -->
-   <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-         <a class="navbar-brand" href="../index.html">
-            <img src="../logo.png" class="mw-20 mh-10">
-         </a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto" id="edit_navbar_ul">
-               <li class="nav-item">
-                  <a class="nav-link" href="../aboutus.html">About us</a>
-               </li>
-               <li class="nav-item active dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                     aria-expanded="false">
-                     Our Services
-                  </a>
-                  <ul class="dropdown-menu">
-                     <li class="nav-item dropend">
+        </div>
+    </div>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../logo.png" class="mw-20 mh-10">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto" id="edit_navbar_ul">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../aboutus.html">About us</a>
+                    </li>
+                    <li class="nav-item active dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                           Fertility Services
+                            aria-expanded="false">
+                            Our Services
                         </a>
                         <ul class="dropdown-menu">
-                           <li><a class="dropdown-item" href="fertility1.html">In Vitro Fertilization(IVF)</a>
-                           </li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="fertility2.html">Intracytoplasmic Sperm
-                                 Injection(ICSI)</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="fertility3.html">Intrauterine
-                                 Insemination(IUI)</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="fertility4.html">Blastocyst Culture</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="fertility5.html">Frozen Embryo Transfer(FET)</a>
-                           </li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="fertility6.html">Embryo
-                                 Cryopreservation(freezing)</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="fertility7.html">Egg Freezing</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="fertility8.html">Sperm Freezing</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="fertility9.html">Recurrent Pregnancy Loss</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="fertility10.html">PCOS Clinic</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="fertility11.html">Laparoscopy</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="fertility12.html">Hysteroscopy</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="fertility13.html">Male Infertility</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li class="nav-item dropdown dropend">
-                              <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                 aria-expanded="false">
-                                 Donor Program
-                              </a>
-                              <ul class="dropdown-menu">
-                                 <li><a class="dropdown-item" href="donor/donor1.html">Donor Egg</a></li>
-                                 <li>
-                                    <hr class="dropdown-divider">
-                                 </li>
-                                 <li><a class="dropdown-item" href="donor/donor2.html">Donor sperm</a></li>
-                              </ul>
-                           </li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="fertility15.html">Advanced Technology and
-                                 Diagnostics</a></li>
-                        </ul>
-                     </li>
+                            <li class="nav-item dropend">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Fertility Services
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="fertility1.html">In Vitro Fertilization(IVF)</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="fertility2.html">Intracytoplasmic Sperm
+                                            Injection(ICSI)</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="fertility3.html">Intrauterine
+                                            Insemination(IUI)</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="fertility4.html">Blastocyst Culture</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="fertility5.html">Frozen Embryo Transfer(FET)</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="fertility6.html">Embryo
+                                            Cryopreservation(freezing)</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="fertility7.html">Egg Freezing</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="fertility8.html">Sperm Freezing</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="fertility9.html">Recurrent Pregnancy Loss</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="fertility10.html">PCOS Clinic</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="fertility11.html">Laparoscopy</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="fertility12.html">Hysteroscopy</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="fertility13.html">Male Infertility</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li class="nav-item dropdown dropend">
+                                        <a class="dropdown-item dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Donor Program
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="donor/donor1.html">Donor Egg</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="donor/donor2.html">Donor sperm</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="fertility15.html">Advanced Technology and
+                                            Diagnostics</a></li>
+                                </ul>
+                            </li>
 
-                     <li>
-                        <hr class="dropdown-divider">
-                     </li>
-                     <li class="nav-item dropend">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                           Orthopaedic
-                        </a>
-                        <ul class="dropdown-menu">
-                           <li><a class="dropdown-item" href="../orthopaedic/ortho1.html">Orthopaedic & Trauma
-                                 Care</a>
-                           </li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="../orthopaedic/ortho2.html">Spine Surgery &
-                                 Spinal
-                                 Disorders</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="../orthopaedic/ortho3.html">Vertebroplasty</a>
-                           </li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="../orthopaedic/ortho4.html">Joint Replacement</a>
-                           </li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="../orthopaedic/ortho5.html">Ankle Foot
-                                 Surgery</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="../orthopaedic/ortho6.html">Arthroscopy Knee,
-                                 Shoulder &
-                                 Ankle</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="../orthopaedic/ortho7.html">Sports Medicine</a>
-                           </li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="../orthopaedic/ortho8.html">Hand & Microvascular
-                                 Surgeries</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="../orthopaedic/ortho9.html">Paediatric
-                                 orthopaedics</a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="../orthopaedic/ortho10.html">Rheumatology &
-                                 Arthritis</a>
-                           </li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="../orthopaedic/ortho11.html">Pain Management</a>
-                           </li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" href="../orthopaedic/ortho12.html">Physiotherapy and
-                                 Rehabilitation</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <hr class="dropdown-divider">
-                     </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="nav-item dropend">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Orthopaedic
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../orthopaedic/ortho1.html">Orthopaedic & Trauma
+                                            Care</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../orthopaedic/ortho2.html">Spine Surgery &
+                                            Spinal
+                                            Disorders</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../orthopaedic/ortho3.html">Vertebroplasty</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../orthopaedic/ortho4.html">Joint Replacement</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../orthopaedic/ortho5.html">Ankle Foot
+                                            Surgery</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../orthopaedic/ortho6.html">Arthroscopy Knee,
+                                            Shoulder &
+                                            Ankle</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../orthopaedic/ortho7.html">Sports Medicine</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../orthopaedic/ortho8.html">Hand & Microvascular
+                                            Surgeries</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../orthopaedic/ortho9.html">Paediatric
+                                            orthopaedics</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../orthopaedic/ortho10.html">Rheumatology &
+                                            Arthritis</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../orthopaedic/ortho11.html">Pain Management</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../orthopaedic/ortho12.html">Physiotherapy and
+                                            Rehabilitation</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
 
-                     <li class="nav-item dropend">
-                        <a class="nav-link dropdown-toggle" href="../gynaecology.html" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">
-                           Gynaecology
-                        </a>
-                     </li>
-                  </ul>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="../doctors.html">Doctors</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="../gallery.html">Gallery</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="../patient.html">Our Patients</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="../facilities.html">Facility</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="../cashless.html">Cashless</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="../index.html#contactus">Contact Us</a>
-               </li>
+                            <li class="nav-item dropend">
+                                <a class="nav-link dropdown-toggle" href="../gynaecology.html" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Gynaecology
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../doctors.html">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../patient.html">Our Patients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../facilities.html">Facility</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../cashless.html">Cashless</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#contactus">Contact Us</a>
+                    </li>
+                </ul>
+                <a href="../book-appointment.html" class="btn btn-appointment ml-auto" id="Book">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- middle section -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid" id="back_img">
+            <h4 style="color: #2c4b6b; font-size: 30px; font-weight: bold;" class="text-center">Egg Freezing
+            </h4>
+            <p class="text-center lead" style="color: #7a5a4b;">Advanced Fertility Treatment in Virar & Mumbai</p>
+        </div>
+    </div>
+
+    <div class="container-fluid my-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="zoom-effect-container">
+                        <img src="../fertImages/25.jpg" class="img-fluid image-card" alt="IVF Procedure">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="zoom-effect-container">
+                        <img src="../fertImages/26.jpg" class="img-fluid image-card" alt="Fertility Consultation">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="zoom-effect-container">
+                        <img src="../fertImages/27.jpg" class="img-fluid image-card" alt="Embryo Transfer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-box" id="info-box">
+            <h4 class="text-center" style="font-weight: bold;">Egg Freezing</h4>
+
+            <p>Egg freezing, also known as oocyte cryopreservation, is a revolutionary procedure that allows women to
+                preserve their fertility by freezing and storing their eggs. This advanced technique is especially
+                beneficial for women who wish to delay childbirth due to personal, medical, or professional reasons.</p>
+
+            <h5 style="font-weight: bold;">The Process of Egg Freezing</h5>
+            <h6>Consultation and Assessment</h6>
+            <p>The journey begins with a thorough consultation with a fertility specialist. During this visit, a
+                comprehensive assessment of the woman's overall health, reproductive health, and fertility status is
+                conducted. This may include blood tests and ultrasound examinations to evaluate ovarian reserve and
+                hormone
+                levels.</p>
+
+            <h6 style="font-weight: bold;">Ovarian Stimulation</h6>
+            <p>To maximize the number of eggs retrieved, the woman undergoes a process called ovarian stimulation. This
+                involves administering hormone injections over a period of 10-14 days to stimulate the ovaries to
+                produce
+                multiple mature eggs in one cycle. Regular monitoring through blood tests and ultrasounds ensures the
+                optimal response to the medication.</p>
+
+            <h6 style="font-weight: bold;">Egg Retrieval</h6>
+            <p>Once the eggs are mature, they are retrieved from the ovaries using a minimally invasive procedure called
+                transvaginal ultrasound aspiration. This procedure is performed under sedation or anesthesia to ensure
+                comfort. A thin needle is guided through the vaginal wall into the ovaries to collect the eggs.</p>
+
+            <h6 style="font-weight: bold;">Freezing and Storage</h6>
+            <p>The retrieved eggs are then rapidly frozen using a method called vitrification. This process prevents the
+                formation of ice crystals, which can damage the eggs. The vitrified eggs are stored in liquid nitrogen
+                at
+                extremely low temperatures, where they can remain viable for many years.</p>
+
+            <h6 style="font-weight: bold;">Future Use</h6>
+            <p>When the woman is ready to conceive, the frozen eggs are thawed and fertilized with sperm in a laboratory
+                using in vitro fertilization (IVF) techniques. The resulting embryos are cultured for a few days before
+                being transferred to the woman's uterus, where they can implant and develop into a pregnancy.</p>
+
+            <h5 style="font-weight: bold;">Advantages of Egg Freezing</h5>
+            <ul>
+                <li><strong>Flexibility and Control:</strong> Egg freezing provides women with the flexibility to plan
+                    their
+                    family at a time that is right for them, without the pressure of their biological clock.</li>
+                <li><strong>Medical Preservation:</strong> Women facing medical treatments that may affect their
+                    fertility,
+                    such as chemotherapy, can preserve their eggs before starting their treatment.</li>
+                <li><strong>Career and Personal Goals:</strong> Women can focus on their career, education, or other
+                    personal goals without compromising their future fertility.</li>
             </ul>
-            <a href="../book-appointment.html" class="btn btn-appointment ml-auto" id="Book">Book Appointment</a>
-         </div>
-      </div>
-   </nav>
+            <h5 style="font-weight: bold;">Begin Your Journey with Sterling IVF</h5>
+            <p>Your journey to parenthood starts here. Contact Us at <a href="tel:+918530064800"
+                    style="font-weight: bold; color: #2c4b6b; text-decoration: underline;" class="contactss">
+                    +918530046800/+918530064800</a>
+                today to
+                schedule a consultation or visit our state-of-the-art facility. Together, we can help you achieve the
+                dream
+                of building your family.</p>
+            <p><strong><i>"Book an appointment today and let us help you achieve your dream of parenthood!"</i></strong>
+            </p>
 
-   <!-- middle section -->
-   <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-         <h2 style="color: #09325a">Egg Freezing</h2>
-         <p class="lead" style="color: #7a5a4b; font-weight: bolder;">Advanced Fertility Treatment in Virar & Mumbai</p>
-      </div>
-   </div>
+        </div>
+    </div>
 
-   <div class="container my-3">
-      <div class="row">
-         <div class="col-md-4">
-            <div class="zoom-effect-container">
-               <img src="../fertImages/25.jpg" class="img-fluid image-card" alt="Egg Freezing Procedure">
+    <div class="container-fluid image-container">
+        <div class="image-content">
+            <div class="text-center">
+                <h4 style="font-weight: bold;">Our Specialist</h4>
             </div>
-         </div>
-         <div class="col-md-4">
-            <div class="zoom-effect-container">
-               <img src="../fertImages/26.jpg" class="img-fluid image-card" alt="Fertility Clinic">
+            <img src="../renu.webp" alt="IVF Specialist">
+        </div>
+    </div>
+
+
+    <div class="container-fluid my-5">
+        <div class="row row-equal-height">
+            <div class="col-md-6">
+                <div class="testimonial">
+                    <h4 class="text-center" style="font-weight: bold;">Patient Testimonials</h4>
+                    <div class="testimonial-card">
+                        <div class="testimonial-image-container d-flex justify-content-center">
+                            <img src="data:image/png;base64,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"
+                                alt="patient_image" class="testimonial-image">
+                        </div>
+                        <div class="testimonial-name">Jannat Khan:</div>
+                        <div class="testimonial-message">"Opting for egg freezing was an important decision for us, and
+                            the hospital made the entire process smooth and reassuring. The team provided clear
+                            explanations and offered compassionate support every step of the way. Knowing our eggs are
+                            safely preserved has given us the confidence to plan for our future with peace of mind. We
+                            appreciate the professionalism and care shown by everyone involved."
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-image-container d-flex justify-content-center">
+                            <img src="data:image/png;base64,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"
+                                alt="patient_image" class="testimonial-image">
+                        </div>
+                        <div class="testimonial-name">Manisha Khot:</div>
+                        <div class="testimonial-message">"Our egg freezing experience at this hospital was exceptional.
+                            The staff were knowledgeable and empathetic, making sure we understood each part of the
+                            procedure. The process was handled with utmost professionalism, and we felt well-cared for
+                            throughout. We’re grateful for the opportunity to preserve our fertility and the supportive
+                            environment provided by the team."</div>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class="col-md-4">
-            <div class="zoom-effect-container">
-               <img src="../fertImages/27.jpg" class="img-fluid image-card" alt="Cryopreservation Technology">
+            <div class="col-md-6">
+                <div class="contact">
+                    <h4 class="text-center">You can reach us at</h4>
+                    <hr class="custom-hr">
+                    <div class="contact-info phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <p><a href="tel:+918530064800" id="phone-number"
+                                style="text-decoration: none; color: #1a355d;">+918530046800 /
+                                +918530064800</a></p>
+                    </div>
+                    <hr>
+                    <div class="whatsapp-info whatsapp">
+                        <i class="fa-brands fa-whatsapp" style="color: green; font-size: px;"></i>
+                        <p><a href="https://wa.me/+919970947724/?text=Hi I want to book appointment"
+                                style="text-decoration: none; color: #1a355d;">+918530046800 /
+                                +918530064800</a></p>
+                    </div>
+                    <hr>
+                    <div class="visit-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><a href="https://www.google.com/maps?q=Yashwant+Vihar+Complex,+Virar+Nalasopara+Link+Road,+Bolinj,+Virar+West,+Maharashtra,+India+401303"
+                                style="text-decoration: none;">Besides Yashwant Vihar Complex, Virar Nalasopara Link
+                                Road,<br>
+                                Bolinj, Virar West, Maharashtra,
+                                India 401303</a></p>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
+        </div>
+    </div>
 
-   <div class="container my-3">
-      <div class="info-box">
-         <h3>Egg Freezing</h3>
-         <p>Egg freezing, also known as oocyte cryopreservation, is a revolutionary procedure that allows women to
-            preserve their fertility by freezing and storing their eggs. This advanced technique is especially
-            beneficial for women who wish to delay childbirth due to personal, medical, or professional reasons.</p>
-
-         <h5>The Process of Egg Freezing</h5>
-         <h6>Consultation and Assessment</h6>
-         <p>The journey begins with a thorough consultation with a fertility specialist. During this visit, a
-            comprehensive assessment of the woman's overall health, reproductive health, and fertility status is
-            conducted. This may include blood tests and ultrasound examinations to evaluate ovarian reserve and hormone
-            levels.</p>
-
-         <h6>Ovarian Stimulation</h6>
-         <p>To maximize the number of eggs retrieved, the woman undergoes a process called ovarian stimulation. This
-            involves administering hormone injections over a period of 10-14 days to stimulate the ovaries to produce
-            multiple mature eggs in one cycle. Regular monitoring through blood tests and ultrasounds ensures the
-            optimal response to the medication.</p>
-
-         <h6>Egg Retrieval</h6>
-         <p>Once the eggs are mature, they are retrieved from the ovaries using a minimally invasive procedure called
-            transvaginal ultrasound aspiration. This procedure is performed under sedation or anesthesia to ensure
-            comfort. A thin needle is guided through the vaginal wall into the ovaries to collect the eggs.</p>
-
-         <h6>Freezing and Storage</h6>
-         <p>The retrieved eggs are then rapidly frozen using a method called vitrification. This process prevents the
-            formation of ice crystals, which can damage the eggs. The vitrified eggs are stored in liquid nitrogen at
-            extremely low temperatures, where they can remain viable for many years.</p>
-
-         <h6>Future Use</h6>
-         <p>When the woman is ready to conceive, the frozen eggs are thawed and fertilized with sperm in a laboratory
-            using in vitro fertilization (IVF) techniques. The resulting embryos are cultured for a few days before
-            being transferred to the woman's uterus, where they can implant and develop into a pregnancy.</p>
-
-         <h5>Advantages of Egg Freezing</h5>
-         <ul>
-            <li><strong>Flexibility and Control:</strong> Egg freezing provides women with the flexibility to plan their
-               family at a time that is right for them, without the pressure of their biological clock.</li>
-            <li><strong>Medical Preservation:</strong> Women facing medical treatments that may affect their fertility,
-               such as chemotherapy, can preserve their eggs before starting their treatment.</li>
-            <li><strong>Career and Personal Goals:</strong> Women can focus on their career, education, or other
-               personal goals without compromising their future fertility.</li>
-         </ul>
-         <p><i><strong>"For more information or to schedule a consultation <a href="tel:+918530064800"
-            style="font-weight: bold; color: #2c4b6b; text-decoration: underline;" class="contact">Contact Us</a>. We are here to help
-            you achieve your dream of parenthood."</strong></i></p>
-      </div>
-   </div>
-
-   <!-- Footer -->
-   <footer id="contactus" class="py-3">
-      <div class="container-fluid">
-         <div class="row" id="footer">
-            <div class="col-md-4 mb-3">
-               <h5>About Us</h5>
-               <p>Sterling Hospital is dedicated to providing exceptional medical care with integrity and compassion.
-                  Our state-of-the-art facilities and highly skilled medical professionals ensure that each patient
-                  receives personalized and comprehensive treatment. We prioritize patient well-being and strive to
-                  create a supportive and healing environment. Whether it's routine check-ups, specialized treatments,
-                  or emergency care, our commitment to excellence remains unwavering.</p>
+    <section id="ivf-services" class="my-5">
+        <div class="container-fluid">
+            <h4 class="text-center mb-5"><b>Our IVF Services</b></h4>
+            <div class="slider-container" id="ivf-slider">
+                <div class="slider-wrapper">
+                    <!-- Card 1: IVF -->
+                    <div class="card">
+                        <img src="../fertImages/14.jpg" alt="IVF">
+                        <div class="card-body">
+                            <h6 class="card-title" style="font-weight: bold;">In-Vitro Fertilization</h6>
+                            <a href="fertility1.html" class="btn btn-primary btn-appointment">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <!-- Card 2: Intrauterine Insemination (IUI) -->
+                    <div class="card">
+                        <img src="../fertImages/12.jpg" alt="Intrauterine Insemination (IUI)">
+                        <div class="card-body">
+                            <h6 class="card-title" style="font-weight: bold">Intrauterine Insemination (IUI)</h6>
+                            <a href="fertility3.html" class="btn btn-primary btn-appointment">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <!-- Card 2: Intracytoplasmic Sperm Injection -->
+                    <div class="card">
+                        <img src="../fertImages/16.jpg" alt="Intracytoplasmic Sperm Injection">
+                        <div class="card-body">
+                            <h6 class="card-title" style="font-weight: bold">Intracytoplasmic Sperm Injection</h6>
+                            <a href="fertility2.html" class="btn btn-primary btn-appointment">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <!-- Card 3: Male Infertility -->
+                    <div class="card">
+                        <img src="../fertImages/nurse-holding-model-of-male-reproductive-system.jpg"
+                            alt="Male Infertility">
+                        <div class="card-body">
+                            <h6 class="card-title" style="font-weight: bold">Male Infertility</h6>
+                            <a href="fertility13.html" class="btn btn-primary btn-appointment">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <!-- Card 4: Blastocyst Culture -->
+                    <div class="card">
+                        <img src="../fertImages/20.jpg" alt="Blastocyst Culture">
+                        <div class="card-body">
+                            <h6 class="card-title" style="font-weight:bold">Blastocyst Culture</h6>
+                            <a href="fertility4.html" class="btn btn-primary btn-appointment">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <!-- Card 6: Frozen Embryo Transfer -->
+                    <div class="card">
+                        <img src="../fertImages/30.jpg" alt="Frozen Embryo Transfer">
+                        <div class="card-body">
+                            <h6 class="card-title" style="font-weight:bold;">Frozen Embryo Transfer</h6>
+                            <a href="fertility5.html" class="btn btn-primary btn-appointment">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <!-- Card 7: Embryo Cryopreservation -->
+                    <div class="card">
+                        <img src="../fertImages/36.jpg" alt="Embryo Cryopreservation">
+                        <div class="card-body">
+                            <h6 class="card-title" style="font-weight:bold">Embryo Cryopreservation</h6>
+                            <a href="fertility6.html" class="btn btn-primary btn-appointment">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <!-- Card 8: PCOS Clinic -->
+                    <div class="card">
+                        <img src="https://media.istockphoto.com/id/1454161996/photo/doctor-in-a-white-coat-holding-virtual-uterus-reproductive-system-woman-health-pcos-ovary.jpg?s=612x612&w=0&k=20&c=BhfIZQinXyHSwNDfFP2uECobj6ll3j4lsN32Skt_acY="
+                            alt="Blastocyst Culture">
+                        <div class="card-body">
+                            <h6 class="card-title" style="font-weight:bold">PCOS Clinic</h6>
+                            <a href="fertility10.html" class="btn btn-primary btn-appointment">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <!-- Card 9: Donor Egg -->
+                    <div class="card">
+                        <img src="../fertImages/donoregg.jpg" alt="Donor Egg">
+                        <div class="card-body">
+                            <h6 class="card-title" style="font-weight:bold">Donor Egg</h6>
+                            <a href="donor/donor1.html" class="btn btn-primary btn-appointment">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <!-- Card 10: Donor Sperm -->
+                    <div class="card">
+                        <img src="https://media.istockphoto.com/id/1318458414/photo/donor-giving-container-of-sperm-to-doctor-in-hospital-closeup.jpg?s=612x612&w=0&k=20&c=Y_RVgDoZgPbnRdq5q-0NqVW42qqFG8MIePz6GFFzncg="
+                            alt="Donor Sperm">
+                        <div class="card-body">
+                            <h6 class="card-title" style="font-weight: bold">Donor Sperm</h6>
+                            <a href="donor/donor2.html" class="btn btn-primary btn-appointment">Learn
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-button prev" onclick="prevSlide('ivf-slider')">&#10094;</button>
+                <button class="slider-button next" onclick="nextSlide('ivf-slider')">&#10095;</button>
             </div>
-            <div class="col-md-2 mb-3" id="contact_us">
-               <h5>Navigation</h5>
-               <ul class="list-unstyled">
-                  <li><a href="../aboutus.html">About Us</a></li>
-                  <li><a href="../orthopaedic/ortho1.html">Our Services</a></li>
-                  <li><a href="../doctors.html">Doctors</a></li>
-                  <li><a href="../gallery.html">Gallery</a></li>
-                  <li><a href="../patient.html">Our Patients</a></li>
-                  <li><a href="../facilities.html">Facilities</a></li>
-                  <li><a href="../cashless.html">Cashless</a></li>
-                  <li><a href="../index.html#contactus">Contact Us</a></li>
+        </div>
+    </section>
 
-               </ul>
+    <!-- Footer -->
+    <footer id="contactus" class="py-3">
+        <div class="container-fluid">
+            <div class="row" id="footer">
+                <div class="col-md-4 mb-3">
+                    <h5>About Us</h5>
+                    <p>Sterling Hospital is dedicated to providing exceptional medical care with integrity and
+                        compassion.
+                        Our state-of-the-art facilities and highly skilled medical professionals ensure that each
+                        patient
+                        receives personalized and comprehensive treatment. We prioritize patient well-being and strive
+                        to
+                        create a supportive and healing environment. Whether it's routine check-ups, specialized
+                        treatments,
+                        or emergency care, our commitment to excellence remains unwavering.</p>
+                </div>
+                <div class="col-md-2 mb-3" id="contact_us">
+                    <h5>Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../aboutus.html">About Us</a></li>
+                        <li><a href="../orthopaedic/ortho1.html">Our Services</a></li>
+                        <li><a href="../doctors.html">Doctors</a></li>
+                        <li><a href="../gallery.html">Gallery</a></li>
+                        <li><a href="../patient.html">Our Patients</a></li>
+                        <li><a href="../facilities.html">Facilities</a></li>
+                        <li><a href="../cashless.html">Cashless</a></li>
+                        <li><a href="../index.html#contactus">Contact Us</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.google.com/maps?q=Yashwant+Vihar+Complex,+Virar+Nalasopara+Link+Road,+Bolinj,+Virar+West,+Maharashtra,+India+401303"
+                                style="text-decoration: none;">
+                                <i class="fas fa-map-marker-alt fa-lg" style="color: #1a355d;"></i>
+                                Besides Yashwant Vihar Complex, Virar Nalasopara Link Road, Bolinj, Virar West,
+                                Maharashtra,
+                                India 401303
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+918530064800" id="phone-number" style="text-decoration: none;">
+                                <i class="fas fa-phone fa-lg" style="color: #1a355d;"></i> 8530046800 / 8530064800
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:sterlingorthohospital@gmail.com" style="text-decoration: none;">
+                                <i class="fas fa-envelope fa-lg" style="color: #1a355d;"></i>
+                                sterlingorthohospital@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5>Get Connected</h5>
+                    <ul class="list-inline social-icons">
+                        <li><a href="../index.html"><i class="fa fa-globe fa-lg fa-inverse" style="color: #1a355d;"></i>
+                                https://sterlingorthoivf.in/</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-3 mb-3">
-               <h5>Contact Us</h5>
-               <ul class="list-unstyled">
-                  <li>
-                     <a href="https://www.google.com/maps?q=Yashwant+Vihar+Complex,+Virar+Nalasopara+Link+Road,+Bolinj,+Virar+West,+Maharashtra,+India+401303"
-                        style="text-decoration: none;">
-                        <i class="fas fa-map-marker-alt fa-lg" style="color: #1a355d;"></i>
-                        Besides Yashwant Vihar Complex, Virar Nalasopara Link Road, Bolinj, Virar West, Maharashtra,
-                        India 401303
-                     </a>
-                  </li>
-                  <li>
-                     <a href="tel:+918530064800" id="phone-number" style="text-decoration: none;">
-                        <i class="fas fa-phone fa-lg" style="color: #1a355d;"></i> 8530046800 / 8530064800
-                     </a>
-                  </li>
-                  <li>
-                     <a href="mailto:sterlingorthohospital@gmail.com" style="text-decoration: none;">
-                        <i class="fas fa-envelope fa-lg" style="color: #1a355d;"></i>
-                        sterlingorthohospital@gmail.com
-                     </a>
-                  </li>
-               </ul>
+            <div class="line"
+                style="background-color: rgb(212, 212, 212); height: 1px; width: 105%; margin-bottom: 15px; position: relative; left: -20px;">
 
             </div>
-            <div class="col-md-3 mb-3">
-               <h5>Get Connected</h5>
-               <ul class="list-inline social-icons">
-                  <li><a href="../index.html"><i class="fa fa-globe fa-lg fa-inverse" style="color: #1a355d;"></i>
-                        https://sterlingorthoivf.in/</a></li>
-               </ul>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">Copyright @2024 Sterling Orthopaedic Hospital and IVF Centre. All
+                        rights reserved.</p>
+                </div>
             </div>
-         </div>
-         <div class="line"
-            style="background-color: rgb(212, 212, 212); height: 1px; width: 105%; margin-bottom: 15px; position: relative; left: -20px;">
+        </div>
+    </footer>
 
-         </div>
-         <div class="row">
-            <div class="col-12 text-center">
-               <p class="mb-0">Copyright @2024 Sterling Orthopaedic Hospital and IVF Centre. All
-                  rights reserved.</p>
-            </div>
-         </div>
-      </div>
-   </footer>
-   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var video = document.getElementById('myVideo');
+            var startTime = 0;
+            var endTime = 32;
+
+            video.addEventListener('loadedmetadata', function () {
+                video.currentTime = startTime;
+            });
+
+            video.addEventListener('timeupdate', function () {
+                if (video.currentTime >= endTime) {
+                    video.pause();
+                }
+            });
+
+            video.addEventListener('click', function () {
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        });
+    </script>
+    <script>
+        let ivfIndex = 0;
+        let orthoIndex = 0;
+
+        function showSlides(sliderId, index) {
+            const slider = document.getElementById(sliderId);
+            const slides = slider.querySelectorAll('.card');
+            const totalSlides = slides.length;
+
+            const cardsToShow = window.innerWidth >= 768 ? 3 : 1;
+
+            const maxIndex = Math.max(0, Math.ceil((totalSlides / cardsToShow) - 1));
+
+            index = Math.max(0, Math.min(index, maxIndex));
+
+            const sliderWrapper = slider.querySelector('.slider-wrapper');
+            sliderWrapper.style.transform = `translateX(${-index * (100 / cardsToShow)}%)`;
+
+            if (sliderId === 'ivf-slider') {
+                ivfIndex = index;
+            } else if (sliderId === 'ortho-slider') {
+                orthoIndex = index;
+            }
+
+            toggleButtons(sliderId);
+        }
+
+        function toggleButtons(sliderId) {
+            const slider = document.getElementById(sliderId);
+            const slides = slider.querySelectorAll('.card');
+            const cardsToShow = window.innerWidth >= 768 ? 2 : 1;
+            const totalSlides = slides.length;
+            const maxIndex = Math.max(0, Math.ceil((totalSlides / cardsToShow) - 1));
+
+            if (sliderId === 'ivf-slider') {
+                document.querySelector(`#${sliderId} .prev`).disabled = ivfIndex === 0;
+                document.querySelector(`#${sliderId} .next`).disabled = ivfIndex >= maxIndex;
+            } else if (sliderId === 'ortho-slider') {
+                document.querySelector(`#${sliderId} .prev`).disabled = orthoIndex === 0;
+                document.querySelector(`#${sliderId} .next`).disabled = orthoIndex >= maxIndex;
+            }
+        }
+
+        function nextSlide(sliderId) {
+            if (sliderId === 'ivf-slider' && ivfIndex < Math.max(0, Math.ceil((document.querySelectorAll(`#${sliderId} .card`).length / (window.innerWidth >= 768 ? 3 : 1)) - 1))) {
+                showSlides(sliderId, ivfIndex + 1);
+            } else if (sliderId === 'ortho-slider' && orthoIndex < Math.max(0, Math.ceil((document.querySelectorAll(`#${sliderId} .card`).length / (window.innerWidth >= 768 ? 3 : 1)) - 1))) {
+                showSlides(sliderId, orthoIndex + 1);
+            }
+        }
+
+        function prevSlide(sliderId) {
+            if (sliderId === 'ivf-slider' && ivfIndex > 0) {
+                showSlides(sliderId, ivfIndex - 1);
+            } else if (sliderId === 'ortho-slider' && orthoIndex > 0) {
+                showSlides(sliderId, orthoIndex - 1);
+            }
+        }
+
+        window.addEventListener('resize', () => {
+            showSlides('ivf-slider', ivfIndex);
+            showSlides('ortho-slider', orthoIndex);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            showSlides('ivf-slider', ivfIndex);
+            showSlides('ortho-slider', orthoIndex);
+        });
+
+    </script>
+    <script>
+        $('#videoModal').on('show.bs.modal', function () {
+            $('#videoIframe').attr('src', 'https://www.youtube.com/embed/4Ju696mZgtg?autoplay=1');
+        });
+
+        $('#videoModal').on('hide.bs.modal', function () {
+            $('#videoIframe').attr('src', '');
+        });
+    </script>
 </body>
 
 </html>
