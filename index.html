@@ -141,6 +141,12 @@
             padding-top: 0.3rem;
             padding-bottom: 0rem;
         }
+
+        #scroller {
+            max-height: 300px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
     </style>
 </head>
 
@@ -187,7 +193,7 @@
                                     aria-expanded="false">
                                     Fertility Services
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu" id="scroller">
                                     <li>
                                         <a class="dropdown-item" href="fertilityServices/fertility1.html">
                                             In Vitro
@@ -328,7 +334,7 @@
                                     aria-expanded="false">
                                     Orthopaedic
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu" id="scroller">
                                     <li>
                                         <a class="dropdown-item" href="orthopaedic/ortho1.html">
                                             Orthopaedic & Trauma
@@ -457,7 +463,7 @@
 
     <!-- slider -->
     <div id="container-fluid">
-        <div id="mainSlider" class="carousel slide" data-ride="carousel">
+        <div id="mainSlider" class="carousel slide" data-ride="carousel" data-interval="2000">
             <ol class="carousel-indicators">
                 <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
                 <li data-target="#mainSlider" data-slide-to="1"></li>
@@ -465,7 +471,7 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="slider3.jpg" alt="Couples Enjoying Parenthood" class="d-block w-100">
+                    <img src="baby.jpg" alt="Couples Enjoying Parenthood" class="d-block w-100">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="card">
                             <div class="card-body">
@@ -495,7 +501,8 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="slider1.jpg" alt="State-of-the-Art Facilities" class="d-block w-100">
+                    <img src="https://wallpapercave.com/wp/wp7521381.jpg" alt="State-of-the-Art Facilities"
+                        class="d-block w-100">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="card">
                             <div class="card-body">
@@ -522,6 +529,7 @@
             </a>
         </div>
     </div>
+
 
     <!-- why choose us -->
     <section id="aboutus" class="my-5">
@@ -774,6 +782,26 @@
             </div>
         </div>
     </section>
+
+    <div class="container my-3">
+        <h4 class="text-center" style="font-weight: bold;">Our Specialized Doctors</h4>
+        <div class="row mt-3">
+            <!-- First Image -->
+            <div class="col-md-6 d-flex align-items-center">
+                <img src="sachin.png" alt="Doctor 1" class="img-fluid rounded" style="height: 100%;">
+            </div>
+
+            <!-- Second Image -->
+            <div class="col-md-6 d-flex align-items-center">
+                <img src="renu.webp" alt="Doctor 2" class="img-fluid rounded" style="height: 100%;">
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="doctors.html" class="btn btn-appointment ml-auto">Know More About Our Specialized Team</a>
+        </div>
+    </div>
+
+
 
     <!-- Maps -->
     <section class="py-5">

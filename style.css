@@ -360,3 +360,9 @@ a {
   font-size: 1rem;
   line-height: 1.6;
 }
+
+#scroller {
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
