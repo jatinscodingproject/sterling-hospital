@@ -1170,6 +1170,28 @@
             setInterval(showNextTestimonial, 2000);
         });
     </script>
+    <script>
+        document.querySelectorAll('.nav-item.dropdown').forEach(dropdown => {
+            let timeout;
+
+            dropdown.addEventListener('mouseenter', function () {
+                clearTimeout(timeout);
+                this.classList.add('show');
+                this.querySelector('.dropdown-menu').classList.add('show');
+            });
+
+            dropdown.addEventListener('mouseleave', function () {
+                timeout = setTimeout(() => {
+                    this.classList.remove('show');
+                    this.querySelector('.dropdown-menu').classList.remove('show');
+                }, 10000);
+            });
+
+            dropdown.addEventListener('mouseenter', function () {
+                clearTimeout(timeout);
+            });
+        });
+    </script>
 
 </body>
 <!-- Mirrored from sterlingorthoivf.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jun 2024 08:38:44 GMT -->
