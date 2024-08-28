@@ -454,6 +454,26 @@
             font-size: 14px;
          }
       }
+      .carousel-item {
+         height: auto;
+      }
+
+      #slider-xray {
+         height: auto;
+      }
+
+      @media (max-width: 768px) {
+         .image-card {
+            margin-bottom: 15px;
+         }
+
+         .image-card {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+         }
+      }
    </style>
 </head>
 
@@ -825,6 +845,26 @@
          <p><i><strong>"Book an appointment today and let us help you or your loved one recover and live a healthier,
                   pain-free life!"</strong></i></p>
 
+      </div>
+   </div>
+
+   <div class="container my-3">
+      <h4 class="text-center" style="font-weight: bold;">X-Rays</h4>
+      <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+         <div class="carousel-inner" id="slider-xray">
+            <div class="carousel-item active">
+               <img src="../orthoImages/image. 1.png" class="d-block w-100 image-card" alt="Orthopaedic Care">
+            </div>
+            <div class="carousel-item">
+               <img src="../orthoImages/image 3 (1).png" class="d-block w-100 image-card" alt="Joint Replacement">
+            </div>
+            <div class="carousel-item">
+               <img src="../orthoImages/image 4 (1).png" class="d-block w-100 image-card" alt="Orthopaedic Care">
+            </div>
+            <div class="carousel-item">
+               <img src="../orthoImages/image 5 (2).jpg" class="d-block w-100 image-card" alt="Trauma Care">
+            </div>
+         </div>
       </div>
    </div>
 
