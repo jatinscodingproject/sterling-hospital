@@ -371,3 +371,9 @@ a {
   overflow-y: auto;
   overflow-x: hidden;
 }
+
+@media screen and (max-width) {
+  .gynaec {
+    margin-left: 10px;
+  }
+}
