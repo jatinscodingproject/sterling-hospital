@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script type="application/ld+json">
          {
            "@context": "https://schema.org",
@@ -309,6 +310,23 @@
                 max-height: 300px;
                 width: auto;
             }
+        }
+
+        .icon-card {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #f0f0f0;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-card img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .icon-card h5 {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -632,11 +650,11 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Gifting Couples The Joy of Parenthood</h5>
-                                <p class="card-text" style="color:#7a5a4b">
+                                <!-- <p class="card-text" style="color:#7a5a4b">
                                     Our dedicated team strives to turn that dream into reality, gifting couples the joy
                                     of
                                     building a family.
-                                </p>
+                                </p> -->
                             </div>
                         </div>
                     </div>
@@ -647,11 +665,11 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Experience Exceptional Care</h5>
-                                <p class="card-text" style="color:#7a5a4b">
+                                <!-- <p class="card-text" style="color:#7a5a4b">
                                     Our commitment to excellence extends beyond success rates. With compassionate and
                                     personalized care, we ensure that every step of your IVF journey is supported by our
                                     dedicated team of experts.
-                                </p>
+                                </p> -->
                             </div>
                         </div>
                     </div>
@@ -662,13 +680,13 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Discover State-of-the-Art Facilities</h5>
-                                <p class="card-text" style="color:#7a5a4b">
+                                <!-- <p class="card-text" style="color:#7a5a4b">
                                     Embark on your IVF journey with confidence, knowing that you're supported by the
                                     latest
                                     advancements in medical technology and world-class facilities. Your comfort and
                                     safety
                                     are our top priorities.
-                                </p>
+                                </p> -->
                             </div>
                         </div>
                     </div>
@@ -706,6 +724,38 @@
         </div>
     </div>
 
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                <div class="icon-card">
+                    <img src="trusted.jpg" alt="Trusted Doctor Icon">
+                    <h5>Trusted Doctor</h5>
+                    <!-- <p>Our doctors are highly experienced in IVF procedures.</p> -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon-card">
+                    <img src="worl class ivf lab.jpg" alt="World Class IVF Lab Icon">
+                    <h5>World Class IVF Lab</h5>
+                    <!-- <p>State-of-the-art IVF lab for successful treatments.</p> -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-card">
+                    <img src="high success rate.jpg" alt="High Success Rate Icon">
+                    <h5>High Success Rate</h5>
+                    <!-- <p>We offer some of the highest IVF success rates.</p> -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-card">
+                    <img src="affordable icon.jpg" alt="Affordable Cost Icon">
+                    <h5>Affordable Cost</h5>
+                    <!-- <p>IVF treatments at a cost you can afford.</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ivf section -->
     <section id="ivf-services" class="my-5">
@@ -1218,6 +1268,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script>
         let ivfIndex = 0;
         let orthoIndex = 0;
