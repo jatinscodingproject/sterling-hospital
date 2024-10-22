@@ -18,445 +18,445 @@
     <link rel="stylesheet" href="../style.css">
     <style>
         .jumbotron {
-           width: 100%;
-           /* background-image: url("https://media.istockphoto.com/id/685594006/photo/checking-result-of-in-vitro-fertilization.jpg?s=612x612&w=0&k=20&c=0UztVDSarmUaqObryeRblRRzHN7ki0m89R97Zop37AE="); */
-           background-size: cover;
-           background-position: center;
-           background-repeat: no-repeat;
-           position: relative;
-           min-height: auto;
-           display: flex;
-           align-items: center;
-           justify-content: center;
+            width: 100%;
+            /* background-image: url("https://media.istockphoto.com/id/685594006/photo/checking-result-of-in-vitro-fertilization.jpg?s=612x612&w=0&k=20&c=0UztVDSarmUaqObryeRblRRzHN7ki0m89R97Zop37AE="); */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-  
-  
+
+
         .zoom-effect-container {
-           position: relative;
-           width: 100%;
-           overflow: hidden;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
         }
-  
+
         .image-card {
-           width: 100%;
-           height: 400px;
-           object-fit: cover;
-           transition: transform 0.5s ease;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
         }
-  
+
         .zoom-effect-container:hover .image-card {
-           transform: scale(1.1);
+            transform: scale(1.1);
         }
-  
+
         #info-box {
-           background: #f8f9fa;
-           padding: 20px;
-           border-radius: 5px;
-           margin-top: 20px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
         }
-  
+
         @media (max-width: 768px) {
-           .image-card {
-              margin-bottom: 15px;
-              height: 300px;
-           }
+            .image-card {
+                margin-bottom: 15px;
+                height: 300px;
+            }
         }
-  
+
         #info-box img {
-           width: 100%;
-           height: 100%;
+            width: 100%;
+            height: 100%;
         }
-  
+
         #info {
-           position: relative;
-           padding: 50px 0;
-           overflow: hidden;
+            position: relative;
+            padding: 50px 0;
+            overflow: hidden;
         }
-  
+
         #info::before {
-           content: "";
-           position: absolute;
-           top: 0;
-           left: 0;
-           width: 100%;
-           height: 100%;
-           background-image: url('https://media.istockphoto.com/id/1388613536/photo/shot-of-a-young-couple-celebrating-their-pregnancy-while-sitting-with-their-obstetrician-in.jpg?s=612x612&w=0&k=20&c=6XojsdsP38AAW9bY_k0pK_gFEnh1zRozkGtWvm7ctCA=');
-           background-size: cover;
-           background-position: center;
-           background-repeat: no-repeat;
-           opacity: 0.1;
-           z-index: -1;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://media.istockphoto.com/id/1388613536/photo/shot-of-a-young-couple-celebrating-their-pregnancy-while-sitting-with-their-obstetrician-in.jpg?s=612x612&w=0&k=20&c=6XojsdsP38AAW9bY_k0pK_gFEnh1zRozkGtWvm7ctCA=');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: -1;
         }
-  
-  
+
+
         .custom-hr {
-           height: 1px;
-           border: none;
+            height: 1px;
+            border: none;
         }
-  
+
         .row-equal-height {
-           display: flex;
-           flex-wrap: wrap;
+            display: flex;
+            flex-wrap: wrap;
         }
-  
+
         .col-md-6 {
-           display: flex;
-           flex-direction: column;
+            display: flex;
+            flex-direction: column;
         }
-  
+
         .testimonial,
         .contact {
-           background-color: #f8f9fa;
-           padding: 20px;
-           border-radius: 8px;
-           flex: 1;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
         }
-  
+
         .contact {
-           background-color: #e9ecef;
+            background-color: #e9ecef;
         }
-  
+
         .contact-form input,
         .contact-form textarea {
-           margin-bottom: 15px;
+            margin-bottom: 15px;
         }
-  
+
         .contact-form button {
-           margin-top: 10px;
+            margin-top: 10px;
         }
-  
+
         .testimonial-card {
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           margin-bottom: 20px;
-           padding: 15px;
-           border: 1px solid #ddd;
-           border-radius: 5px;
-           text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
         }
-  
+
         .testimonial-image-container {
-           width: 80px;
-           height: 80px;
-           margin-bottom: 15px;
-           display: flex;
-           justify-content: center;
-           align-items: center;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-  
+
         .testimonial-image {
-           width: 100%;
-           height: 100%;
-           border-radius: 50%;
-           object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
         }
-  
+
         .testimonial-name {
-           font-weight: bold;
-           color: #1a355d;
-           text-align: center;
+            font-weight: bold;
+            color: #1a355d;
+            text-align: center;
         }
-  
+
         .testimonial-message {
-           margin-top: 5px;
-           text-align: center;
-           font-style: italic;
+            margin-top: 5px;
+            text-align: center;
+            font-style: italic;
         }
-  
+
         .testimonial-card:nth-child(even) {
-           background-color: #f1f1f1;
+            background-color: #f1f1f1;
         }
-  
+
         .contact {
-           background-color: #e9ecef;
-           padding: 20px;
-           border-radius: 8px;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           justify-content: center;
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-  
+
         .contact h4 {
-           font-weight: bold;
-           margin-bottom: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
-  
+
         .contact-info {
-           text-align: center;
-           margin-bottom: 15px;
-           display: flex;
-           align-items: center;
+            text-align: center;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
         }
-  
+
         .contact-info i {
-           font-size: 24px;
-           color: #ffffff;
-           margin-right: 10px;
-           border-radius: 50%;
-           padding: 10px;
+            font-size: 24px;
+            color: #ffffff;
+            margin-right: 10px;
+            border-radius: 50%;
+            padding: 10px;
         }
-  
+
         .contact-info p {
-           display: inline;
-           margin: 0;
+            display: inline;
+            margin: 0;
         }
-  
+
         .contact-info a {
-           text-decoration: none;
-           color: #1a355d;
+            text-decoration: none;
+            color: #1a355d;
         }
-  
+
         .contact-info.phone i {
-           background-color: #1a355d;
+            background-color: #1a355d;
         }
-  
+
         .whatsapp-info {
-           text-align: center;
-           margin-bottom: 15px;
-           display: flex;
-           align-items: center;
+            text-align: center;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
         }
-  
+
         .whatsapp-info i {
-           font-size: 40px;
-           color: #ffffff;
-           border-radius: 50%;
-           padding: 10px;
+            font-size: 40px;
+            color: #ffffff;
+            border-radius: 50%;
+            padding: 10px;
         }
-  
+
         .whatsapp-info p {
-           display: inline;
-           margin: 0;
+            display: inline;
+            margin: 0;
         }
-  
+
         .whatsapp-info a {
-           text-decoration: none;
+            text-decoration: none;
         }
-  
+
         .whatsapp-info.phone i {
-           background-color: #28a745;
+            background-color: #28a745;
         }
-  
+
         hr {
-           border: 0;
-           height: 1px;
-           background: #ddd;
-           margin: 20px 0;
-           width: 100%;
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+            width: 100%;
         }
-  
+
         .visit-info {
-           display: flex;
-           align-items: center;
-           text-align: left;
-           margin-top: 20px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            margin-top: 20px;
         }
-  
+
         .visit-info i {
-           font-size: 24px;
-           color: #1a355d;
-           background-color: #f8f9fa;
-           border-radius: 50%;
-           padding: 15px;
-           margin-right: 15px;
+            font-size: 24px;
+            color: #1a355d;
+            background-color: #f8f9fa;
+            border-radius: 50%;
+            padding: 15px;
+            margin-right: 15px;
         }
-  
+
         .visit-info p {
-           margin: 0;
+            margin: 0;
         }
-  
+
         .slider-container {
-           position: relative;
-           width: 100%;
-           overflow: hidden;
-           padding: 0;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 0;
         }
-  
+
         .slider-wrapper {
-           display: flex;
-           transition: transform 0.5s ease;
-           width: 100%;
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 100%;
         }
-  
+
         .card {
-           flex: 0 0 100%;
-           box-sizing: border-box;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           justify-content: center;
+            flex: 0 0 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-  
+
         @media (min-width: 768px) {
-           .card {
-              flex: 0 0 calc(33.33% - 20px);
-              margin: 0 10px;
-           }
+            .card {
+                flex: 0 0 calc(33.33% - 20px);
+                margin: 0 10px;
+            }
         }
-  
+
         @media (max-width: 767px) {
-           .card {
-              margin: 0;
-           }
+            .card {
+                margin: 0;
+            }
         }
-  
+
         .card img {
-           max-width: 100%;
-           height: auto;
+            max-width: 100%;
+            height: auto;
         }
-  
+
         .card-body {
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           justify-content: center;
-           text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
-  
+
         .card-title {
-           margin-bottom: 15px;
+            margin-bottom: 15px;
         }
-  
+
         .btn-appointment {
-           margin-top: auto;
-           text-align: center;
+            margin-top: auto;
+            text-align: center;
         }
-  
+
         .slider-button {
-           position: absolute;
-           top: 50%;
-           transform: translateY(-50%);
-           background-color: white;
-           color: black;
-           border: none;
-           padding: 10px;
-           cursor: pointer;
-           border-radius: 50%;
-           width: 40px;
-           height: 40px;
-           display: flex;
-           align-items: center;
-           justify-content: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-  
+
         .prev {
-           left: 10px;
+            left: 10px;
         }
-  
+
         .next {
-           right: 10px;
+            right: 10px;
         }
-  
+
         .slider-button[disabled] {
-           background-color: #ddd;
-           cursor: not-allowed;
-           color: #aaa;
+            background-color: #ddd;
+            cursor: not-allowed;
+            color: #aaa;
         }
-  
+
         .image-container {
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           height: auto;
-           padding: 20px;
-           box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            padding: 20px;
+            box-sizing: border-box;
         }
-  
+
         .image-content {
-           display: flex;
-           flex-direction: row;
-           align-items: center;
-           position: relative;
-           text-align: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            text-align: center;
         }
-  
+
         .image-content img {
-           max-width: 60% !important;
-           max-height: 400px !important;
-           border-radius: 8px;
+            max-width: 60% !important;
+            max-height: 400px !important;
+            border-radius: 8px;
         }
-  
+
         .text-left,
         .text-right {
-           font-weight: bold;
+            font-weight: bold;
         }
-  
+
         .text-left {
-           flex: 1;
-           text-align: center;
-           margin-right: 20px;
+            flex: 1;
+            text-align: center;
+            margin-right: 20px;
         }
-  
+
         .text-right {
-           display: flex;
-           align-items: center;
-           flex: 1;
-           text-align: center;
-           margin-left: 20px;
+            display: flex;
+            align-items: center;
+            flex: 1;
+            text-align: center;
+            margin-left: 20px;
         }
-  
+
         .text-right i {
-           font-size: 24px;
-           color: #007bff;
-           margin-right: 10px;
+            font-size: 24px;
+            color: #007bff;
+            margin-right: 10px;
         }
-  
+
         .text-right h4 {
-           margin: 0;
-           font-weight: bold;
+            margin: 0;
+            font-weight: bold;
         }
-  
+
         .text-right p {
-           margin: 0;
-           font-size: 16px;
+            margin: 0;
+            font-size: 16px;
         }
-  
+
         @media (max-width: 992px) {
-           .image-content {
-              flex-direction: column;
-              text-align: center;
-           }
-  
-           .text-left,
-           .text-right {
-              margin: 0;
-              text-align: center;
-              width: 100%;
-           }
-  
-           .text-left {
-              order: 1;
-              margin-bottom: 20px;
-           }
-  
-           .text-right {
-              order: 2;
-              justify-content: center;
-           }
-  
-           .image-content img {
-              max-width: 100%;
-              max-height: 400px !important;
-           }
+            .image-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-left,
+            .text-right {
+                margin: 0;
+                text-align: center;
+                width: 100%;
+            }
+
+            .text-left {
+                order: 1;
+                margin-bottom: 20px;
+            }
+
+            .text-right {
+                order: 2;
+                justify-content: center;
+            }
+
+            .image-content img {
+                max-width: 100%;
+                max-height: 400px !important;
+            }
         }
-  
-  
+
+
         @media (max-width: 576px) {
-           .text-right i {
-              font-size: 20px;
-           }
-  
-           .text-right h4 {
-              font-size: 18px;
-           }
-  
-           .text-right p {
-              font-size: 14px;
-           }
+            .text-right i {
+                font-size: 20px;
+            }
+
+            .text-right h4 {
+                font-size: 18px;
+            }
+
+            .text-right p {
+                font-size: 14px;
+            }
         }
-     </style>
+    </style>
 </head>
 
 <body>
@@ -673,8 +673,8 @@
                             </li>
 
                             <li class="nav-item dropend">
-                                <a class="nav-link dropdown-toggle" href="../gynaecology.html" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="../gynaecology.html" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     Gynaecology
                                 </a>
                             </li>
@@ -730,7 +730,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="zoom-effect-container">
-                        <img src="https://media.istockphoto.com/id/846131250/photo/surgical-operation-for-knee-arthroscopy-micro-surgery-in-hospital-operating-theater-emergency.jpg?s=612x612&w=0&k=20&c=AqGEK0RvWdC8H10FErs86CvcRtvVNClUQhw6btMYl-c=" class="img-fluid image-card" alt="Embryo Transfer">
+                        <img src="https://media.istockphoto.com/id/846131250/photo/surgical-operation-for-knee-arthroscopy-micro-surgery-in-hospital-operating-theater-emergency.jpg?s=612x612&w=0&k=20&c=AqGEK0RvWdC8H10FErs86CvcRtvVNClUQhw6btMYl-c="
+                            class="img-fluid image-card" alt="Embryo Transfer">
                     </div>
                 </div>
             </div>
@@ -804,7 +805,8 @@
                 suffering from painful joint conditions or needs relief from instability, we encourage you to seek
                 expert
                 advice and consultation with Dr. Sachin Zambare. Contact Us
-                at <a href="tel:+918530064800" style="font-weight: bold; color: #2c4b6b; text-decoration: underline;" class="contactss">
+                at <a href="tel:+918530064800" style="font-weight: bold; color: #2c4b6b; text-decoration: underline;"
+                    class="contactss">
                     +918530046800/+918530064800</a>
             </p>
             <p><i><strong>"Book an appointment today and let us help you or your loved one recover and live a healthier,
@@ -833,14 +835,10 @@
                                 alt="patient_image" class="testimonial-image">
                         </div>
                         <div class="testimonial-name">Shravani Bhaskar:</div>
-                        <div class="testimonial-message">"I had been experiencing persistent knee pain for several
-                            months, which made even simple activities like walking or climbing stairs difficult. Dr.
-                            Sachin at Sterling Orthopaedic hosptial and IVF center suggested knee arthroscopy to
-                            diagnose and
-                            treat the issue. The procedure was minimally invasive, and I was back on my feet much sooner
-                            than I expected. Dr. Sachin’s expertise and the care I received during my recovery were
-                            exceptional. My knee feels better than ever, and I’m finally able to enjoy my daily
-                            activities without pain. I highly recommend Dr. Sachin for anyone needing knee arthroscopy."
+                        <div class="testimonial-message">"I was very anxious about my ankle surgery, but the entire team
+                            helped put my mind at ease. They were professional, attentive, and truly cared about my
+                            recovery. My ankle
+                            is healing well, and I'm grateful for the care I received!"
                         </div>
                     </div>
                     <div class="testimonial-card">
@@ -849,13 +847,9 @@
                                 alt="patient_image" class="testimonial-image">
                         </div>
                         <div class="testimonial-name">Devendra Mishra:</div>
-                        <div class="testimonial-message">"After a sports injury left me with a torn rotator cuff, I was
-                            worried about losing mobility in my shoulder. Dr. Sachin recommended shoulder arthroscopy to
-                            repair the damage. The procedure was a success, and the recovery process was smooth, thanks
-                            to the comprehensive care I received at Sterling Orthopaedic Hospital and IVF center. Dr. Sachin’s
-                            skillful hands restored my shoulder function, and I’m back to playing sports without any
-                            issues. I couldn’t be happier with the results and would recommend Dr. Sachin to anyone
-                            needing shoulder arthroscopy."
+                        <div class="testimonial-message">"I had knee arthroscopy for a torn meniscus, and the experience
+                            was exceptional. The staff was friendly and knowledgeable, guiding me through each step. My
+                            recovery went smoothly, and I'm thrilled with the outcome!"
                         </div>
                     </div>
                 </div>
@@ -893,111 +887,111 @@
 
     <section id="ortho-services" class="my-5">
         <div class="container-fluid">
-           <h3 class="text-center mb-5"><b>Our Orthopaedic Services</b></h3>
-           <div class="slider-container" id="ortho-slider">
-              <div class="slider-wrapper">
-                 <!-- Card 1: Orthopaedic and Trauma Care -->
-                 <div class="card">
-                    <img src="../orthoImages/o1.jpg" alt="Orthopaedic and Trauma Care">
-                    <div class="card-body">
-                       <h6 class="card-title">Orthopaedic and Trauma Care</h6>
-                       <a href="ortho1.html" class="btn btn-primary btn-appointment">Learn More</a>
+            <h3 class="text-center mb-5"><b>Our Orthopaedic Services</b></h3>
+            <div class="slider-container" id="ortho-slider">
+                <div class="slider-wrapper">
+                    <!-- Card 1: Orthopaedic and Trauma Care -->
+                    <div class="card">
+                        <img src="../orthoImages/o1.jpg" alt="Orthopaedic and Trauma Care">
+                        <div class="card-body">
+                            <h6 class="card-title">Orthopaedic and Trauma Care</h6>
+                            <a href="ortho1.html" class="btn btn-primary btn-appointment">Learn More</a>
+                        </div>
                     </div>
-                 </div>
-                 <!-- Card 2: Spine Surgery and Spinal Disorders -->
-                 <div class="card">
-                    <img src="../orthoImages/o5.jpg" alt="Spine Surgery and Spinal Disorders">
-                    <div class="card-body">
-                       <h6 class="card-title">Spine Surgery and Spinal Disorders</h6>
-                       <a href="ortho2.html" class="btn btn-primary btn-appointment">Learn More</a>
+                    <!-- Card 2: Spine Surgery and Spinal Disorders -->
+                    <div class="card">
+                        <img src="../orthoImages/o5.jpg" alt="Spine Surgery and Spinal Disorders">
+                        <div class="card-body">
+                            <h6 class="card-title">Spine Surgery and Spinal Disorders</h6>
+                            <a href="ortho2.html" class="btn btn-primary btn-appointment">Learn More</a>
+                        </div>
                     </div>
-                 </div>
-                 <!-- Card 3: Joint Replacement -->
-                 <div class="card">
-                    <img src="../orthoImages/o12.jpg" alt="Joint Replacement">
-                    <div class="card-body">
-                       <h6 class="card-title">Joint Replacement</h6>
-                       <a href="ortho4.html" class="btn btn-primary btn-appointment">Learn More</a>
+                    <!-- Card 3: Joint Replacement -->
+                    <div class="card">
+                        <img src="../orthoImages/o12.jpg" alt="Joint Replacement">
+                        <div class="card-body">
+                            <h6 class="card-title">Joint Replacement</h6>
+                            <a href="ortho4.html" class="btn btn-primary btn-appointment">Learn More</a>
+                        </div>
                     </div>
-                 </div>
-                 <!-- Card 4: Arthroscopy Knee, Shoulder & Ankle -->
-                 <div class="card">
-                    <img src="../orthoImages/o17.jpg" alt="Arthroscopy Knee, Shoulder & Ankle">
-                    <div class="card-body">
-                       <h6 class="card-title">Arthroscopy Knee, Shoulder & Ankle</h6>
-                       <a href="ortho6.html" class="btn btn-primary btn-appointment">Learn More</a>
+                    <!-- Card 4: Arthroscopy Knee, Shoulder & Ankle -->
+                    <div class="card">
+                        <img src="../orthoImages/o17.jpg" alt="Arthroscopy Knee, Shoulder & Ankle">
+                        <div class="card-body">
+                            <h6 class="card-title">Arthroscopy Knee, Shoulder & Ankle</h6>
+                            <a href="ortho6.html" class="btn btn-primary btn-appointment">Learn More</a>
+                        </div>
                     </div>
-                 </div>
-                 <!-- Card 5: Vertebroplasty -->
-                 <div class="card">
-                    <img src="../orthoImages/o7.jpg" alt="Vertebroplasty">
-                    <div class="card-body">
-                       <h6 class="card-title">Vertebroplasty</h6>
-                       <a href="ortho3.html" class="btn btn-primary btn-appointment">Learn More</a>
+                    <!-- Card 5: Vertebroplasty -->
+                    <div class="card">
+                        <img src="../orthoImages/o7.jpg" alt="Vertebroplasty">
+                        <div class="card-body">
+                            <h6 class="card-title">Vertebroplasty</h6>
+                            <a href="ortho3.html" class="btn btn-primary btn-appointment">Learn More</a>
+                        </div>
                     </div>
-                 </div>
-                 <!-- Card 6: Ankle Foot Surgery -->
-                 <div class="card">
-                    <img src="../orthoImages/o13.jpg" alt="Ankle Foot Surgery">
-                    <div class="card-body">
-                       <h6 class="card-title">Ankle Foot Surgery</h6>
-                       <a href="ortho5.html" class="btn btn-primary btn-appointment">Learn More</a>
+                    <!-- Card 6: Ankle Foot Surgery -->
+                    <div class="card">
+                        <img src="../orthoImages/o13.jpg" alt="Ankle Foot Surgery">
+                        <div class="card-body">
+                            <h6 class="card-title">Ankle Foot Surgery</h6>
+                            <a href="ortho5.html" class="btn btn-primary btn-appointment">Learn More</a>
+                        </div>
                     </div>
-                 </div>
-                 <!-- Card 7: Sports Medicine -->
-                 <div class="card">
-                    <img src="../orthoImages/o20.jpg" alt="Sports Medicine">
-                    <div class="card-body">
-                       <p class="card-title">Sports Medicine</p>
-                       <a href="ortho7.html" class="btn btn-primary btn-appointment">Learn More</a>
+                    <!-- Card 7: Sports Medicine -->
+                    <div class="card">
+                        <img src="../orthoImages/o20.jpg" alt="Sports Medicine">
+                        <div class="card-body">
+                            <p class="card-title">Sports Medicine</p>
+                            <a href="ortho7.html" class="btn btn-primary btn-appointment">Learn More</a>
+                        </div>
                     </div>
-                 </div>
-                 <!-- Card 8: Hand & Microvascular Surgeries -->
-                 <div class="card">
-                    <img src="../orthoImages/o23.jpg" alt="Hand & Microvascular Surgeries">
-                    <div class="card-body">
-                       <h6 class="card-title">Hand & Microvascular Surgeries</h6>
-                       <a href="ortho8.html" class="btn btn-primary btn-appointment">Learn More</a>
+                    <!-- Card 8: Hand & Microvascular Surgeries -->
+                    <div class="card">
+                        <img src="../orthoImages/hand.webp" alt="Hand & Microvascular Surgeries">
+                        <div class="card-body">
+                            <h6 class="card-title">Hand & Microvascular Surgeries</h6>
+                            <a href="ortho8.html" class="btn btn-primary btn-appointment">Learn More</a>
+                        </div>
                     </div>
-                 </div>
-                 <!-- Card 9: Pediatric Orthopaedics -->
-                 <div class="card">
-                    <img src="../orthoImages/o25.jpeg" alt="Pediatric Orthopaedics">
-                    <div class="card-body">
-                       <h6 class="card-title">Pediatric Orthopaedics</h6>
-                       <a href="ortho9.html" class="btn btn-primary btn-appointment">Learn More</a>
+                    <!-- Card 9: Pediatric Orthopaedics -->
+                    <div class="card">
+                        <img src="../orthoImages/o25.jpeg" alt="Pediatric Orthopaedics">
+                        <div class="card-body">
+                            <h6 class="card-title">Pediatric Orthopaedics</h6>
+                            <a href="ortho9.html" class="btn btn-primary btn-appointment">Learn More</a>
+                        </div>
                     </div>
-                 </div>
-                 <!-- Card 10: Rheumatology & Arthritis -->
-                 <div class="card">
-                    <img src="../orthoImages/o30.jpg" alt="Rheumatology & Arthritis">
-                    <div class="card-body">
-                       <h6 class="card-title">Rheumatology & Arthritis</h6>
-                       <a href="ortho10.html" class="btn btn-primary btn-appointment">Learn More</a>
+                    <!-- Card 10: Rheumatology & Arthritis -->
+                    <div class="card">
+                        <img src="../orthoImages/o30.jpg" alt="Rheumatology & Arthritis">
+                        <div class="card-body">
+                            <h6 class="card-title">Rheumatology & Arthritis</h6>
+                            <a href="ortho10.html" class="btn btn-primary btn-appointment">Learn More</a>
+                        </div>
                     </div>
-                 </div>
-                 <!-- Card 10: Pain Management -->
-                 <div class="card">
-                    <img src="../orthoImages/o33.jpg" alt="Rheumatology & Arthritis">
-                    <div class="card-body">
-                       <h6 class="card-title">Pain Management</h6>
-                       <a href="ortho11.html" class="btn btn-primary btn-appointment">Learn More</a>
+                    <!-- Card 10: Pain Management -->
+                    <div class="card">
+                        <img src="../orthoImages/o33.jpg" alt="Rheumatology & Arthritis">
+                        <div class="card-body">
+                            <h6 class="card-title">Pain Management</h6>
+                            <a href="ortho11.html" class="btn btn-primary btn-appointment">Learn More</a>
+                        </div>
                     </div>
-                 </div>
-                 <!-- Card 10: Physiotherapy & Rehabilitation -->
-                 <div class="card">
-                    <img src="../orthoImages/o35.jpg" alt="Rheumatology & Arthritis">
-                    <div class="card-body">
-                       <h6 class="card-title">Physiotherapy & Rehabilitation</h6>
-                       <a href="ortho12.html" class="btn btn-primary btn-appointment">Learn More</a>
+                    <!-- Card 10: Physiotherapy & Rehabilitation -->
+                    <div class="card">
+                        <img src="../orthoImages/o35.jpg" alt="Rheumatology & Arthritis">
+                        <div class="card-body">
+                            <h6 class="card-title">Physiotherapy & Rehabilitation</h6>
+                            <a href="ortho12.html" class="btn btn-primary btn-appointment">Learn More</a>
+                        </div>
                     </div>
-                 </div>
-              </div>
-              <button class="slider-button prev" onclick="prevSlide('ortho-slider')">&#10094;</button>
-              <button class="slider-button next" onclick="nextSlide('ortho-slider')">&#10095;</button>
-           </div>
+                </div>
+                <button class="slider-button prev" onclick="prevSlide('ortho-slider')">&#10094;</button>
+                <button class="slider-button next" onclick="nextSlide('ortho-slider')">&#10095;</button>
+            </div>
         </div>
-     </section>
+    </section>
 
 
     <!-- Footer -->
@@ -1107,7 +1101,7 @@
         });
     </script>
     <script>
-         let ivfIndex = 0;
+        let ivfIndex = 0;
         let orthoIndex = 0;
 
         function showSlides(sliderId, index) {
