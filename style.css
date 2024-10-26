@@ -403,3 +403,11 @@ a {
       top: 40px; 
   }
 }
+
+
+
+#mainSlider .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
