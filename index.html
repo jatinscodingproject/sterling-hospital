@@ -656,8 +656,6 @@
         </div>
     </div>
 
-
-
     <!-- ivf section -->
     <section id="ivf-services" class="my-5">
         <div class="container-fluid">
@@ -1030,7 +1028,7 @@
 
             <!-- Second Image -->
             <div id="doctor2-col" class="col-md-6 d-flex align-items-center">
-                <img id="doctor2-img" src="renu.webp" alt="Doctor 2" class="img-fluid rounded"
+                <img id="doctor2-img" src="renubg.png" alt="Doctor 2" class="img-fluid rounded"
                     style="margin-bottom: 20px;">
             </div>
         </div>
@@ -1381,8 +1379,9 @@
     </script>
     <script>
         $(document).ready(function () {
-            $('#quoteCarousel').carousel({
-                interval: 2000
+            $('#mainSlider').on('slid.bs.carousel', function (e) {
+                let index = $(e.relatedTarget).index();
+                $('#quoteCarousel').carousel(index);
             });
         });
 
